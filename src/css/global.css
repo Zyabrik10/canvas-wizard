@@ -1,0 +1,60 @@
+@import url("./variables.css");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1040px;
+  padding: 0 20px;
+}
+
+.global-p,
+.global-title {
+  margin: 0;
+}
+
+.global-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.global-link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.global-button {
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
+
+  background: none;
+
+  color: currentColor;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  font-variant: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
