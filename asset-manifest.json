@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wizard-book/static/css/main.4527f5ae.css",
+    "main.js": "/wizard-book/static/js/main.c582baf8.js",
+    "index.html": "/wizard-book/index.html",
+    "main.4527f5ae.css.map": "/wizard-book/static/css/main.4527f5ae.css.map",
+    "main.c582baf8.js.map": "/wizard-book/static/js/main.c582baf8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4527f5ae.css",
+    "static/js/main.c582baf8.js"
+  ]
+}
