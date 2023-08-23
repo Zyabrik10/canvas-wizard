@@ -4,3 +4,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.main {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 100%;
+  max-width: 1000px;
+
+  line-height: 1.8;
+}
