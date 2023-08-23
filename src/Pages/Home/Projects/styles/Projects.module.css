@@ -1,0 +1,39 @@
+@import url("../../../../css/variables.css");
+
+.project.dark-theme {
+  background: linear-gradient(180deg, #141a1f 0%, #001425 100%);
+}
+
+.project.light-theme {
+  background: linear-gradient(180deg, #fff 0%, #efefef 100%);
+}
+
+.project-p {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.project-p span {
+  color: var(--primary-bl);
+}
+
+.project-list-item-box {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 2px solid;
+}
+
+.project-list-item-box.dark-theme {
+  border-color: var(--def-dark-2);
+}
+
+.project-list-item-box.light-theme {
+  border-color: #f2f2f2;
+}
+
+.project-list-item-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}

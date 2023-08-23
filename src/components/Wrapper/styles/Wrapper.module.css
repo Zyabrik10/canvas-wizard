@@ -1,0 +1,18 @@
+@import url("../../../css/variables.css");
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.wrapper.dark-theme {
+  background: var(--default-dark);
+  color: #fff;
+}
+
+.wrapper.light-theme {
+  background: #fff;
+  color: #333;
+}

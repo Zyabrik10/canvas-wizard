@@ -1,0 +1,63 @@
+@import url("../../../../css/variables.css");
+
+.hero {
+  padding-top: 160px;
+}
+
+.hero.dark-theme {
+  background: linear-gradient(180deg, #001425 0%, #141a1f 100%);
+  border-bottom: 1px solid var(--def-dark-2);
+}
+
+.hero.light-theme {
+  background: linear-gradient(180deg, #efefef 0%, #fff 100%);
+  box-shadow: 0px -1px 0px 1px #e2e2e2 inset;
+}
+
+.hero-title,
+.hero-subtitle {
+  text-align: center;
+}
+
+.hero-title {
+  color: var(--primary-bl, #0075ff);
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 75px;
+}
+
+.hero-subtitle.dark-theme {
+  color: #fff;
+}
+
+.hero-subtitle.light-theme {
+  color: #333;
+}
+
+.hero-subtitle span {
+  color: var(--primary-bl, #0075ff);
+}
+
+.hero-button {
+  display: block;
+  margin: 0 auto;
+
+  width: 270px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(180deg, var(--primary-bl) 0%, #004da8 100%);
+  box-shadow: 0px 0px 10px 2px var(--primary-bl);
+
+  padding: 11px;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  color: #fff;
+}

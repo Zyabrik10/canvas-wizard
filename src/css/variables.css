@@ -1,2 +1,11 @@
 :root {
+  /* cell */
+  --flex-items: 1;
+  --flex-items-gap: 10px;
+
+  /* dark */
+  --default-dark: #141a1f;
+  --def-dark-2: #1f262e;
+  --def-light-dark: #66b2ff;
+  --primary-bl: #0075ff;
 }
