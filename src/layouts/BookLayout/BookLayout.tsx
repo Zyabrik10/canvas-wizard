@@ -7,8 +7,6 @@ import { Outlet } from "react-router-dom";
 
 import SideMenuMap from "../../components/SideMenuMap/SideMenuMap";
 
-// import arrow from "../../img/logo/arrow1.svg";
-
 export default function BookLayout() {
   return (
     <>
@@ -19,18 +17,9 @@ export default function BookLayout() {
         data-light-theme={css["light-theme"]}
       >
         <SideMenuMap />
-        <main className={globalCss["main"]} style={{ margin: "0 auto" }}>
+        <main className={`${css['main']} ${globalCss["main"]}`}>
           <Outlet />
         </main>
-        {/* <aside>
-          <ul>
-            <li>
-              <NavLink className={globalCss["global-link"]} to="">
-                Init Canvas
-              </NavLink>
-            </li>
-          </ul>
-        </aside> */}
       </div>
       <Footer isContainer={false} />
     </>

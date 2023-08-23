@@ -41,7 +41,7 @@ export default function HeaderList() {
       <HeaderListItem>
         <a
           className={globalCss["global-link"]}
-          href="https://www.linkedin.com/in/pan-mazurok-bunpal-olecsandr-5b245a260"
+          href="https://www.linkedin.com/in/alexander-mazurok-jfd/"
           target="_blank"
           rel="noreferrer"
         >

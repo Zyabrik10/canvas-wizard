@@ -1,0 +1,44 @@
+.f-title {
+  margin-bottom: 25px;
+}
+
+.f-p {
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.f-code-box {
+  display: block;
+  background: rgb(36, 37, 48);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  overflow: auto;
+}
+
+.f-var {
+  color: rgb(210, 0, 218);
+}
+
+.f-varname {
+  color: rgb(226, 226, 226);
+}
+
+.f-equal,
+.f-function,
+.f-class,
+.f-lit {
+  color: rgb(236, 95, 0);
+}
+
+.f-this {
+  color: rgb(0, 225, 255);
+}
+
+.f-mark {
+  display: inline-block;
+  background: #aaa;
+  border: 2px solid #888;
+  border-radius: 5px;
+  color: #fff;
+}
