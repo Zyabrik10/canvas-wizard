@@ -1,18 +1,10 @@
 import globalCss from "../../css/global.module.css";
 // import css from "./styles/BookPage.module.css";
-import format_text from "../../css/format-text.module.css";
 
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/user/user-selector";
 import { adaptTheme } from "../../ts/theme/adapt-theme";
-
-function Code() {
-  return <pre>
-    <span>const</span> <span>canvas</span>
-   <span>const</span> <span>canvas</span>
-  </pre>
-}
 
 export default function Book() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -21,83 +13,230 @@ export default function Book() {
     adaptTheme(theme);
   }, [theme]);
 
-
   return (
     <>
-      <section>
-        <h2 className={`${format_text["f-title"]} ${globalCss["global-title"]}`}>
-          Free Canvas Cources
-        </h2>
-                <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          Introducing [Your Website Name]: Unleash Your Creativity with Free
-          Canvas Courses, Books, and Projects!
+      <div className={globalCss[`container`]}>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          Welcome to a digital haven where artistic inspiration and educational
-          exploration converge – [Your Website Name]. We are thrilled to present
-          a unique platform that opens up a world of creative possibilities
-          through an extensive collection of free canvas-related resources.
-          Whether you're an aspiring artist, a seasoned creative enthusiast, or
-          an eager learner, our website is designed to be your go-to destination
-          for honing your skills and embracing the joy of artistic expression.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          🎨 Explore Diverse Canvas Courses: Our website hosts a rich array of
-          free canvas courses crafted to cater to all skill levels. From
-          beginners looking to grasp the fundamentals of canvas art to advanced
-          artists aiming to refine their techniques, we have meticulously
-          curated courses that cover a wide spectrum of topics. Immerse yourself
-          in the world of acrylics, oils, mixed media, and more, guided by
-          experienced instructors who share their expertise step by step.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          🖌️ Embark on Captivating Canvas Projects: Sometimes, the best way to
-          learn is by doing. That's why we've compiled a series of hands-on
-          canvas projects that invite you to roll up your sleeves and get
-          creative. These projects encompass a wide range of themes and styles,
-          encouraging you to experiment, innovate, and discover your own
-          artistic voice. With detailed instructions and accompanying visuals,
-          each project transforms your workspace into a playground of
-          imagination.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          🌐 Community and Connection: At [Your Website Name], we believe in the
-          power of a thriving creative community. Engage with fellow learners,
-          share your progress, exchange ideas, and receive constructive
-          feedback. Our platform fosters an environment where artists of all
-          backgrounds can come together, learn from one another, and form
-          meaningful connections that fuel their artistic growth.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          🆓 Completely Free and Accessible: We are committed to breaking down
-          barriers and making creative education accessible to everyone. All the
-          courses, books, and projects on our website are absolutely free,
-          ensuring that financial limitations never hinder your artistic
-          pursuit.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          🔒 User-Friendly Experience: Navigating [Your Website Name] is a
-          breeze. Our user-friendly interface ensures that you can seamlessly
-          explore courses, discover books, and embark on projects without any
-          technical hurdles. Spend less time figuring out how to use the website
-          and more time indulging in your creative passions.
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
-          Experience the boundless world of canvas artistry like never before.
-          Whether you're a painter at heart, a hobbyist seeking new experiences,
-          or simply intrigued by the magic of canvas, [Your Website Name]
-          invites you to join us in this exciting journey of creativity and
-          learning. Unleash your imagination, refine your techniques, and
-          cultivate your love for canvas art with our free courses, books, and
-          projects. Your masterpiece awaits – come and create with us!
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
         </p>
-        {/* <div className={format_text['f-code-box']}>
-          <button className={`${globalCss['global-button']} ${format_text['f-copy-button']}`} type="button">copy</button>
-          <pre className={globalCss['global-p']}>
-            <code className="code"></code>
-          </pre>
-        </div> */}
-      </section>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, aut
+          laborum, est voluptatibus ipsum repudiandae voluptatem eveniet culpa
+          ipsa neque fuga unde possimus quam? Harum assumenda officia quaerat
+          animi praesentium. Quos provident dolore accusantium dicta tempore ab
+          vitae inventore dolorum, temporibus, id impedit architecto labore
+          nulla sint quidem rerum veniam neque vero nihil asperiores. Magni
+          aspernatur molestiae nam laborum quos? Aperiam accusantium reiciendis
+          dolorum rerum porro ratione aliquid fuga ex, commodi et incidunt
+        </p>
+      </div>
     </>
   );
 }

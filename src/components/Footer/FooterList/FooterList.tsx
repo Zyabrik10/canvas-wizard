@@ -17,7 +17,7 @@ export default function FooterList() {
 
   const items: Array<Link> = [
     {
-      path: "https://www.linkedin.com/in/alexander-mazurok-jfd/",
+      path: "https://www.linkedin.com/in/pan-mazurok-bunpal-olecsandr-5b245a260",
       text: "Linkedin",
       logo: linkedin_logo
     },
