@@ -1,6 +1,13 @@
 .book-sidebar-map {
+  display: none;
   width: 100%;
   max-width: 250px;
+}
+
+@media screen and (min-width: 1050px) {
+  .book-sider-map {
+    display: block;
+  }
 }
 
 .book-sidebar-map.dark-theme {
@@ -17,12 +24,10 @@
   position: sticky;
   top: 10px;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .sidebar-item {
-  padding: 10px;
-
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
@@ -37,18 +42,37 @@
 }
 
 .sidebar-item-button {
+  padding: 10px;
   display: flex;
   align-items: center;
   text-align: left;
   width: 100%;
 }
 
+.sidebar-item-button.dark-theme:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-item-button.light-theme:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .item-button-title {
   flex-grow: 2;
 }
 
-.sidebar-item-button + ul > li {
+.book-term-link {
+  display: block;
   padding: 10px;
+  margin-left: 10px;
+}
+
+.book-term-link.dark-theme:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.book-term-link.light-theme:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .item-button-status {

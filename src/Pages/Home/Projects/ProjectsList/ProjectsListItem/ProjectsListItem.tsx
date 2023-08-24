@@ -2,15 +2,16 @@ import { Link } from "react-router-dom";
 import globalCss from "../../../../../css/global.module.css";
 import css from "../../styles/Projects.module.css";
 
-interface Item {
+type Item = {
   logo: string;
   title: string;
+  link: string;
 }
 
-export default function ProjectsListItem({ logo, title }: Item) {
+export default function ProjectsListItem({ logo, title, link }: Item) {
   return (
     <li>
-      <Link className={globalCss["global-link"]} to="/book">
+      <Link className={globalCss["global-link"]} to={link}>
         <div
           className={`${css["project-list-item-box"]} ${globalCss["global-img"]} ${css["dark-theme"]} switch-theme`}
           data-dark-theme={css["dark-theme"]}

@@ -22,7 +22,7 @@ export default function Hero() {
         </p>
         <Link
           className={`switch-theme ${css["dark-theme"]} ${css["hero-button"]} ${globalCss["global-link"]}`}
-          to="/book"
+          to="/book/about-canvas"
           data-dark-theme={css["dark-theme"]}
           data-light-theme={css["light-theme"]}
         >

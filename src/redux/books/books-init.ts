@@ -16,14 +16,59 @@ export const initialState: Array<Book> = [
         title: "What is Canvas ?",
         path: "/book/about-canvas",
       },
+      {
+        title: "Canvas API",
+        path: "/book/canvas-api",
+      },
     ],
   },
   {
     title: "Math And Physics",
     terms: [
       {
-        title: "Get distance between two objects",
-        path: "/",
+        title: "Random value between min and max value",
+        path: "/book/random-value",
+      },
+      {
+        title: "Distance between objects",
+        path: "/book/distance-between-objects",
+      },
+      {
+        title: "Collision between reactangles",
+        path: "/book/collision-between-reactangles",
+      },
+      {
+        title: "Collision between circles",
+        path: "/book/collision-between-circles",
+      },
+      {
+        title: "Collision between reactangle and cirlcle",
+        path: "/book/collision-between-reactangles-cirlcles",
+      },
+    ],
+  },
+  {
+    title: "Stars",
+    terms: [
+      {
+        title: "Init and Preview",
+        path: "/book/projects/stars/init-preview",
+      },
+      {
+        title: "Class Ball",
+        path: "/book/projects/stars/class-ball",
+      },
+      {
+        title: "Function Init",
+        path: "/book/projects/stars/init",
+      },
+      {
+        title: "Function Update",
+        path: "/book/projects/stars/function-update",
+      },
+      {
+        title: "",
+        path: "/book/projects/stars/function-update",
       },
     ],
   },

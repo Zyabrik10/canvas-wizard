@@ -13,12 +13,28 @@
 .about-title {
   font-size: 12px;
   margin-bottom: 5px;
+  text-align: center;
+}
+
+@media screen and (min-width: 748px) {
+  .about-title {
+    text-align: left;
+  }
 }
 
 .about-p {
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@media screen and (min-width: 748px) {
+  .about-p {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 20px;
+  }
 }
 
 .about-p span {
@@ -27,7 +43,28 @@
 
 .about-main-box {
   display: flex;
+  flex-direction: column-reverse;
   gap: 30px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-main-box {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.about-main-box > canvas {
+  width: 100%;
+  height: 340px;
+}
+
+@media screen and (min-width: 748px) {
+  .about-main-box > canvas {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
 }
 
 .about-main-box canvas {
@@ -37,7 +74,20 @@
 .about-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
+}
+
+@media screen and (min-width: 675px) {
+  .about-list {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about-list {
+    flex-direction: column;
+  }
 }
 
 .about-list-item {
@@ -92,9 +142,17 @@
   flex-direction: column;
   gap: 5px;
 
-  margin-left: 343px;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
   max-width: 270px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-button-box {
+    margin-right: 0;
+    margin-left: 343px;
+  }
 }
 
 .about-box-logo {

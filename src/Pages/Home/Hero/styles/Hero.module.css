@@ -1,7 +1,19 @@
 @import url("../../../../css/variables.css");
 
 .hero {
-  padding-top: 160px;
+  padding-top: 100px;
+}
+
+@media screen and (min-width: 748px) {
+  .hero {
+    padding-top: 135px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 160px;
+  }
 }
 
 .hero.dark-theme {
@@ -20,15 +32,40 @@
 }
 
 .hero-title {
-  color: var(--primary-bl, #0075ff);
-  font-size: 64px;
+  color: var(--primary-bl);
+  font-size: 36px;
   font-weight: 700;
 }
 
+@media screen and (min-width: 748px) {
+  .hero-title {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-title {
+    font-size: 64px;
+  }
+}
+
 .hero-subtitle {
-  font-size: 45px;
+  font-size: 25px;
   font-weight: 700;
-  margin-bottom: 75px;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 748px) {
+  .hero-subtitle {
+    font-size: 34px;
+    margin-bottom: 75px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-subtitle {
+    font-size: 45px;
+  }
 }
 
 .hero-subtitle.dark-theme {
@@ -47,17 +84,34 @@
   display: block;
   margin: 0 auto;
 
-  width: 270px;
+  width: 100%;
+  max-width: 155px;
 
   border-radius: 10px;
 
   background: linear-gradient(180deg, var(--primary-bl) 0%, #004da8 100%);
   box-shadow: 0px 0px 10px 2px var(--primary-bl);
 
-  padding: 11px;
+  padding: 10px;
 
-  font-size: 36px;
+  font-size: 18px;
   font-weight: 700;
 
   color: #fff;
+
+  text-align: center;
+}
+
+@media screen and (min-width: 748px) {
+  .hero-button {
+    font-size: 24px;
+    max-width: 215px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero-button {
+    font-size: 36px;
+    max-width: 270px;
+  }
 }

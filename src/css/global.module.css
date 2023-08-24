@@ -76,13 +76,25 @@ body {
 }
 
 .global-section {
-  padding: 100px 0;
+  padding: 40px 0;
+}
+
+@media screen and (min-width: 748px) {
+  .global-section {
+    padding: 75px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .global-section {
+    padding: 100px 0;
+  }
 }
 
 /* cell */
 .flex-container {
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: var(--flex-items-gap);
 }
 

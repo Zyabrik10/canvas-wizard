@@ -22,11 +22,13 @@
 .footer-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   margin-left: auto;
 
   font-size: 20px;
   font-weight: 700;
+  justify-content: right;
 }
 
 .footer-list-item {
@@ -43,6 +45,14 @@
   color: var(--def-light-dark);
   font-size: 24px;
   font-weight: 700;
+}
+
+.footer-list-item.dark-theme:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-list-item.light-theme:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .footer-list-item.dark-theme {

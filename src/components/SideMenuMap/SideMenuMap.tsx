@@ -1,4 +1,3 @@
-// import globalCss from "../../css/global.module.css";
 import css from "./styles/SideMenuMap.module.css";
 
 import BookSidebarList from "./BookSidebarList/BookSidebarList";

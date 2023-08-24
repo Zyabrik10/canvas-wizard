@@ -20,7 +20,7 @@ export default function About() {
           What are you going to learn ?
         </h2>
         <p className={`${css["about-p"]} ${globalCss["global-p"]}`}>
-          How to work with canvas <span>using js</span> ?
+          How to work with canvas <span>using js</span>
         </p>
         <div className={css["about-main-box"]}>
           <canvas id="stars-canvas"></canvas>

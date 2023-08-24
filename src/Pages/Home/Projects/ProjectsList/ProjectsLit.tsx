@@ -11,16 +11,17 @@ export default function ProjectsList() {
   interface Item {
     logo: string;
     title: string;
+    link: string
   }
   const items: Array<Item> = [
-    { logo: img1, title: "Game of Life" },
-    { logo: img2, title: "Watching Eyes" },
-    { logo: img3, title: "Pinball" },
+    { logo: img1, title: "Game of Life", link:"https://github.com/Zyabrik10/game-of-life/" },
+    { logo: img2, title: "Eyes Watcher", link:"https://github.com/Zyabrik10/eyes_watcher" },
+    { logo: img3, title: "Pinball", link: "https://github.com/Zyabrik10/pinball_js" },
   ];
   return (
     <ul className={`${css["project-list"]} ${globalCss["flex-container"]} ${globalCss["global-list"]}`}>
-      {items.map(({ logo, title }: Item) => (
-        <ProjectsListItem key={nanoid()} logo={logo} title={title} />
+      {items.map(({ logo, title, link }: Item) => (
+        <ProjectsListItem key={nanoid()} logo={logo} title={title} link={link} />
       ))}
     </ul>
   );

@@ -11,11 +11,6 @@ export function HeaderNav() {
             Book
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink to="/about-us" className={globalCss["global-link"]}>
-            About Us
-          </NavLink>
-        </li> */}
       </ul>
     </nav>
   );

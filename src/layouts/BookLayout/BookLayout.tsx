@@ -11,14 +11,12 @@ export default function BookLayout() {
   return (
     <>
       <Header isContainer={false} position="static" />
-      <div
-        className={`${css["dark-theme"]} ${css["book-global-box"]} switch-theme`}
-        data-dark-theme={css["dark-theme"]}
-        data-light-theme={css["light-theme"]}
-      >
+      <div className={`${css["book-global-box"]}`}>
         <SideMenuMap />
         <main className={`${css['main']} ${globalCss["main"]}`}>
-          <Outlet />
+          <div className={css['container']}>
+            <Outlet />
+          </div>
         </main>
       </div>
       <Footer isContainer={false} />

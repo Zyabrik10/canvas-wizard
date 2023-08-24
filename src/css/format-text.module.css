@@ -1,44 +1,102 @@
-.f-title {
+.titleh2 {
   margin-bottom: 25px;
 }
 
-.f-p {
-  margin-bottom: 20px;
-  letter-spacing: 2px;
+.titleh3 {
+  margin-bottom: 15px;
 }
 
-.f-code-box {
+.p {
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.code-box {
   display: block;
+  width: 100%;
   background: rgb(36, 37, 48);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 20px;
   overflow: auto;
+  margin-bottom: 20px;
+  color: #fff;
 }
 
-.f-var {
+.var {
   color: rgb(210, 0, 218);
 }
 
-.f-varname {
+.varname {
   color: rgb(226, 226, 226);
 }
 
-.f-equal,
-.f-function,
-.f-class,
-.f-lit {
+.equal,
+.function,
+.class,
+.lit {
   color: rgb(236, 95, 0);
 }
 
-.f-this {
+.this {
   color: rgb(0, 225, 255);
 }
 
-.f-mark {
+.mark {
+  padding: 0 5px;
   display: inline-block;
-  background: #aaa;
+  background: rgba(100, 100, 100, 0.5);
   border: 2px solid #888;
   border-radius: 5px;
   color: #fff;
+  margin: 0 2px;
+}
+
+.link {
+  display: inline-block;
+  padding: 0 5px;
+  border: 1px solid;
+}
+
+.link.dark-theme {
+  color: rgb(26, 200, 206);
+  border-color: rgb(26, 200, 206);
+}
+
+.link.light-theme {
+  color: rgb(11, 79, 204);
+  border-color: rgb(11, 79, 204);
+}
+
+.link.dark-theme:hover {
+  background-color: rgb(26, 200, 206);
+  color: #fff;
+}
+
+.link.light-theme:hover {
+  background-color: rgb(11, 79, 204);
+  color: #fff;
+}
+
+.tag {
+  color: #999;
+}
+
+.tag-text {
+  color: red;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 15px;
+  margin: 20px 0;
+  letter-spacing: 1px;
+}
+
+.p:last-child,
+.list:last-child,
+.code-box:last-child {
+  margin-bottom: 0;
 }

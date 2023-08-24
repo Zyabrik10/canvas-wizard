@@ -25,14 +25,14 @@ export default function Book() {
   return (
     <>
       <section>
-        <h2 className={`${format_text["f-title"]} ${globalCss["global-title"]}`}>
+        <h2 className={`${format_text["title"]} ${globalCss["global-title"]}`}>
           Free Canvas Cources
         </h2>
-                <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+                <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           Introducing [Your Website Name]: Unleash Your Creativity with Free
           Canvas Courses, Books, and Projects!
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           Welcome to a digital haven where artistic inspiration and educational
           exploration converge – [Your Website Name]. We are thrilled to present
           a unique platform that opens up a world of creative possibilities
@@ -41,7 +41,7 @@ export default function Book() {
           an eager learner, our website is designed to be your go-to destination
           for honing your skills and embracing the joy of artistic expression.
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           🎨 Explore Diverse Canvas Courses: Our website hosts a rich array of
           free canvas courses crafted to cater to all skill levels. From
           beginners looking to grasp the fundamentals of canvas art to advanced
@@ -50,7 +50,7 @@ export default function Book() {
           in the world of acrylics, oils, mixed media, and more, guided by
           experienced instructors who share their expertise step by step.
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           🖌️ Embark on Captivating Canvas Projects: Sometimes, the best way to
           learn is by doing. That's why we've compiled a series of hands-on
           canvas projects that invite you to roll up your sleeves and get
@@ -60,7 +60,7 @@ export default function Book() {
           each project transforms your workspace into a playground of
           imagination.
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           🌐 Community and Connection: At [Your Website Name], we believe in the
           power of a thriving creative community. Engage with fellow learners,
           share your progress, exchange ideas, and receive constructive
@@ -68,21 +68,21 @@ export default function Book() {
           backgrounds can come together, learn from one another, and form
           meaningful connections that fuel their artistic growth.
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           🆓 Completely Free and Accessible: We are committed to breaking down
           barriers and making creative education accessible to everyone. All the
           courses, books, and projects on our website are absolutely free,
           ensuring that financial limitations never hinder your artistic
           pursuit.
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           🔒 User-Friendly Experience: Navigating [Your Website Name] is a
           breeze. Our user-friendly interface ensures that you can seamlessly
           explore courses, discover books, and embark on projects without any
           technical hurdles. Spend less time figuring out how to use the website
           and more time indulging in your creative passions.
         </p>
-        <p className={`${format_text["f-p"]} ${globalCss["global-p"]}`}>
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           Experience the boundless world of canvas artistry like never before.
           Whether you're a painter at heart, a hobbyist seeking new experiences,
           or simply intrigued by the magic of canvas, [Your Website Name]
@@ -91,12 +91,6 @@ export default function Book() {
           cultivate your love for canvas art with our free courses, books, and
           projects. Your masterpiece awaits – come and create with us!
         </p>
-        {/* <div className={format_text['f-code-box']}>
-          <button className={`${globalCss['global-button']} ${format_text['f-copy-button']}`} type="button">copy</button>
-          <pre className={globalCss['global-p']}>
-            <code className="code"></code>
-          </pre>
-        </div> */}
       </section>
     </>
   );
