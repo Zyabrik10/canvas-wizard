@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/canvas-wizard/static/css/main.8ac63b5b.css",
-    "main.js": "/canvas-wizard/static/js/main.ee60c9bd.js",
+    "main.css": "/canvas-wizard/static/css/main.252d10f6.css",
+    "main.js": "/canvas-wizard/static/js/main.9f38a97b.js",
     "static/media/img1.png": "/canvas-wizard/static/media/img1.417a88b18cfe05c7e305.png",
     "static/media/img2.png": "/canvas-wizard/static/media/img2.e2a05adef2ee35cb9c80.png",
     "static/media/img3.png": "/canvas-wizard/static/media/img3.60aa5f4b32c21c2360a3.png",
@@ -19,11 +19,11 @@
     "static/media/arrow1.svg": "/canvas-wizard/static/media/arrow1.37c7656d33d1fea0d52507318a493766.svg",
     "static/media/arrow2.svg": "/canvas-wizard/static/media/arrow2.720393b75ddeaf44fbd1d517995c6140.svg",
     "static/media/api-logo.svg": "/canvas-wizard/static/media/api-logo.3cfcf2b29ce91d5ab1c345b15707a0de.svg",
-    "main.8ac63b5b.css.map": "/canvas-wizard/static/css/main.8ac63b5b.css.map",
-    "main.ee60c9bd.js.map": "/canvas-wizard/static/js/main.ee60c9bd.js.map"
+    "main.252d10f6.css.map": "/canvas-wizard/static/css/main.252d10f6.css.map",
+    "main.9f38a97b.js.map": "/canvas-wizard/static/js/main.9f38a97b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ac63b5b.css",
-    "static/js/main.ee60c9bd.js"
+    "static/css/main.252d10f6.css",
+    "static/js/main.9f38a97b.js"
   ]
 }
