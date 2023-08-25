@@ -1,0 +1,1 @@
+export const selectMobileMenu = (state:any) => state.mobileMenu;

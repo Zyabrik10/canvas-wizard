@@ -16,7 +16,8 @@ type Book = {
   terms: Array<Term>;
 };
 
-export default function BookSidebarItem({ title, terms }: Book) {
+
+export default function BookSidebarItem({ title, terms}: Book) {
   const [isOpenedSubMenu, setIsOpenedSubMenu] = useState<boolean>(false);
 
   function buttonHandler() {

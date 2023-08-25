@@ -15,7 +15,11 @@ export default function BookTermList({ terms }: { terms: Array<Term> }) {
       // style={{ display: "none" }}
     >
       {terms.map(({ title, path }: Term) => (
-        <BookTermItem key={nanoid()} title={title} path={path} />
+        <BookTermItem
+          key={nanoid()}
+          title={title}
+          path={path}
+        />
       ))}
     </ul>
   );
