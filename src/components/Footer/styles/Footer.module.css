@@ -17,6 +17,7 @@
 .footer-content {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .footer-list {
