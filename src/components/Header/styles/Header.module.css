@@ -19,10 +19,6 @@
   align-items: center;
 }
 
-.header-logo {
-  margin-right: 20px;
-}
-
 .header-nav-link {
   display: inline-block;
   padding: 10px;
