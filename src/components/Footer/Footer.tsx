@@ -24,7 +24,7 @@ export default function Footer({ isContainer }: FooterProps) {
       data-light-theme={css["light-theme"]}
     >
       {isContainer ? (
-        <div className={globalCss.container}>
+        <div className={globalCss.container} style={{padding:"0"}}>
           <FooterContent />
         </div>
       ) : (

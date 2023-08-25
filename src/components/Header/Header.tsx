@@ -35,7 +35,7 @@ export default function Header({
       }}
     >
       {isContainer ? (
-        <div className={`${globalCss.container}`}>
+        <div className={`${globalCss.container}`} style={{padding:"0"}}>
           <HeaderContent />
         </div>
       ) : (
