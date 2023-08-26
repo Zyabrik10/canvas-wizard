@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../redux/user/user-selector";
-import { adaptTheme } from "../../../ts/theme/adapt-theme";
+import { selectUser } from "../../../../redux/user/user-selector";
+import { adaptTheme } from "../../../../ts/theme/adapt-theme";
 
 import {
   FormatP,
@@ -10,8 +10,8 @@ import {
   FormatLink,
   FormatTitleH3,
   FormatCode,
-  FormatListUl
-} from "../../../components/FormatedComponents/FormatedComponents";
+  FormatListUl,
+} from "../../../../components/FormatedComponents/FormatedComponents";
 
 import globalCss from '../../../css/global.module.css';
 

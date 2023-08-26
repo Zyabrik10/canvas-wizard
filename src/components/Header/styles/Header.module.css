@@ -34,6 +34,10 @@
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+.header-logo {
+  margin-right: 5px;
+}
+
 .header-list,
 .header-nav-list {
   display: flex;

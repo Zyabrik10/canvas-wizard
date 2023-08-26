@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../redux/user/user-selector";
-import { adaptTheme } from "../../../ts/theme/adapt-theme";
+import { selectUser } from "../../../../redux/user/user-selector";
+import { adaptTheme } from "../../../../ts/theme/adapt-theme";
 
 import {
   FormatP,
@@ -9,7 +9,7 @@ import {
   FormatMark,
   FormatLink,
   FormatCode,
-} from "../../../components/FormatedComponents/FormatedComponents";
+} from "../../../../components/FormatedComponents/FormatedComponents";
 
 export default function AboutCanvas() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -36,16 +36,19 @@ export default function AboutCanvas() {
 </html>`}</FormatCode>
       <FormatP>
         {`<canvas>`} - HTML element that provides you with varaity functoins for
-        drawing graphics. In order to start using it you should understand
-        basics of HTML and you have to know basics of JavaScript. Without these
-        knowledge you will encounter a non-understandable text problem.
+        drawing graphics.
+      </FormatP>
+      <FormatP>
+        In order to start using it you should understand basics of HTML and you
+        have to know basics of JavaScript. Without these knowledge you will
+        encounter a non-understandable text problem.
       </FormatP>
       <FormatP>
         Also you will need some basics knowledge of math and physics. Don`t
-        worry if you don`t remember almost anything. I will tell about theme.
+        worry if you don`t remember almost anything. I will tell about them.
       </FormatP>
       <FormatP>
-        With Canvas you develop interesting things e.g for your website, for
+        With Canvas you develop interesting things. For example: for your website, for
         just relaxing, simulating physics or even game. This can, for instance,
         be used to draw graphs, combine photos, or create simple animations.
       </FormatP>

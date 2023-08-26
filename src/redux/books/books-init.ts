@@ -17,7 +17,7 @@ export const initialState: Array<Book> = [
         path: "/book/about-canvas",
       },
       {
-        title: "Canvas API",
+        title: "CANVAS API",
         path: "/book/canvas-api",
       },
     ],
@@ -33,18 +33,18 @@ export const initialState: Array<Book> = [
         title: "Distance between objects",
         path: "/book/distance-between-objects",
       },
-      {
-        title: "Collision between reactangles",
-        path: "/book/collision-between-reactangles",
-      },
-      {
-        title: "Collision between circles",
-        path: "/book/collision-between-circles",
-      },
-      {
-        title: "Collision between reactangle and cirlcle",
-        path: "/book/collision-between-reactangles-cirlcles",
-      },
+      // {
+      //   title: "Collision between reactangles",
+      //   path: "/book/collision-between-reactangles",
+      // },
+      // {
+      //   title: "Collision between circles",
+      //   path: "/book/collision-between-circles",
+      // },
+      // {
+      //   title: "Collision between reactangle and cirlcle",
+      //   path: "/book/collision-between-reactangles-cirlcles",
+      // },
     ],
   },
   {
@@ -64,10 +64,6 @@ export const initialState: Array<Book> = [
       },
       {
         title: "Function Update",
-        path: "/book/projects/stars/function-update",
-      },
-      {
-        title: "",
         path: "/book/projects/stars/function-update",
       },
     ],

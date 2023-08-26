@@ -15,8 +15,8 @@ export default function Aboutlist() {
   const items: Array<Item> = [
     {
       logo: api_logo,
-      title: "API Canvas",
-      text: `What is API Canvas and how to deal with it properly`,
+      title: "Canvas API",
+      text: `What is Canvas API and how to deal with it properly`,
     },
     {
       logo: project_logo,
