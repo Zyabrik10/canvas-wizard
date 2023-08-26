@@ -14,13 +14,45 @@
 .code-box {
   display: block;
   width: 100%;
+
   background: rgb(36, 37, 48);
+
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2);
+
   padding: 20px;
+
   overflow: auto;
   margin-bottom: 20px;
+
   color: #fff;
+
+  position: relative;
+}
+
+.code-box > .copy-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 5px;
+
+  padding: 0 10px;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.code-box > .copy-button:hover {
+  background: #fff;
+  color: #333;
+}
+
+.code-box:hover > .copy-button {
+  opacity: 1;
 }
 
 .var {
@@ -78,14 +110,6 @@
   color: #fff;
 }
 
-.tag {
-  color: #999;
-}
-
-.tag-text {
-  color: red;
-}
-
 .list {
   display: flex;
   flex-direction: column;
@@ -99,4 +123,105 @@
 .list:last-child,
 .code-box:last-child {
   margin-bottom: 0;
+}
+
+/* HTML */
+
+.tag {
+  color: rgb(255, 146, 74);
+}
+
+.tagName {
+  color: rgb(74, 219, 255);
+}
+
+.tag-text {
+  color: red;
+}
+
+.attrName {
+  color: rgb(210, 0, 218);
+}
+
+.equal {
+  color: rgb(234, 106, 238);
+}
+
+.quote,
+.text {
+  color: rgb(228, 215, 33);
+}
+
+.attrValue {
+  color: rgb(228, 215, 33);
+}
+
+/* JavaScript */
+
+.varDec {
+  color: rgb(247, 0, 255);
+}
+
+.varName {
+  color: rgb(106, 148, 238);
+}
+
+.object {
+  color: rgb(40, 211, 40);
+}
+
+.property {
+  color: red;
+}
+
+.method {
+  color: rgb(109, 109, 255);
+}
+
+.dot {
+  color: rgb(70, 192, 233);
+}
+
+.coma {
+  color: rgb(70, 192, 233);
+}
+
+.bracket {
+  color: yellow;
+}
+
+.semicoln {
+  color: rgb(226, 155, 226);
+}
+
+.class {
+  color: yellow;
+}
+
+.functionName {
+  color: yellow;
+}
+
+.className {
+  color: yellow;
+}
+
+.literal {
+  color: orange;
+}
+
+.clasName {
+  color: pink;
+}
+
+.comment {
+  color: #888;
+}
+
+.sign {
+  color: #fff;
+}
+
+.number {
+  color: rgb(196, 34, 34);
 }

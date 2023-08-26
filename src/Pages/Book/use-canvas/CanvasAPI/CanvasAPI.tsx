@@ -13,6 +13,22 @@ import {
   FormatListUl,
 } from "../../../../components/FormatedComponents/FormatedComponents";
 
+import {
+  Dot,
+  VarDec,
+  VarName,
+  Equal,
+  Bracket,
+  Quote,
+  Method,
+  Object,
+  Semicoln,
+  Text,
+  Comment,
+  Br,
+  Coma,
+} from "../../../../components/ColoredCodeComponents/ColoredCodeComponents";
+
 import globalCss from "../../../css/global.module.css";
 
 export default function CanvasAPI() {
@@ -45,9 +61,37 @@ export default function CanvasAPI() {
         Before we start, we need to get access to CANVAS API. Canvas context
         provides us it. The following code is how to do that.
       </FormatP>
-      <FormatCode id="">{`const canvas = document.querySelector("canvas"); // We need to find canvas first to get its context
-const ctx = canvas.getContext("2d"); // Our context
-`}</FormatCode>
+      <FormatCode id="">
+        <VarDec value="const" />
+        <VarName value="canvas" />
+        <Equal />
+        <Object value="document" />
+        <Dot />
+        <Method value="querySelector" />
+        <Bracket value="(" />
+        <Quote value="'" />
+        <Text value="canvas" />
+        <Quote value="'" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="We need to find canvas first to get its context" />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="ctx" />
+        <Equal />
+        <Object value="canvas" />
+        <Dot />
+        <Method value="getContext" />
+        <Bracket value="(" />
+        <Quote value="'" />
+        <Text value="2d" />
+        <Quote value="'" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="Our context" />
+      </FormatCode>
       <FormatP>
         First we declare a variable wich contains a canvas element. We can find
         canvas using:{" "}
@@ -57,17 +101,56 @@ const ctx = canvas.getContext("2d"); // Our context
         .
       </FormatP>
       <FormatCode id="">
-        const canvas = document.querySelector("canvas");
+        <VarDec value="const" />
+        <VarName value="canvas" />
+        <Equal />
+        <Object value="document" />
+        <Dot />
+        <Method value="querySelector" />
+        <Bracket value="(" />
+        <Quote value="'" />
+        <Text value="canvas" />
+        <Quote value="'" />
+        <Bracket value=")" />
+        <Semicoln />
       </FormatCode>
       <FormatP>
         Then we need to get our context using canvas method getContext and "2d"
         as argument.
       </FormatP>
-      <FormatCode id="">const ctx = canvas.getContext("2d");</FormatCode>
+      <FormatCode id="">
+        {" "}
+        <VarDec value="const" />
+        <VarName value="ctx" />
+        <Equal />
+        <Object value="canvas" />
+        <Dot />
+        <Method value="getContext" />
+        <Bracket value="(" />
+        <Quote value="'" />
+        <Text value="2d" />
+        <Quote value="'" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>Now we have an access to CANVAS API.</FormatP>
 
       <FormatTitleH3>fillRect</FormatTitleH3>
-      <FormatCode id="">{`ctx.fillRect(x, y, width, height);`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="fillRect" />
+        <Bracket value="(" />
+        <VarName value="x" />
+        <Coma />
+        <VarName value="y" />
+        <Coma />
+        <VarName value="width" />
+        <Coma />
+        <VarName value="height" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>
         fillRect - is a method that draws reactangle and fills it at once.
       </FormatP>
@@ -93,7 +176,21 @@ const ctx = canvas.getContext("2d"); // Our context
       </iframe>
 
       <FormatTitleH3>clearRect</FormatTitleH3>
-      <FormatCode id="">{`ctx.clearRect(x, y, width, height);`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="clearRect" />
+        <Bracket value="(" />
+        <VarName value="x" />
+        <Coma />
+        <VarName value="y" />
+        <Coma />
+        <VarName value="width" />
+        <Coma />
+        <VarName value="height" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>
         clearRect - clears rectangle area with transparent color.
       </FormatP>
@@ -122,7 +219,14 @@ const ctx = canvas.getContext("2d"); // Our context
       </iframe>
 
       <FormatTitleH3>fill</FormatTitleH3>
-      <FormatCode id="">{`ctx.fill();`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="fill" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>fill - fill marked area.</FormatP>
 
       <iframe
@@ -140,7 +244,14 @@ const ctx = canvas.getContext("2d"); // Our context
       </iframe>
 
       <FormatTitleH3>stroke</FormatTitleH3>
-      <FormatCode id="">{`ctx.stroke();`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="stroke" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>stroke - stroke area.</FormatP>
 
       <iframe
@@ -158,7 +269,21 @@ const ctx = canvas.getContext("2d"); // Our context
       </iframe>
 
       <FormatTitleH3>rect</FormatTitleH3>
-      <FormatCode id="">{`ctx.rect(x, y, width, height);`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="rect" />
+        <Bracket value="(" />
+        <VarName value="x" />
+        <Coma />
+        <VarName value="y" />
+        <Coma />
+        <VarName value="width" />
+        <Coma />
+        <VarName value="height" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>react - mark rectangle area with transparent color.</FormatP>
       <FormatP>
         To fill or stroke marked rectangle use <FormatMark>fill()</FormatMark>{" "}
@@ -187,7 +312,25 @@ const ctx = canvas.getContext("2d"); // Our context
       </iframe>
 
       <FormatTitleH3>arc</FormatTitleH3>
-      <FormatCode id="">{`ctx.arc(x, y, radius, startAngle, endAngle, counterClockWise);`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="arc" />
+        <Bracket value="(" />
+        <VarName value="x" />
+        <Coma />
+        <VarName value="y" />
+        <Coma />
+        <VarName value="radius" />
+        <Coma />
+        <VarName value="startAngle" />
+        <Coma />
+        <VarName value="endAngle" />
+        <Coma />
+        <VarName value="counterClockWise" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>arc - mark a circle area with transparent color.</FormatP>
       <FormatP>
         To fill or stroke marked rectangle use <FormatMark>fill()</FormatMark>{" "}
@@ -217,8 +360,19 @@ const ctx = canvas.getContext("2d"); // Our context
         by Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
       </iframe>
+
       <FormatTitleH3>moveTo</FormatTitleH3>
-      <FormatCode id="">{`ctx.moveTo(x, y);`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="moveTo" />
+        <Bracket value="(" />
+        <VarName value="x" />
+        <Coma />
+        <VarName value="y" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>moveTo - mark a start point of a line.</FormatP>
       <FormatP>
         In order to draw line we need use <FormatMark>lineTo()</FormatMark>{" "}
@@ -229,8 +383,19 @@ const ctx = canvas.getContext("2d"); // Our context
         <li>x - x position of point</li>
         <li>y - y position of point</li>
       </FormatListUl>
+
       <FormatTitleH3>lineTo</FormatTitleH3>
-      <FormatCode id="">{`ctx.lineTo(x, y, width, height);`}</FormatCode>
+      <FormatCode id="">
+        <Object value="ctx" />
+        <Dot />
+        <Method value="lineTo" />
+        <Bracket value="(" />
+        <VarName value="x" />
+        <Coma />
+        <VarName value="y" />
+        <Bracket value=")" />
+        <Semicoln />
+      </FormatCode>
       <FormatP>lineTo - mark a endPoint point of a line.</FormatP>
       <FormatP>In order to use draw line we need lineTo method.</FormatP>
       <FormatP>Method takes 2 parametrs:</FormatP>

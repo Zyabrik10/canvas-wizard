@@ -1,6 +1,6 @@
 import globalCss from "../../css/global.module.css";
 import formatText from "../../css/format-text.module.css";
-import { JSX } from "react";
+import { JSX, useRef } from "react";
 
 type ChildrenType =
   | Array<string>
@@ -69,14 +69,26 @@ export function FormatLink({ children, href }: FormatLinkType) {
 }
 
 export function FormatCode({ id, children }: FormatCodeType) {
+
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  function buttonHandler() {
+    const parentElement = buttonRef.current?.parentElement!;
+    const copyText = parentElement.querySelector(".code")!; 
+
+    navigator.clipboard.writeText(copyText.textContent!);
+  }
+
   return (
     <div id={id} className={formatText["code-box"]}>
-      {/* <button
+      <button
+        ref={buttonRef}
         className={`${globalCss["global-button"]} ${formatText["copy-button"]}`}
         type="button"
+        onClick={buttonHandler}
       >
         copy
-      </button> */}
+      </button>
       <pre className={globalCss["global-p"]}>
         <code className="code">{children ? children : null}</code>
       </pre>

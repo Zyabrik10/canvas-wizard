@@ -11,6 +11,15 @@ import {
   FormatCode,
 } from "../../../../components/FormatedComponents/FormatedComponents";
 
+import {
+  OpenTag,
+  CloseTag,
+  Br,
+  OpenTagWithAttr,
+  CloseTagWithAttr,
+  Docytype
+} from "../../../../components/ColoredCodeComponents/ColoredCodeComponents";
+
 export default function AboutCanvas() {
   const { theme }: { theme: string } = useSelector(selectUser);
 
@@ -21,21 +30,59 @@ export default function AboutCanvas() {
   return (
     <>
       <FormatTitleH2>What is Canvas?</FormatTitleH2>
-      <FormatCode id="canvas">{`<canvas></canvas>`}</FormatCode>
-      <FormatCode id="canvas">{`<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Canvas</title>
-</head>
-<body>
-    <canvas></canvas>
-    <script src="./js/main.js"></script>
-</body>
-</html>`}</FormatCode>
+      <FormatCode id="">
+        <OpenTag tagName="canvas" />
+        <CloseTag tagName="canvas" />
+      </FormatCode>
+      <FormatCode id="">
+        <Docytype />
+        <Br />
+        <OpenTagWithAttr
+          tagName="html"
+          attrs={[{ name: "lang", value: "en" }]}
+        />
+        <Br />
+        <OpenTag tagName="head" />
+        <Br />{" "}
+        <CloseTagWithAttr
+          tagName="meta"
+          attrs={[{ name: "charset", value: "utf-8" }]}
+        />
+        <Br />{" "}
+        <CloseTagWithAttr
+          tagName="meta"
+          attrs={[
+            { name: "name", value: "viewport" },
+            { name: "content", value: "width=device-width" },
+            { name: "initial-scale", value: "1" },
+          ]}
+        />
+        <Br />
+        <OpenTag tagName="title" />
+        Canvas
+        <CloseTag tagName="title" />
+        <Br />
+        <CloseTag tagName="head" />
+        <Br />
+        <OpenTag tagName="body" />
+        <Br />
+        {"  "}
+        <OpenTag tagName="canvas" />
+        <CloseTag tagName="canvas" />
+        <Br />
+        <OpenTag tagName="body" />
+        <Br />
+        <OpenTagWithAttr
+          tagName="script"
+          attrs={[{ name: "src", value: "./js/main.js" }]}
+        />
+        <CloseTag tagName="script" />
+        <Br />
+        <CloseTag tagName="html" />
+      </FormatCode>
       <FormatP>
-        {`<canvas>`} - HTML element that provides you with varaity functoins for
+               <OpenTag tagName="canvas" />
+        <CloseTag tagName="canvas" /> - <FormatMark>HTML element</FormatMark> that provides you with varaity functoins for
         drawing graphics.
       </FormatP>
       <FormatP>
@@ -48,9 +95,10 @@ export default function AboutCanvas() {
         worry if you don`t remember almost anything. I will tell about them.
       </FormatP>
       <FormatP>
-        With Canvas you develop interesting things. For example: for your website, for
-        just relaxing, simulating physics or even game. This can, for instance,
-        be used to draw graphs, combine photos, or create simple animations.
+        With Canvas you develop interesting things. For example: for your
+        website, for just relaxing, simulating physics or even game. This can,
+        for instance, be used to draw graphs, combine photos, or create simple
+        animations.
       </FormatP>
       <FormatP>
         Here is a few examples what you can do with only canvas and js.

@@ -7,11 +7,30 @@ import {
   FormatP,
   FormatTitleH2,
   FormatMark,
-  FormatLink,
   FormatTitleH3,
   FormatCode,
   FormatListUl,
 } from "../../../../components/FormatedComponents/FormatedComponents";
+
+import {
+  Dot,
+  VarDec,
+  VarName,
+  Equal,
+  Bracket,
+  Method,
+  Object,
+  Semicoln,
+  Comment,
+  Br,
+  Sign,
+  Coma,
+  ArrowFunction,
+  Number,
+  Property,
+  Literal,
+  FunctionName,
+} from "../../../../components/ColoredCodeComponents/ColoredCodeComponents";
 
 import globalCss from "../../../css/global.module.css";
 
@@ -30,9 +49,40 @@ export default function RandomValue() {
 
       <FormatTitleH3>Function ready to be used</FormatTitleH3>
       <FormatCode id="">
-        const randInt = (min, max) {"=>"} Math.floor(Math.random() * (max - min
-        + 1) + min);
+        <VarDec value="const" />
+        <VarName value="randInt" />
+        <Equal />
+        <Bracket value="(" />
+        <VarName value="min" />
+        <Coma />
+        <VarName value="max" />
+        <Bracket value=")" />
+        <ArrowFunction />
+        <Object value="Math" />
+        <Dot />
+        <Method value="floor" />
+        <Bracket value="(" />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="max" />
+        <Sign value="-" />
+        <VarName value="min" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Sign value="+" />
+        <VarName value="min" />
+        <Bracket value=")" />
+        <Semicoln />
       </FormatCode>
+
+      {/*  */}
+
       <FormatTitleH3>Inroducing Math.random()</FormatTitleH3>
       <FormatP>
         Method <FormatMark>random()</FormatMark> in class{" "}
@@ -47,8 +97,27 @@ export default function RandomValue() {
         <FormatMark>0.999...</FormatMark>.
       </FormatP>
       <FormatCode id="">
-        {`const randomValue = Math.random();
-console.log(randomValue); // 0.09820142543127064`}
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
+
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <VarName value="randomValue" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="0.09820142543127064" />
       </FormatCode>
 
       {/*  */}
@@ -61,9 +130,41 @@ console.log(randomValue); // 0.09820142543127064`}
       </FormatP>
       {/* make info that we need to add + 1 */}
       <FormatCode id="">
-        {`const randomValue = Math.random(); // random value from 0 to 1
-const anyValue = 10;
-console.log(randomValue * (anyValue + 1)); // 5.9242883533580475`}
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="anyValue" />
+        <Equal />
+        <Number value="10" />
+        <Semicoln />
+
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <VarName value="randomValue" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="anyValue" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="5.9242883533580475" />
       </FormatCode>
       <FormatP>
         As you can see now we have random value from <FormatMark>0</FormatMark>{" "}
@@ -79,9 +180,46 @@ console.log(randomValue * (anyValue + 1)); // 5.9242883533580475`}
         <FormatMark>Math</FormatMark>.
       </FormatP>
       <FormatCode id="">
-        {`const randomValue = Math.random(); // random value from 0 to 1
-const anyValue = 10;
-console.log(Math.floor(randomValue * anyValue)); // 7`}
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="anyValue" />
+        <Equal />
+        <Number value="10" />
+        <Semicoln />
+
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <Object value="Math" />
+        <Dot />
+        <Method value="floor" />
+        <Bracket value="(" />
+        <VarName value="randomValue" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="anyValue" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Bracket value=")" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="7" />
       </FormatCode>
 
       {/*  */}
@@ -99,9 +237,36 @@ console.log(Math.floor(randomValue * anyValue)); // 7`}
         our random value.
       </FormatP>
       <FormatCode id="">
-        {`const randomValue = Math.random(); // random value from 0 to 1
-const anyValue = 5;
-console.log(randomValue + anyValue); // 5.256558353604628`}
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="anyValue" />
+        <Equal />
+        <Number value="5" />
+        <Semicoln />
+
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <VarName value="randomValue" />
+        <Sign value="+" />
+        <VarName value="anyValue" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="5.256558353604628" />
       </FormatCode>
 
       {/*  */}
@@ -118,15 +283,79 @@ console.log(randomValue + anyValue); // 5.256558353604628`}
       </FormatP>
       <FormatP>Let`s try to combine theme.</FormatP>
       <FormatCode id="">
-        {`const randomValue = Math.random(); // random value from 0 to 1
-const minValue = 2;
-const maxValue = 5;
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
 
-const minRandomValue = randomValue * (minValue + 1); // random value between 0 an 2
-const randomValueBetweenMinAndMax = Math.floor(minRandomValue) + maxValue; // 0 + 5 = 5, 2 + 5 = 7!!!
-console.log( Math.floor( randomValue * (minValue + 1)) + maxValue);
+        <Br />
 
-console.log(randomValueBetweenMinAndMax); // 5, 6, 7`}
+        <VarDec value="const" />
+        <VarName value="minValue" />
+        <Equal />
+        <Number value="2" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="maxValue" />
+        <Equal />
+        <Number value="5" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="minRandomValue" />
+        <Equal />
+        <VarName value="randomValue" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="minValue" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value between 0 and 2" />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="randomValueBetweenMinAndMax" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Property value="floor" />
+        <Bracket value="(" />
+        <VarName value="minRandomValue" />
+        <Sign value="+" />
+        <VarName value="maxValue" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="0 + 5 = 5, 2 + 5 = 7!!!" />
+        <Br />
+        <Br />
+
+        <Comment value="console.log(Math.floor(randomValue * (minValue + 1)) + maxValue);" />
+
+        <Br />
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <VarName value="randomValueBetweenMinAndMax" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="5, 6, 7" />
       </FormatCode>
       <FormatP>
         Unfortunately we encountered a broblem. We get random value between{" "}
@@ -139,21 +368,9 @@ console.log(randomValueBetweenMinAndMax); // 5, 6, 7`}
       <FormatP>
         From <FormatMark>minRandomValue</FormatMark> we get random value between{" "}
         <FormatMark>0</FormatMark> and <FormatMark>2</FormatMark> and then we
-        add it to <FormatMark>maxValue</FormatMark> <FormatMark>(0, 2) + 5 = (5, 7)</FormatMark>.
+        add it to <FormatMark>maxValue</FormatMark>{" "}
+        <FormatMark>(0, 2) + 5 = (5, 7)</FormatMark>.
       </FormatP>
-      {/* <FormatP>
-        If we imagine that we got <FormatMark>0</FormatMark> as{" "}
-        <FormatMark>minRandomValue</FormatMark> then add it to{" "}
-        <FormatMark>5</FormatMark> as <FormatMark>maxValue</FormatMark> it would
-        be <FormatMark>5</FormatMark> as{" "}
-        <FormatMark>randomValueBetweenMinAndMax</FormatMark>.
-      </FormatP>
-      <FormatP>
-        Now we do the same with <FormatMark>2</FormatMark> as{" "}
-        <FormatMark>minRandomValue</FormatMark> and get{" "}
-        <FormatMark>7</FormatMark> as{" "}
-        <FormatMark>randomValueBetweenMinAndMax</FormatMark>
-      </FormatP> */}
       <FormatListUl>
         <li>0 + 5 = 5 - min output value</li>
         <li>2 + 5 = 7 - max output value</li>
@@ -172,14 +389,77 @@ console.log(randomValueBetweenMinAndMax); // 5, 6, 7`}
         <FormatMark>5 - 2 = 3</FormatMark>.
       </FormatP>
       <FormatCode id="">
-        {`const randomValue = Math.random(); // random value from 0 to 1
-const minValue = 2;
-const maxValue = 5;
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
 
-const differenceBetweenMinAndMax = maxValue - minValue;
-const randomValueBetweenDiffernce = Math.floor(Math.random() * (differenceBetweenMinAndMax + 1));
+        <Br />
 
-console.log(randomValueBetweenDiffernce); // 0, 1, 2, 3`}
+        <VarDec value="const" />
+        <VarName value="minValue" />
+        <Equal />
+        <Number value="2" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="maxValue" />
+        <Equal />
+        <Number value="5" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="differenceBetweenMinAndMax" />
+        <Equal />
+        <VarName value="maxValue" />
+        <Sign value="-" />
+        <VarName value="minValue" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="randomValueBetweenDiffernce" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="floor" />
+        <Bracket value="(" />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="differenceBetweenMinAndMax" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Bracket value=")" />
+        <Semicoln />
+
+        <Br />
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <VarName value="randomValueBetweenDiffernce" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="0, 1, 2, 3" />
       </FormatCode>
       <FormatP>
         Let`s see what we will get if add minValue to the random value of the
@@ -193,38 +473,208 @@ console.log(randomValueBetweenDiffernce); // 0, 1, 2, 3`}
         Congratulations, we finnaly get this range that we need for our random
         value between. Final result is below.
       </FormatP>
-      <FormatCode id="">{`const randomValue = Math.random(); // random value from 0 to 1
-const minValue = 2;
-const maxValue = 5;
+      <FormatCode id="">
+        <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
 
-const rangeBetweenMinAndMax = maxValue - minValue;
-const randomValueBetweenMinAndMax = Math.floor(Math.random() * (rangeBetweenMinAndMax + 1) + minValue);
+        <Semicoln />
+        <Comment value="random value from 0 to 1" />
 
-console.log(randomValueBetweenMinAndMax); // 2, 3, 4, 5`}</FormatCode>
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="minValue" />
+        <Equal />
+        <Number value="2" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="maxValue" />
+        <Equal />
+        <Number value="5" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="rangeBetweenMinAndMax" />
+        <Equal />
+        <VarName value="maxValue" />
+        <Sign value="-" />
+        <VarName value="minValue" />
+        <Semicoln />
+
+        <Br />
+
+        <VarDec value="const" />
+        <VarName value="randomValueBetweenDiffernce" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="floor" />
+        <Bracket value="(" />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="rangeBetweenMinAndMax" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Sign value="+" />
+        <VarName value="minValue" />
+        <Bracket value=")" />
+        <Semicoln />
+
+        <Br />
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log" />
+        <Bracket value="(" />
+        <VarName value="randomValueBetweenMinAndMax" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="2, 3, 4, 5" />
+      </FormatCode>
       <FormatP>
         Let`s replace this code into function to reuse it in the future.
       </FormatP>
-      <FormatCode id="">{`function randInt(minValue, maxvalue){
-    const randomValue = Math.random();
-    
-    const rangeBetweenMinAndMax = maxValue - minValue;
-    
-    const randomValueBetweenMinAndMax = Math.floor(Math.random() * (rangeBetweenMinAndMax + 1) + minValue);
-    
-    return randomValueBetweenMinAndMax;
-}
+      <FormatCode id="">
+        <Literal value="function" />
+        <FunctionName value="randInt" />{" "}
+        <Bracket value="(" />
+        <VarName value="min" />
+        <Coma />
+        <VarName value="max" />
+        <Bracket value=")" />
+        <Bracket value="{" />
+        <Br /> <VarDec value="const" />
+        <VarName value="randomValue" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Br /> <VarDec value="const" />
+        <VarName value="rangeBetweenMinAndMax" />
+        <Equal />
+        <VarName value="maxValue" />
+        <Sign value="-" />
+        <VarName value="minValue" />
+        <Semicoln />
+        <Br /> <VarDec value="const" />
+        <VarName value="randomValueBetweenDiffernce" />
+        <Equal />
+        <Object value="Math" />
+        <Dot />
+        <Method value="floor" />
+        <Bracket value="(" />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="rangeBetweenMinAndMax" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Sign value="+" />
+        <VarName value="minValue" />
+        <Bracket value=")" />
+        <Semicoln />
+        <Br />
+        <Br /> <Literal value="return" />
+        <VarName value="randomValueBetweenDiffernce" />
+        <Semicoln />
+        <Br />
+        <Bracket value="}" />
 
-const minValue = 50;
-const maxValue = 100;
+        <Br />
+        <Br />
+        
+        <VarDec value="const" />
+        <VarName value="minValue" />
+        <Equal />
+        <Number value="50" />
+        <Semicoln />
 
-console.log(randInt(minValue, maxValue)); // 81`}</FormatCode>
+        <Br />
+        
+        <VarDec value="const" />
+        <VarName value="maxValue" />
+        <Equal />
+        <Number value="100" />
+        <Semicoln />
+
+        <Br />
+        <Br />
+
+        <Object value="console" />
+        <Dot />
+        <Method value="log"/>
+        <Bracket value="(" />
+        <FunctionName value="randInt"/>
+        <Bracket value="(" />
+        <VarName value="minValue" />
+        <Coma/>
+        <VarName value="maxValue"/>
+        <Bracket value=")"/>
+        <Bracket value=")" />
+        <Semicoln />
+        <Comment value="81" />
+      </FormatCode>
       <FormatP>
         Now we understand what is going on inside of{" "}
         <FormatMark>randInt()</FormatMark>. Let`s make it smaller.
       </FormatP>
       <FormatCode id="">
-        const randInt = (min, max) {"=>"} Math.floor(Math.random() * (max - min
-        + 1) + min);
+        <VarDec value="const" />
+        <VarName value="randInt" />
+        <Equal />
+        <Bracket value="(" />
+        <VarName value="min" />
+        <Coma />
+        <VarName value="max" />
+        <Bracket value=")" />
+        <ArrowFunction />
+        <Object value="Math" />
+        <Dot />
+        <Method value="floor" />
+        <Bracket value="(" />
+        <Object value="Math" />
+        <Dot />
+        <Method value="random" />
+        <Bracket value="(" />
+        <Bracket value=")" />
+        <Sign value="*" />
+        <Bracket value="(" />
+        <VarName value="max" />
+        <Sign value="-" />
+        <VarName value="min" />
+        <Sign value="+" />
+        <Number value="1" />
+        <Bracket value=")" />
+        <Sign value="+" />
+        <VarName value="min" />
+        <Bracket value=")" />
+        <Semicoln />
       </FormatCode>
     </>
   );
