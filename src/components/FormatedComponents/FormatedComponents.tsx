@@ -24,8 +24,8 @@ type FormatCodeType = {
 };
 
 type FormatListType = {
-    children: Array<JSX.Element> | JSX.Element
-}
+  children: Array<JSX.Element> | JSX.Element;
+};
 
 export function FormatP({ children }: FormatTextType) {
   return (
@@ -50,7 +50,7 @@ export function FormatTitleH3({ children }: FormatTextType) {
 }
 
 export function FormatMark({ children }: FormatTextType) {
-  return <span className={`${formatText["mark"]}`}>{children}</span>;
+  return <mark className={`${formatText["mark"]}`}>{children}</mark>;
 }
 
 export function FormatLink({ children, href }: FormatLinkType) {
@@ -69,12 +69,11 @@ export function FormatLink({ children, href }: FormatLinkType) {
 }
 
 export function FormatCode({ id, children }: FormatCodeType) {
-
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   function buttonHandler() {
     const parentElement = buttonRef.current?.parentElement!;
-    const copyText = parentElement.querySelector(".code")!; 
+    const copyText = parentElement.querySelector(".code")!;
 
     navigator.clipboard.writeText(copyText.textContent!);
   }
@@ -97,7 +96,5 @@ export function FormatCode({ id, children }: FormatCodeType) {
 }
 
 export function FormatListUl({ children }: FormatListType) {
-  return (
-      <ul className={formatText['list']}>{children}</ul>
-  );
+  return <ul className={formatText["list"]}>{children}</ul>;
 }

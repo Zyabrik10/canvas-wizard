@@ -1,0 +1,56 @@
+/* info box */
+.info-box {
+  width: 100%;
+  overflow-x: auto;
+
+  border-radius: 10px;
+
+  padding: 15px;
+  border-left: 5px solid var(--color);
+  border-right: 5px solid var(--color);
+
+  margin-bottom: 20px;
+
+  display: flex;
+  gap: 10px;
+
+  --color: rgb(0, 225, 255);
+}
+
+.info-box.row {
+  flex-direction: row;
+}
+
+.info-box.column {
+  flex-direction: column;
+}
+
+.info-box.dark-theme {
+  background: rgb(71, 71, 72);
+  color: #fff;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.info-box.light-theme {
+  background: rgb(253, 253, 254);
+  color: #333;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.info-box-marker {
+  color: var(--color);
+
+  display: flex;
+
+  width: 30px;
+  height: 30px;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 100%;
+
+  border: 2px solid currentColor;
+
+  font-weight: bold;
+}

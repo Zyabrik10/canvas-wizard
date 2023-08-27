@@ -11,14 +11,20 @@ import {
   FormatCode,
 } from "../../../../components/FormatedComponents/FormatedComponents";
 
+import InfoBox from "../../../../components/InfoBox/InfoBox";
+
 import {
   OpenTag,
   CloseTag,
   Br,
   OpenTagWithAttr,
   CloseTagWithAttr,
-  Docytype
-} from "../../../../components/ColoredCodeComponents/ColoredCodeComponents";
+  Docytype,
+} from "../../../../components/ColoredCodeComponents/html/html";
+
+import ImageBox from "../../../../components/ImageBox/ImageBox";
+
+import img from '../../../../img/img.jpg';
 
 export default function AboutCanvas() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -81,9 +87,9 @@ export default function AboutCanvas() {
         <CloseTag tagName="html" />
       </FormatCode>
       <FormatP>
-               <OpenTag tagName="canvas" />
-        <CloseTag tagName="canvas" /> - <FormatMark>HTML element</FormatMark> that provides you with varaity functoins for
-        drawing graphics.
+        <OpenTag tagName="canvas" />
+        <CloseTag tagName="canvas" /> - <FormatMark>HTML element</FormatMark>{" "}
+        that provides you with varaity functoins for drawing graphics.
       </FormatP>
       <FormatP>
         In order to start using it you should understand basics of HTML and you
@@ -91,15 +97,24 @@ export default function AboutCanvas() {
         encounter a non-understandable text problem.
       </FormatP>
       <FormatP>
-        Also you will need some basics knowledge of math and physics. Don`t
-        worry if you don`t remember almost anything. I will tell about them.
+        Also you will need some basics knowledge of math and physics.
       </FormatP>
+      <InfoBox type="row">
+        <FormatP>
+          Don`t worry if you don`t remember almost anything. I will tell about
+          them
+        </FormatP>
+      </InfoBox>
       <FormatP>
-        With Canvas you develop interesting things. For example: for your
-        website, for just relaxing, simulating physics or even game. This can,
-        for instance, be used to draw graphs, combine photos, or create simple
-        animations.
+        With Canvas you develop interesting things. This can, for instance, be
+        used to draw graphs, combine photos, or create simple animations.
       </FormatP>
+      <InfoBox type="row">
+        <FormatP>
+          You can use it: for your website, for just relaxing, simulating physics
+          or even game.
+      </FormatP>
+      </InfoBox>
       <FormatP>
         Here is a few examples what you can do with only canvas and js.
       </FormatP>
@@ -143,17 +158,19 @@ export default function AboutCanvas() {
         by Akimitsu Hamamuro (<a href="https://codepen.io/akm2">@akm2</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
       </iframe>
-      <FormatP>
-        To see more just google it as
-        <FormatMark>canvas js projects</FormatMark> to find more websites with
-        canvas projects.
-      </FormatP>
-      <FormatP>
-        Link on one of theme{" "}
-        <FormatLink href="https://webdesign.tutsplus.com/21-ridiculously-impressive-html5-canvas-experiments--net-14210a">
-          canvas projects
-        </FormatLink>
-      </FormatP>
+      <InfoBox type="column">
+        <FormatP>
+          To see more just google it as
+          <FormatMark>canvas js projects</FormatMark> to find more websites with
+          canvas projects.
+        </FormatP>
+        <FormatP>
+          Link on one of theme{" "}
+          <FormatLink href="https://webdesign.tutsplus.com/21-ridiculously-impressive-html5-canvas-experiments--net-14210a">
+            canvas projects
+          </FormatLink>
+        </FormatP>
+      </InfoBox>
     </>
   );
 }

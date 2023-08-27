@@ -7,13 +7,33 @@ import {
   FormatP,
   FormatTitleH2,
   FormatMark,
-  FormatLink,
   FormatTitleH3,
   FormatCode,
-  FormatListUl,
 } from "../../../../components/FormatedComponents/FormatedComponents";
 
-import globalCss from "../../../css/global.module.css";
+import {
+  BracketExpression,
+  CallFunction,
+  ConsoleLog,
+  ConstVariable,
+  FunctionDeclare,
+  Return,
+  UseObject,
+} from "../../../../components/JavaScriptCode/JavaScriptCode";
+
+import { Br } from "../../../../components/ColoredCodeComponents/html/html";
+
+import {
+  Coma,
+  Comment,
+  Number,
+  Sign,
+  VarName,
+} from "../../../../components/ColoredCodeComponents/js/js";
+
+import { GetDistFunction } from "../../../../components/JavaScriptCode/CanvasCode/CanvasCode";
+
+import { ObjectA, ObjectB } from "./Code/Code";
 
 export default function DistanceBetweenObjects() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -30,8 +50,7 @@ export default function DistanceBetweenObjects() {
 
       <FormatTitleH3>Function ready to be used</FormatTitleH3>
       <FormatCode id="">
-        const getDist = (a, b) {"=>"} Math.sqrt(Math.pow(a.x - b.x, 2) +
-        Math.pow(a.y - b.y, 2));
+        <GetDistFunction />
       </FormatCode>
       <FormatTitleH3>Theorem of Pythagoras</FormatTitleH3>
       <FormatP>
@@ -50,16 +69,20 @@ export default function DistanceBetweenObjects() {
         <FormatMark>(2, 2)</FormatMark> and point <FormatMark>B</FormatMark>{" "}
         such <FormatMark>(8, 10)</FormatMark>.
       </FormatP>
-      <FormatCode id="">{`const A = {
-  x: 2,
-  y: 2
-}
-const B = {
-  x: 8,
-  y: 10
-}
-
-console.log(A, B); // {x: 2, y: 2} {x: 8, y: 10}`}</FormatCode>
+      <FormatCode id="">
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <VarName value="A" />
+          <Coma />
+          <VarName value="B" />
+        </ConsoleLog>
+        <Comment value="{x: 2, y: 2} {x: 8, y: 10}" />
+        <Br />
+      </FormatCode>
       <FormatP>
         Theorem of Pythagoras uses lengthes of sides of triangle. Our points
         make triangle if we connect point <FormatMark>A</FormatMark> and point{" "}
@@ -82,16 +105,35 @@ console.log(A, B); // {x: 2, y: 2} {x: 8, y: 10}`}</FormatCode>
         <FormatMark>y axie</FormatMark>is also thier difference{" "}
         <FormatMark>(A.y - B.y) 2 - 10 = -8</FormatMark>.
       </FormatP>
-      <FormatCode id="">{`const A = {
-  x: 2,
-  y: 2
-}
-const B = {
-  x: 8,
-  y: 10
-}
-const xLength = A.x - B.x; // 2 - 8 = -6;
-const yLength = A.y - B.y; // 2 - 10 = -8;`}</FormatCode>
+      <FormatCode id="">
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <Br />
+        <ConstVariable name="xLength">
+          <UseObject name="A" propertys={["x"]} />
+          <Sign value="-" />
+          <UseObject name="B" propertys={["x"]} />
+        </ConstVariable>
+        <Comment value="2 - 8 = -6" />
+        <Br />
+        <ConstVariable name="yLength">
+          <UseObject name="A" propertys={["y"]} />
+          <Sign value="-" />
+          <UseObject name="B" propertys={["y"]} />
+        </ConstVariable>
+        <Comment value="2 - 10 = -8" />
+        <Br />
+        <Br />
+
+        <ConsoleLog>
+          <VarName value="xLength" />
+          <Coma />
+          <VarName value="yLength" />
+        </ConsoleLog>
+        <Comment value="-6, -8" />
+      </FormatCode>
       <FormatP>
         It`s hard to work with negative length so we need to multiply it by{" "}
         <FormatMark>-1</FormatMark> <FormatMark>(2 - 8) * -1 = 6</FormatMark>{" "}
@@ -104,23 +146,65 @@ const yLength = A.y - B.y; // 2 - 10 = -8;`}</FormatCode>
         <FormatMark>Math</FormatMark>. It returns the absolute value or just the
         value without its sign.
       </FormatP>
-      <FormatCode id="">{`const A = {
-  x: 2,
-  y: 2
-}
-const B = {
-  x: 8,
-  y: 10
-}
-const xLength = (A.x - B.x) * -1; // (2 - 8) * -1 = 6;
-const yLength = (A.y - B.y) * -1; // (2 - 10) * -1 = 8;
-
-// or
-
-const xLength = Math.abs(A.x - B.x); // [2 - 8] = 6;
-const yLength = Math.abs(A.y - B.y); // [2 - 10] = 8;
-
-console.log(xLength, yLength); // 6 8`}</FormatCode>
+      <FormatCode id="">
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <Br />
+        <ConstVariable name="xLength">
+          <BracketExpression brackets="()">
+            <UseObject name="A" propertys={["x"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["x"]} />
+          </BracketExpression>
+          <Sign value="*" />
+          <Number value="-1" />
+        </ConstVariable>
+        <Comment value="(2 - 8) * -1 = 6" />
+        <Br />
+        <ConstVariable name="yLength">
+          <BracketExpression brackets="()">
+            <UseObject name="A" propertys={["y"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["y"]} />
+          </BracketExpression>
+          <Sign value="*" />
+          <Number value="-1" />
+        </ConstVariable>
+        <Comment value="(2 - 10) * -1 = 8" />
+        <Br />
+        <Br />
+        <Comment value="or" />
+        <Br />
+        <Br />
+        <ConstVariable name="xLength">
+          <UseObject name="Math" method="abs">
+            <UseObject name="A" propertys={["x"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["x"]} />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="[2 - 8] = 6" />
+        <Br />
+        <ConstVariable name="yLength">
+          <UseObject name="Math" method="abs">
+            <UseObject name="A" propertys={["y"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["y"]} />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="[2 - 10] = 8" />
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <VarName value="xLength" />
+          <Coma />
+          <VarName value="yLength" />
+        </ConsoleLog>
+        <Comment value="6 8" />
+        <Br />
+      </FormatCode>
       <FormatTitleH3>Get distance between points</FormatTitleH3>
       <FormatP>
         So <FormatMark>legs</FormatMark> in our triangle are{" "}
@@ -144,25 +228,76 @@ console.log(xLength, yLength); // 6 8`}</FormatCode>
         </FormatMark>{" "}
         - returns the value of x to the power of y.
       </FormatP>
-      <FormatCode id="">{`const A = {
-  x: 2,
-  y: 2
-}
-const B = {
-  x: 8,
-  y: 10
-}
-  
-const xLength = (A.x - B.x) * -1; // (2 - 8) * -1 = 6;
-const yLength = (A.y - B.y) * -1; // (2 - 10) * -1 = 8;
-  
-// or
-  
-const xLength = Math.abs(A.x - B.x); // [2 - 8] = 6;
-const yLength = Math.abs(A.y - B.y); // [2 - 10] = 8;
-  
-const middleValue = Math.pow(xLength, 2) + Math.pow(yLength, 2); // (6 * 6) + (8 * 8) = 100
-console.log(middleValue); // 100`}</FormatCode>
+      <FormatCode id="">
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <ConstVariable name="xLength">
+          <BracketExpression brackets="()">
+            <UseObject name="A" propertys={["x"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["x"]} />
+          </BracketExpression>
+          <Sign value="*" />
+          <Number value="-1" />
+        </ConstVariable>
+        <Comment value="(2 - 8) * -1 = 6" />
+        <Br />
+        <ConstVariable name="yLength">
+          <BracketExpression brackets="()">
+            <UseObject name="A" propertys={["y"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["y"]} />
+          </BracketExpression>
+          <Sign value="*" />
+          <Number value="-1" />
+        </ConstVariable>
+        <Comment value="(2 - 10) * -1 = 8" />
+        <Br />
+        <Br />
+        <Comment value="or" />
+        <Br />
+        <Br />
+        <ConstVariable name="xLength">
+          <UseObject name="Math" method="abs">
+            <UseObject name="A" propertys={["x"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["x"]} />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="[2 - 8] = 6" />
+        <Br />
+        <ConstVariable name="yLength">
+          <UseObject name="Math" method="abs">
+            <UseObject name="A" propertys={["y"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["y"]} />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="[2 - 10] = 8" />
+        <Br />
+        <ConstVariable name="PythagorasTheoremValue">
+          <UseObject name="Math" method="pow">
+            <VarName value="xLength" />
+            <Coma />
+            <Number value="2" />
+          </UseObject>
+          <Sign value="+" />
+          <UseObject name="Math" method="pow">
+            <VarName value="yLength" />
+            <Coma />
+            <Number value="2" />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="(6 * 6) + (8 * 8) = 100" />
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <VarName value="PythagorasTheoremValue" />
+        </ConsoleLog>
+        <Comment value="100" />
+      </FormatCode>
       <FormatP>
         But <FormatMark>100</FormatMark> is the length powerd by 2 so we need to
         find squer root of <FormatMark>100</FormatMark>{" "}
@@ -178,61 +313,133 @@ console.log(middleValue); // 100`}</FormatCode>
       <FormatP>
         <FormatMark>Math.sqrt(x)</FormatMark> - returns the square root of a x.
       </FormatP>
-      <FormatCode id="">{`const A = {
-  x: 2,
-  y: 2
-}
-const B = {
-  x: 8,
-  y: 10
-}
+      <FormatCode id="">
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <Br />
 
-const xLength = (A.x - B.x) * -1; // (2 - 8) * -1 = 6;
-const yLength = (A.y - B.y) * -1; // (2 - 10) * -1 = 8;
-
-// or
-
-const xLength = Math.abs(A.x - B.x); // [2 - 8] = 6;
-const yLength = Math.abs(A.y - B.y); // [2 - 10] = 8;
-
-const middleValue = Math.pow(xLength, 2) + Math.pow(yLength, 2); // (6 * 6) + (8 * 8) = 100
-const distanceBetweenAandB = Math.sqrt(middleValue); // 10
-console.log(distanceBetweenAandB); // 10`}</FormatCode>
+        <ConstVariable name="xLength">
+          <UseObject name="Math" method="abs">
+            <UseObject name="A" propertys={["x"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["x"]} />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="[2 - 8] = 6" />
+        <Br />
+        <ConstVariable name="yLength">
+          <UseObject name="Math" method="abs">
+            <UseObject name="A" propertys={["y"]} />
+            <Sign value="-" />
+            <UseObject name="B" propertys={["y"]} />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="[2 - 10] = 8" />
+        <Br />
+        <ConstVariable name="PythagorasTheoremValue">
+          <UseObject name="Math" method="pow">
+            <VarName value="xLength" />
+            <Coma />
+            <Number value="2" />
+          </UseObject>
+          <Sign value="+" />
+          <UseObject name="Math" method="pow">
+            <VarName value="yLength" />
+            <Coma />
+            <Number value="2" />
+          </UseObject>
+        </ConstVariable>
+        <Comment value="(6 * 6) + (8 * 8) = 100" />
+        <Br />
+        <ConstVariable name="distanceBetweenAandB">
+          <UseObject name="Math" method="sqrt">
+            <VarName value="PythagorasTheoremValue" />
+          </UseObject>
+        </ConstVariable>
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <VarName value="distanceBetweenAandB" />
+        </ConsoleLog>
+        <Comment value="10" />
+      </FormatCode>
       <FormatP>
         The distance between two points <FormatMark>A(2, 2)</FormatMark> and{" "}
         <FormatMark>A(8, 10)</FormatMark> is 10.
       </FormatP>
       <FormatP>Let`s make a function to reuse this in the future.</FormatP>
-      <FormatCode id="">{`function getDist(a, b){
-    const xLength = Math.abs(A.x - B.x);
-    const yLength = Math.abs(A.y - B.y);
-    
-    const middleValue = Math.pow(xLength, 2) + Math.pow(yLength, 2);
-    const distanceBetweenAandB = Math.sqrt(middleValue);
-    
-    return distanceBetweenAandB;
-}
+      <FormatCode id="">
+        <FunctionDeclare name="getDist" parameters={["a", "b"]}>
+          {" "}
+          <ConstVariable name="xLength">
+            <UseObject name="Math" method="abs">
+              <UseObject name="A" propertys={["x"]} />
+              <Sign value="-" />
+              <UseObject name="B" propertys={["x"]} />
+            </UseObject>
+          </ConstVariable>
+          <Br />{" "}
+          <ConstVariable name="yLength">
+            <UseObject name="Math" method="abs">
+              <UseObject name="A" propertys={["y"]} />
+              <Sign value="-" />
+              <UseObject name="B" propertys={["y"]} />
+            </UseObject>
+          </ConstVariable>
+          <Br />
+          <Br />{" "}
+          <ConstVariable name="PythagorasTheoremValue">
+            <UseObject name="Math" method="pow">
+              <VarName value="xLength" />
+              <Coma />
+              <Number value="2" />
+            </UseObject>
+            <Sign value="+" />
+            <UseObject name="Math" method="pow">
+              <VarName value="yLength" />
+              <Coma />
+              <Number value="2" />
+            </UseObject>
+          </ConstVariable>
+          <Br />{" "}
+          <ConstVariable name="distanceBetweenAandB">
+            <UseObject name="Math" method="sqrt">
+              <VarName value="PythagorasTheoremValue" />
+            </UseObject>
+          </ConstVariable>
+          <Br />
+          <Br />{" "}
+          <Return>
+            <VarName value="distanceBetweenAandB" />
+          </Return>
+        </FunctionDeclare>
+        <Br />
+        <Br />
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <Br />
 
-const A = {
-  x: 2,
-  y: 2
-}
+        <ConstVariable name="distance">
+          <CallFunction name="getDist" args={["A", "B"]} />
+        </ConstVariable>
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <VarName value="distance" />
+        </ConsoleLog>
 
-const B = {
-  x: 8,
-  y: 10
-}
-
-const distance = getDist(A, B);
-
-console.log(distance); // 10`}</FormatCode>
+        <Comment value="10" />
+      </FormatCode>
       <FormatP>
-        Now we know how <FormatMark>getDist()</FormatMark> frunction works
+        Now we know how <FormatMark>getDist()</FormatMark> works
         inside. Let`s make it smaller.
       </FormatP>
       <FormatCode id="">
-        const getDist = (a, b) {"=>"} Math.sqrt(Math.pow(a.x - b.x, 2) +
-        Math.pow(a.y - b.y, 2));
+        <GetDistFunction />
       </FormatCode>
     </>
   );
