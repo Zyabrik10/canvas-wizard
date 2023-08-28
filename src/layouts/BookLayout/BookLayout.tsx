@@ -7,13 +7,13 @@ import { Outlet } from "react-router-dom";
 
 import SideMenuMap from "../../components/SideMenuMap/SideMenuMap";
 import MobileSideMenuBox from "../../components/MobileSideMenuBox/MobileSideMenuBox";
-import MobileSideMenu from "../../components/MobileSideMenu/MobileSideMenu";
+import MobileSideMenu from "../../components/MobileSideMenuBox/MobileSideMenu/MobileSideMenu";
 import SideExtraInfo from "../../components/SideExtraInfo/SideExtraInfo";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import {
   FormatMark,
   FormatP,
-} from "../../components/FormatedComponents/FormatedComponents";
+} from "../../code-components/format-components/format-components";
 
 export default function BookLayout() {
   return (

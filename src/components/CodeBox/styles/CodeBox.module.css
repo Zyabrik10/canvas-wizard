@@ -1,0 +1,49 @@
+.code-box {
+  display: block;
+  width: 100%;
+
+  background: rgb(36, 37, 48);
+
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  padding: 20px;
+
+  overflow: auto;
+  margin-bottom: 20px;
+
+  color: #fff;
+
+  position: relative;
+}
+
+.code-box > .copy-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  border-radius: 5px;
+
+  padding: 0 10px;
+
+  opacity: 0;
+
+  transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.code-box > .copy-button:hover {
+  background: #fff;
+  color: #333;
+}
+
+.code-box:hover > .copy-button {
+  opacity: 1;
+}
+
+.filename-box {
+  padding: 10px 0;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 20px;
+}

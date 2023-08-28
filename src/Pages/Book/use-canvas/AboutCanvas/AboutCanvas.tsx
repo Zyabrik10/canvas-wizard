@@ -8,8 +8,9 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatLink,
-  FormatCode,
-} from "../../../../components/FormatedComponents/FormatedComponents";
+} from "../../../../code-components/format-components/format-components";
+
+import { CodeBox } from "../../../../components/CodeBox/CodeBox";
 
 import InfoBox from "../../../../components/InfoBox/InfoBox";
 
@@ -18,13 +19,14 @@ import {
   CloseTag,
   Br,
   OpenTagWithAttr,
-  CloseTagWithAttr,
+  OneTagWithAttr,
   Docytype,
-} from "../../../../components/ColoredCodeComponents/html/html";
+} from "../../../../code-components/colored-code-components/html/html";
 
-import ImageBox from "../../../../components/ImageBox/ImageBox";
+import EditorOnline from "../../../../components/EditorOnline/EditorOnline";
 
-import img from '../../../../img/img.jpg';
+import { Title, Canvas } from "../../../../code-components/html-code/snippets/snippets";
+import { InitHTML } from "../../../../code-components/html-code/html-code";
 
 export default function AboutCanvas() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -36,56 +38,12 @@ export default function AboutCanvas() {
   return (
     <>
       <FormatTitleH2>What is Canvas?</FormatTitleH2>
-      <FormatCode id="">
-        <OpenTag tagName="canvas" />
-        <CloseTag tagName="canvas" />
-      </FormatCode>
-      <FormatCode id="">
-        <Docytype />
-        <Br />
-        <OpenTagWithAttr
-          tagName="html"
-          attrs={[{ name: "lang", value: "en" }]}
-        />
-        <Br />
-        <OpenTag tagName="head" />
-        <Br />{" "}
-        <CloseTagWithAttr
-          tagName="meta"
-          attrs={[{ name: "charset", value: "utf-8" }]}
-        />
-        <Br />{" "}
-        <CloseTagWithAttr
-          tagName="meta"
-          attrs={[
-            { name: "name", value: "viewport" },
-            { name: "content", value: "width=device-width" },
-            { name: "initial-scale", value: "1" },
-          ]}
-        />
-        <Br />
-        <OpenTag tagName="title" />
-        Canvas
-        <CloseTag tagName="title" />
-        <Br />
-        <CloseTag tagName="head" />
-        <Br />
-        <OpenTag tagName="body" />
-        <Br />
-        {"  "}
-        <OpenTag tagName="canvas" />
-        <CloseTag tagName="canvas" />
-        <Br />
-        <OpenTag tagName="body" />
-        <Br />
-        <OpenTagWithAttr
-          tagName="script"
-          attrs={[{ name: "src", value: "./js/main.js" }]}
-        />
-        <CloseTag tagName="script" />
-        <Br />
-        <CloseTag tagName="html" />
-      </FormatCode>
+      <CodeBox>
+        <Canvas />
+      </CodeBox>
+      <CodeBox>
+        <InitHTML />
+      </CodeBox>
       <FormatP>
         <OpenTag tagName="canvas" />
         <CloseTag tagName="canvas" /> - <FormatMark>HTML element</FormatMark>{" "}
@@ -111,20 +69,16 @@ export default function AboutCanvas() {
       </FormatP>
       <InfoBox type="row">
         <FormatP>
-          You can use it: for your website, for just relaxing, simulating physics
-          or even game.
-      </FormatP>
+          You can use it: for your website, for just relaxing, simulating
+          physics or even game.
+        </FormatP>
       </InfoBox>
       <FormatP>
         Here is a few examples what you can do with only canvas and js.
       </FormatP>
-      <iframe
-        height="500"
-        style={{ width: "100%" }}
-        scrolling="no"
-        title="Canvas Orbital Trails"
+      <EditorOnline
         src="https://codepen.io/jackrugile/embed/kMWyeM?default-tab=html%2Cresult"
-        loading="lazy"
+        title="Canvas Orbital Trails"
       >
         See the Pen{" "}
         <a href="https://codepen.io/jackrugile/pen/kMWyeM">
@@ -132,32 +86,24 @@ export default function AboutCanvas() {
         </a>{" "}
         by Jack Rugile (<a href="https://codepen.io/jackrugile">@jackrugile</a>)
         on <a href="https://codepen.io">CodePen</a>.
-      </iframe>
-      <iframe
-        height="500"
-        style={{ width: "100%" }}
-        scrolling="no"
-        title="Rainbow Spider"
+      </EditorOnline>
+      <EditorOnline
         src="https://codepen.io/run-time/embed/abYeqZ?default-tab=html%2Cresult"
-        loading="lazy"
+        title="Rainbow Spider"
       >
         See the Pen{" "}
         <a href="https://codepen.io/run-time/pen/abYeqZ">Rainbow Spider</a> by
         Dave Alger (<a href="https://codepen.io/run-time">@run-time</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
-      <iframe
-        height="500"
-        style={{ width: "100%", marginBottom: "20px" }}
-        scrolling="no"
-        title="Lightning"
+      </EditorOnline>
+      <EditorOnline
         src="https://codepen.io/akm2/embed/DbNJXr?default-tab=html%2Cresult"
-        loading="lazy"
+        title="Lightning"
       >
         See the Pen <a href="https://codepen.io/akm2/pen/DbNJXr">Lightning</a>{" "}
         by Akimitsu Hamamuro (<a href="https://codepen.io/akm2">@akm2</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
       <InfoBox type="column">
         <FormatP>
           To see more just google it as

@@ -8,17 +8,18 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatTitleH3,
-  FormatCode,
   FormatListUl,
-} from "../../../../components/FormatedComponents/FormatedComponents";
+} from "../../../../code-components/format-components/format-components";
+
+import { CodeBox } from "../../../../components/CodeBox/CodeBox";
 
 import {
   VarName,
   Comment,
   Sign,
   Number,
-} from "../../../../components/ColoredCodeComponents/js/js";
-import { Br } from "../../../../components/ColoredCodeComponents/html/html";
+} from "../../../../code-components/colored-code-components/js/js";
+import { Br } from "../../../../code-components/colored-code-components/html/html";
 
 import {
   BracketExpression,
@@ -28,11 +29,11 @@ import {
   FunctionDeclare,
   Return,
   CallFunction,
-} from "../../../../components/JavaScriptCode/JavaScriptCode";
+} from "../../../../code-components/js-code/js-code";
 
-import { RandIntFunction } from "../../../../components/JavaScriptCode/CanvasCode/CanvasCode";
+import { RandIntFunction } from "../../../../code-components/js-code/canvas-code/canvas-code";
 
-import { DeclareRandom } from "../../../../components/JavaScriptCode/Code/Code";
+import { DeclareRandom } from "../../../../code-components/js-code/snippets/snippets";
 
 export default function RandomValue() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -48,9 +49,9 @@ export default function RandomValue() {
       {/*  */}
 
       <FormatTitleH3>Function ready to be used</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <RandIntFunction />
-      </FormatCode>
+      </CodeBox>
 
       {/*  */}
 
@@ -67,7 +68,7 @@ export default function RandomValue() {
         So actualy it returns value from <FormatMark>0</FormatMark> to{" "}
         <FormatMark>0.999...</FormatMark>.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
         <Br />
@@ -75,7 +76,7 @@ export default function RandomValue() {
           <VarName value="randomValue" />
         </ConsoleLog>
         <Comment value="0.09820142543127064" />
-      </FormatCode>
+      </CodeBox>
 
       {/*  */}
 
@@ -85,7 +86,7 @@ export default function RandomValue() {
         <FormatMark>any value</FormatMark> we just need to multiply this{" "}
         <FormatMark>any value + 1</FormatMark> on random value.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
@@ -104,7 +105,7 @@ export default function RandomValue() {
           </BracketExpression>
         </ConsoleLog>
         <Comment value="5.9242883533580475" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         As you can see now we have random value from <FormatMark>0</FormatMark>{" "}
         to <FormatMark>10</FormatMark>. But random method returns random value
@@ -118,7 +119,7 @@ export default function RandomValue() {
         We can use <FormatMark>floor()</FormatMark> method in class{" "}
         <FormatMark>Math</FormatMark>.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
         <Br />
@@ -138,7 +139,7 @@ export default function RandomValue() {
           </UseObject>
         </ConsoleLog>
         <Comment value="7" />
-      </FormatCode>
+      </CodeBox>
 
       {/*  */}
 
@@ -154,7 +155,7 @@ export default function RandomValue() {
         All we have to do is just to add <FormatMark>any value</FormatMark> to
         our random value.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
@@ -173,7 +174,7 @@ export default function RandomValue() {
         <Comment value="5.256558353604628" />
 
         <Br />
-      </FormatCode>
+      </CodeBox>
 
       {/*  */}
 
@@ -188,7 +189,7 @@ export default function RandomValue() {
         <FormatMark>any value</FormatMark>.
       </FormatP>
       <FormatP>Let`s try to combine theme.</FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
@@ -234,7 +235,7 @@ export default function RandomValue() {
           <VarName value="randomValueBetweenMinAndMax" />
         </ConsoleLog>
         <Comment value="5, 6, 7" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Unfortunately we encountered a broblem. We get random value between{" "}
         <FormatMark>5</FormatMark>
@@ -266,7 +267,7 @@ export default function RandomValue() {
         <FormatMark>minValue</FormatMark> and <FormatMark>maxValue</FormatMark>{" "}
         <FormatMark>5 - 2 = 3</FormatMark>.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
@@ -307,7 +308,7 @@ export default function RandomValue() {
           <VarName value="randomValueBetweenDiffernce" />
         </ConsoleLog>
         <Comment value="0, 1, 2, 3" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Let`s see what we will get if add <FormatMark>minValue</FormatMark> to
         the random value of the range{" "}
@@ -321,7 +322,7 @@ export default function RandomValue() {
         Congratulations, we finnaly get this range that we need for our random
         value between. Final result is below.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
@@ -364,11 +365,11 @@ export default function RandomValue() {
           <VarName value="randomValueBetweenMinAndMax" />
         </ConsoleLog>
         <Comment value="2, 3, 4, 5" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Let`s replace this code into function to reuse it in the future.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <FunctionDeclare name="randInt" parameters={["minValue", "maxValue"]}>
           {" "}
           <DeclareRandom />
@@ -413,14 +414,14 @@ export default function RandomValue() {
           <CallFunction name="randInt" args={["minValue", "maxValue"]} />
         </ConsoleLog>
         <Comment value="81" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Now we understand what is going on inside of{" "}
         <FormatMark>randInt()</FormatMark>. Let`s make it smaller.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <RandIntFunction />
-      </FormatCode>
+      </CodeBox>
     </>
   );
 }

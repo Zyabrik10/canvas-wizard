@@ -1,0 +1,28 @@
+.tag {
+  color: rgb(255, 146, 74);
+}
+
+.tagName {
+  color: rgb(74, 219, 255);
+}
+
+.tag-text {
+  color: red;
+}
+
+.attrName {
+  color: rgb(210, 0, 218);
+}
+
+.equal {
+  color: rgb(234, 106, 238);
+}
+
+.quote,
+.text {
+  color: rgb(228, 215, 33);
+}
+
+.attrValue {
+  color: rgb(228, 215, 33);
+}

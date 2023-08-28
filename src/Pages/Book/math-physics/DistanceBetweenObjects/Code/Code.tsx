@@ -1,9 +1,9 @@
 import {
   ConstVariable,
   ObjectExpression,
-} from "../../../../../components/JavaScriptCode/JavaScriptCode";
+} from "../../../../../code-components/js-code/js-code";
 
-import { Number } from "../../../../../components/ColoredCodeComponents/js/js";
+import { Number } from "../../../../../code-components/colored-code-components/js/js";
 
 export function ObjectA() {
   return (

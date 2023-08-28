@@ -18,6 +18,10 @@
   padding: 20px;
 }
 
+.main *:last-child {
+  margin-bottom: 0;
+}
+
 .container {
   margin: 0 auto;
   width: 100%;

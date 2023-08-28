@@ -1,0 +1,92 @@
+.var {
+  color: rgb(210, 0, 218);
+}
+
+.varname {
+  color: rgb(226, 226, 226);
+}
+
+.equal {
+  color: rgb(236, 95, 0);
+}
+
+.function {
+  color: rgb(236, 95, 0);
+}
+
+.literal {
+  color: rgb(236, 95, 0);
+}
+
+.class {
+  color: rgb(236, 95, 0);
+}
+
+.this {
+  color: rgb(0, 225, 255);
+}
+
+.varDec {
+  color: rgb(247, 0, 255);
+}
+
+.varName {
+  color: rgb(106, 148, 238);
+}
+
+.object {
+  color: rgb(40, 211, 40);
+}
+
+.property {
+  color: rgb(75, 214, 224);
+}
+
+.method {
+  color: rgb(109, 109, 255);
+}
+
+.dot {
+  color: rgb(70, 192, 233);
+}
+
+.coma {
+  color: rgb(70, 192, 233);
+}
+
+.bracket {
+  color: yellow;
+}
+
+.semicoln {
+  color: rgb(226, 155, 226);
+}
+
+.functionName {
+  color: yellow;
+}
+
+.className {
+  color: yellow;
+}
+
+.clasName {
+  color: pink;
+}
+
+.comment {
+  color: #888;
+}
+
+.sign {
+  color: #fff;
+}
+
+.number {
+  color: rgb(196, 34, 34);
+}
+
+.quote,
+.string {
+  color: yellow;
+}

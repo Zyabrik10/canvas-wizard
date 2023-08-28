@@ -10,7 +10,7 @@ type Book = {
 
 export const initialState: Array<Book> = [
   {
-    title: "How to use Canvas API ?",
+    title: "How to use Canvas ?",
     terms: [
       {
         title: "What is Canvas ?",
@@ -51,20 +51,28 @@ export const initialState: Array<Book> = [
     title: "Stars",
     terms: [
       {
-        title: "Init and Preview",
-        path: "/book/projects/stars/init-preview",
+        title: "Project configuration",
+        path: "/book/projects/stars/project-configuration",
+      },
+      {
+        title: "Math Variables",
+        path: "/book/projects/stars/math-variables",
       },
       {
         title: "Class Ball",
         path: "/book/projects/stars/class-ball",
       },
       {
-        title: "Function Init",
+        title: "Init",
         path: "/book/projects/stars/init",
       },
       {
-        title: "Function Update",
-        path: "/book/projects/stars/function-update",
+        title: "Update function",
+        path: "/book/projects/stars/update-function",
+      },
+      {
+        title: "React on window reszie",
+        path: "/book/projects/stars/react-window-resize",
       },
     ],
   },

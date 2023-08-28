@@ -8,18 +8,19 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatTitleH3,
-  FormatCode,
   FormatListUl,
-} from "../../../../components/FormatedComponents/FormatedComponents";
+} from "../../../../code-components/format-components/format-components";
 
-import { Comment } from "../../../../components/ColoredCodeComponents/js/js";
-import { Br } from "../../../../components/ColoredCodeComponents/html/html";
+import { CodeBox } from "../../../../components/CodeBox/CodeBox";
+
+import { Comment } from "../../../../code-components/colored-code-components/js/js";
+import { Br } from "../../../../code-components/colored-code-components/html/html";
 
 import {
   DeclareCanvas,
   DeclareCtx,
   UseCtxFunction,
-} from "../../../../components/JavaScriptCode/CanvasCode/CanvasCode";
+} from "../../../../code-components/js-code/canvas-code/canvas-code";
 
 import InfoBox from "../../../../components/InfoBox/InfoBox";
 import ImageBox from "../../../../components/ImageBox/ImageBox";
@@ -63,13 +64,13 @@ export default function CanvasAPI() {
         <FormatMark>CANVAS API</FormatMark>. Canvas context provides us it. The
         following code is how to do that.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareCanvas />
         <Comment value="We need to find canvas first to get its context" />
         <Br />
         <DeclareCtx />
         <Comment value="Our context" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         First we declare a variable wich contains a canvas element. We can find
         canvas using:{" "}
@@ -78,9 +79,9 @@ export default function CanvasAPI() {
         </FormatMark>
         .
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareCanvas />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Then we need to get our context using canvas method{" "}
         <FormatMark>getContext</FormatMark> and <FormatMark>2d</FormatMark>
@@ -93,9 +94,9 @@ export default function CanvasAPI() {
           now.
         </FormatP>
       </InfoBox>
-      <FormatCode id="">
+      <CodeBox>
         <DeclareCtx />
-      </FormatCode>
+      </CodeBox>
       <InfoBox type="row">
         <FormatP>
           Now we have an access to <FormatMark>CANVAS API</FormatMark>.
@@ -120,12 +121,12 @@ export default function CanvasAPI() {
       </InfoBox>
 
       <FormatTitleH3>fillRect</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction
           method="fillRect"
           args={["x", "y", "width", "height"]}
         />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         fillRect - is a method that draws reactangle and fills it at once.
       </FormatP>
@@ -154,12 +155,12 @@ export default function CanvasAPI() {
       </iframe>
 
       <FormatTitleH3>clearRect</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction
           method="clearRect"
           args={["x", "y", "width", "height"]}
         />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         clearRect - clears rectangle area with transparent color.
       </FormatP>
@@ -193,9 +194,9 @@ export default function CanvasAPI() {
       </iframe>
 
       <FormatTitleH3>fill</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction method="fill" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>fill - fill marked area.</FormatP>
       <ImageBox src={FillRectImg} description="ctx.fill()" />
       <iframe
@@ -213,9 +214,9 @@ export default function CanvasAPI() {
       </iframe>
 
       <FormatTitleH3>stroke</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction method="stroke" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>stroke - stroke area.</FormatP>
       <ImageBox src={strokeImg} description="ctx.stroke();" />
       <iframe
@@ -233,9 +234,9 @@ export default function CanvasAPI() {
       </iframe>
 
       <FormatTitleH3>rect</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction method="rect" args={["x", "y", "width", "height"]} />
-      </FormatCode>
+      </CodeBox>
       <FormatP>rect - mark rectangle area with transparent color.</FormatP>
       <InfoBox type="row">
         <FormatP>
@@ -266,7 +267,7 @@ export default function CanvasAPI() {
       </iframe>
 
       <FormatTitleH3>arc</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction
           method="arc"
           args={[
@@ -278,7 +279,7 @@ export default function CanvasAPI() {
             "counterClockWise",
           ]}
         />
-      </FormatCode>
+      </CodeBox>
       <FormatP>arc - mark a circle area with transparent color.</FormatP>
       <InfoBox type="row">
         <FormatP>
@@ -317,9 +318,9 @@ export default function CanvasAPI() {
       </iframe>
 
       <FormatTitleH3>moveTo</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction method="moveTo" args={["x", "y"]} />
-      </FormatCode>
+      </CodeBox>
       <FormatP>moveTo - mark a start point of a line.</FormatP>
       <InfoBox type="row">
         <FormatP>
@@ -335,9 +336,9 @@ export default function CanvasAPI() {
       </FormatListUl>
 
       <FormatTitleH3>lineTo</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <UseCtxFunction method="lineTo" args={["x", "y"]} />
-      </FormatCode>
+      </CodeBox>
       <FormatP>lineTo - mark a endPoint point of a line.</FormatP>
       <FormatP>In order to use draw line we need lineTo method.</FormatP>
       <FormatP>Method takes 2 parametrs:</FormatP>

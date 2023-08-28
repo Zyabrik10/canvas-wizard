@@ -8,8 +8,9 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatTitleH3,
-  FormatCode,
-} from "../../../../components/FormatedComponents/FormatedComponents";
+} from "../../../../code-components/format-components/format-components";
+
+import { CodeBox } from "../../../../components/CodeBox/CodeBox";
 
 import {
   BracketExpression,
@@ -19,9 +20,9 @@ import {
   FunctionDeclare,
   Return,
   UseObject,
-} from "../../../../components/JavaScriptCode/JavaScriptCode";
+} from "../../../../code-components/js-code/js-code";
 
-import { Br } from "../../../../components/ColoredCodeComponents/html/html";
+import { Br } from "../../../../code-components/colored-code-components/html/html";
 
 import {
   Coma,
@@ -29,9 +30,9 @@ import {
   Number,
   Sign,
   VarName,
-} from "../../../../components/ColoredCodeComponents/js/js";
+} from "../../../../code-components/colored-code-components/js/js";
 
-import { GetDistFunction } from "../../../../components/JavaScriptCode/CanvasCode/CanvasCode";
+import { GetDistFunction } from "../../../../code-components/js-code/canvas-code/canvas-code";
 
 import { ObjectA, ObjectB } from "./Code/Code";
 
@@ -49,9 +50,9 @@ export default function DistanceBetweenObjects() {
       {/*  */}
 
       <FormatTitleH3>Function ready to be used</FormatTitleH3>
-      <FormatCode id="">
+      <CodeBox>
         <GetDistFunction />
-      </FormatCode>
+      </CodeBox>
       <FormatTitleH3>Theorem of Pythagoras</FormatTitleH3>
       <FormatP>
         Theorem of Pythagoras -{" "}
@@ -69,7 +70,7 @@ export default function DistanceBetweenObjects() {
         <FormatMark>(2, 2)</FormatMark> and point <FormatMark>B</FormatMark>{" "}
         such <FormatMark>(8, 10)</FormatMark>.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <ObjectA />
         <Br />
         <ObjectB />
@@ -82,7 +83,7 @@ export default function DistanceBetweenObjects() {
         </ConsoleLog>
         <Comment value="{x: 2, y: 2} {x: 8, y: 10}" />
         <Br />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Theorem of Pythagoras uses lengthes of sides of triangle. Our points
         make triangle if we connect point <FormatMark>A</FormatMark> and point{" "}
@@ -105,7 +106,7 @@ export default function DistanceBetweenObjects() {
         <FormatMark>y axie</FormatMark>is also thier difference{" "}
         <FormatMark>(A.y - B.y) 2 - 10 = -8</FormatMark>.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <ObjectA />
         <Br />
         <ObjectB />
@@ -133,7 +134,7 @@ export default function DistanceBetweenObjects() {
           <VarName value="yLength" />
         </ConsoleLog>
         <Comment value="-6, -8" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         It`s hard to work with negative length so we need to multiply it by{" "}
         <FormatMark>-1</FormatMark> <FormatMark>(2 - 8) * -1 = 6</FormatMark>{" "}
@@ -146,7 +147,7 @@ export default function DistanceBetweenObjects() {
         <FormatMark>Math</FormatMark>. It returns the absolute value or just the
         value without its sign.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <ObjectA />
         <Br />
         <ObjectB />
@@ -204,7 +205,7 @@ export default function DistanceBetweenObjects() {
         </ConsoleLog>
         <Comment value="6 8" />
         <Br />
-      </FormatCode>
+      </CodeBox>
       <FormatTitleH3>Get distance between points</FormatTitleH3>
       <FormatP>
         So <FormatMark>legs</FormatMark> in our triangle are{" "}
@@ -228,7 +229,7 @@ export default function DistanceBetweenObjects() {
         </FormatMark>{" "}
         - returns the value of x to the power of y.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <ObjectA />
         <Br />
         <ObjectB />
@@ -297,7 +298,7 @@ export default function DistanceBetweenObjects() {
           <VarName value="PythagorasTheoremValue" />
         </ConsoleLog>
         <Comment value="100" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         But <FormatMark>100</FormatMark> is the length powerd by 2 so we need to
         find squer root of <FormatMark>100</FormatMark>{" "}
@@ -313,7 +314,7 @@ export default function DistanceBetweenObjects() {
       <FormatP>
         <FormatMark>Math.sqrt(x)</FormatMark> - returns the square root of a x.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <ObjectA />
         <Br />
         <ObjectB />
@@ -364,13 +365,13 @@ export default function DistanceBetweenObjects() {
           <VarName value="distanceBetweenAandB" />
         </ConsoleLog>
         <Comment value="10" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         The distance between two points <FormatMark>A(2, 2)</FormatMark> and{" "}
         <FormatMark>A(8, 10)</FormatMark> is 10.
       </FormatP>
       <FormatP>Let`s make a function to reuse this in the future.</FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <FunctionDeclare name="getDist" parameters={["a", "b"]}>
           {" "}
           <ConstVariable name="xLength">
@@ -433,14 +434,14 @@ export default function DistanceBetweenObjects() {
         </ConsoleLog>
 
         <Comment value="10" />
-      </FormatCode>
+      </CodeBox>
       <FormatP>
         Now we know how <FormatMark>getDist()</FormatMark> works
         inside. Let`s make it smaller.
       </FormatP>
-      <FormatCode id="">
+      <CodeBox>
         <GetDistFunction />
-      </FormatCode>
+      </CodeBox>
     </>
   );
 }
