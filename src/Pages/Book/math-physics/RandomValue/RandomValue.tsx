@@ -188,7 +188,7 @@ export default function RandomValue() {
         <FormatMark>1</FormatMark> starting from{" "}
         <FormatMark>any value</FormatMark>.
       </FormatP>
-      <FormatP>Let`s try to combine theme.</FormatP>
+      <FormatP>Let's try to combine theme.</FormatP>
       <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
@@ -243,7 +243,7 @@ export default function RandomValue() {
         <FormatMark>2</FormatMark> to <FormatMark>5</FormatMark>. Why is it
         happening so?
       </FormatP>
-      <FormatP>Let`s see what is actually happening in our code.</FormatP>
+      <FormatP>Let's see what is actually happening in our code.</FormatP>
       <FormatP>
         From <FormatMark>minRandomValue</FormatMark> we get random value between{" "}
         <FormatMark>0</FormatMark> and <FormatMark>2</FormatMark> and then we
@@ -263,7 +263,7 @@ export default function RandomValue() {
         <FormatMark>minRandomValue</FormatMark>
       </FormatP>
       <FormatP>
-        Let`s get random value between range values of{" "}
+        Let's get random value between range values of{" "}
         <FormatMark>minValue</FormatMark> and <FormatMark>maxValue</FormatMark>{" "}
         <FormatMark>5 - 2 = 3</FormatMark>.
       </FormatP>
@@ -310,7 +310,7 @@ export default function RandomValue() {
         <Comment value="0, 1, 2, 3" />
       </CodeBox>
       <FormatP>
-        Let`s see what we will get if add <FormatMark>minValue</FormatMark> to
+        Let's see what we will get if add <FormatMark>minValue</FormatMark> to
         the random value of the range{" "}
         <FormatMark>(0, 3) + 2 = (2, 5)</FormatMark>.
       </FormatP>
@@ -367,7 +367,7 @@ export default function RandomValue() {
         <Comment value="2, 3, 4, 5" />
       </CodeBox>
       <FormatP>
-        Let`s replace this code into function to reuse it in the future.
+        Let's replace this code into function to reuse it in the future.
       </FormatP>
       <CodeBox>
         <FunctionDeclare name="randInt" parameters={["minValue", "maxValue"]}>
@@ -417,7 +417,7 @@ export default function RandomValue() {
       </CodeBox>
       <FormatP>
         Now we understand what is going on inside of{" "}
-        <FormatMark>randInt()</FormatMark>. Let`s make it smaller.
+        <FormatMark>randInt()</FormatMark>. Let's make it smaller.
       </FormatP>
       <CodeBox>
         <RandIntFunction />

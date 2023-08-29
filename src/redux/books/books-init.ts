@@ -27,7 +27,11 @@ export const initialState: Array<Book> = [
     terms: [
       {
         title: "Random value between min and max value",
-        path: "/book/random-value",
+        path: "/book/random-value-between-min-max",
+      },
+      {
+        title: "Random value from array",
+        path: "/book/random-value-array",
       },
       {
         title: "Distance between objects",

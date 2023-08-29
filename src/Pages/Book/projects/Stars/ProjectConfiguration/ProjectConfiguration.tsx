@@ -10,6 +10,8 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatTitleH3,
+  FormatListUl,
+  FormatLink,
 } from "../../../../../code-components/format-components/format-components";
 
 import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
@@ -28,7 +30,13 @@ import {
 } from "../../../../../code-components/js-code/canvas-code/canvas-code";
 import { Br } from "../../../../../code-components/colored-code-components/html/html";
 import { BracketExpression } from "../../../../../code-components/js-code/js-code";
-import { Colon, Object, Property, Semicoln, VarName } from "../../../../../code-components/colored-code-components/js/js";
+import {
+  Colon,
+  Object,
+  Property,
+  Semicoln,
+  VarName,
+} from "../../../../../code-components/colored-code-components/js/js";
 
 export default function ProjectConfiguration() {
   const { theme }: { theme: string } = useSelector(selectUser);
@@ -40,6 +48,31 @@ export default function ProjectConfiguration() {
   return (
     <>
       <FormatTitleH2>Init</FormatTitleH2>
+      <InfoBox type="row">
+        Before you start this project you should know:
+        <FormatListUl>
+          <li>
+            <FormatLink href="/book/canvas-api" isHere>
+              Canvas API
+            </FormatLink>
+          </li>
+          <li>
+            <FormatLink href="/book/random-value-between-min-max" isHere>
+              randInt()
+            </FormatLink>
+          </li>
+          <li>
+            <FormatLink href="/book/random-value-array" isHere>
+              randNum()
+            </FormatLink>
+          </li>
+          <li>
+            <FormatLink href="/book/distance-between-objects" isHere>
+              getDist()
+            </FormatLink>
+          </li>
+        </FormatListUl>
+      </InfoBox>
 
       <FormatTitleH3>Preview</FormatTitleH3>
       <EditorOnline
@@ -96,7 +129,7 @@ export default function ProjectConfiguration() {
       <FormatTitleH3>Edit main.js</FormatTitleH3>
 
       <FormatP>
-        Let`s init our canvas to work with it in{" "}
+        Let's init our canvas to work with it in{" "}
         <FormatMark>main.js</FormatMark> file.
       </FormatP>
 
@@ -143,16 +176,14 @@ export default function ProjectConfiguration() {
 
       <FormatTitleH3>Edit main.css</FormatTitleH3>
       <FormatP>
-        We need to reatore margin for body for canvas to be in right position.
+        We need to restore margin for body for canvas to be in right position.
       </FormatP>
 
       <CodeBox filename="main.css">
         <VarName value="body" />{" "}
-        <BracketExpression brackets="{}" >
-          <Br />
-          {" "} <Property value="margin"/>
-          <Colon />{" "}
-          <Object value="none" />
+        <BracketExpression brackets="{}">
+          <Br /> <Property value="margin" />
+          <Colon /> <Object value="none" />
           <Semicoln />
           <Br />
         </BracketExpression>

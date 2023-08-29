@@ -66,7 +66,7 @@ export default function DistanceBetweenObjects() {
         coordinates <FormatMark>A(x, y) B(x, y)</FormatMark>.
       </FormatP>
       <FormatP>
-        Let`s say point <FormatMark>A</FormatMark> has such coordinates{" "}
+        Let's say point <FormatMark>A</FormatMark> has such coordinates{" "}
         <FormatMark>(2, 2)</FormatMark> and point <FormatMark>B</FormatMark>{" "}
         such <FormatMark>(8, 10)</FormatMark>.
       </FormatP>
@@ -136,7 +136,7 @@ export default function DistanceBetweenObjects() {
         <Comment value="-6, -8" />
       </CodeBox>
       <FormatP>
-        It`s hard to work with negative length so we need to multiply it by{" "}
+        It's hard to work with negative length so we need to multiply it by{" "}
         <FormatMark>-1</FormatMark> <FormatMark>(2 - 8) * -1 = 6</FormatMark>{" "}
         <FormatMark>(2 - 10) * -1 = 8</FormatMark> or just to find modulus of
         this number <FormatMark>[2 - 8] = 6</FormatMark>{" "}
@@ -219,7 +219,7 @@ export default function DistanceBetweenObjects() {
         .
       </FormatP>
       <FormatP>
-        Let`s use <FormatMark>pow()</FormatMark> method in class{" "}
+        Let's use <FormatMark>pow()</FormatMark> method in class{" "}
         <FormatMark>Math</FormatMark> in order not to copy numbers to power them
         by 2 <FormatMark>6 * 6</FormatMark> <FormatMark>8 * 8</FormatMark>{" "}
       </FormatP>
@@ -370,7 +370,7 @@ export default function DistanceBetweenObjects() {
         The distance between two points <FormatMark>A(2, 2)</FormatMark> and{" "}
         <FormatMark>A(8, 10)</FormatMark> is 10.
       </FormatP>
-      <FormatP>Let`s make a function to reuse this in the future.</FormatP>
+      <FormatP>Let's make a function to reuse this in the future.</FormatP>
       <CodeBox>
         <FunctionDeclare name="getDist" parameters={["a", "b"]}>
           {" "}
@@ -437,7 +437,7 @@ export default function DistanceBetweenObjects() {
       </CodeBox>
       <FormatP>
         Now we know how <FormatMark>getDist()</FormatMark> works
-        inside. Let`s make it smaller.
+        inside. Let's make it smaller.
       </FormatP>
       <CodeBox>
         <GetDistFunction />

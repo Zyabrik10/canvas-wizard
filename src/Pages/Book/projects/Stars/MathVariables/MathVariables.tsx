@@ -63,7 +63,7 @@ const getDist = (a, b) => sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));`}
       </CodeBox>
       <FormatP>
         Now to make quick access for our code expiriance to be more flexable and
-        sutisfaying let`s put <FormatMark>Math</FormatMark> methods to a
+        sutisfaying let's put <FormatMark>Math</FormatMark> methods to a
         varibales accordingly. So now we won`t need to address by class{" "}
         <FormatMark>Math</FormatMark> to get this method.
       </FormatP>
@@ -107,17 +107,17 @@ console.log(getDist(A, B)); // 10`}
               </FormatP>
               <FormatListUl>
                   <li>
-                      <FormatLink href="/book/random-value" isHere>
+                      <FormatLink href="/book/random-value-between-min-max" isHere={true}>
                           randInt()
                       </FormatLink>
                   </li>
                   <li>
-                      <FormatLink href="/book/random-value" isHere>
+                      <FormatLink href="/book/random-value-array" isHere={true}>
                             randNum()
                       </FormatLink>
                   </li>
                   <li>
-                      <FormatLink href="/book/distance-between-objects" isHere>
+                      <FormatLink href="/book/distance-between-objects" isHere={true}>
                             getDist()
                       </FormatLink>
                   </li>
