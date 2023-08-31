@@ -17,6 +17,7 @@ import {
   Text,
   ArrowFunction,
   Colon,
+  ClassName,
 } from "../colored-code-components/js/js";
 import { Br } from "../colored-code-components/html/html";
 
@@ -172,8 +173,6 @@ export function FunctionDeclare({
   name,
   parameters,
 }: DeclareFunctionType) {
-  console.log(children);
-
   return (
     <>
       <Literal value="function" />
@@ -241,6 +240,76 @@ export function CallFunction({ args, name }: CallFunctionType) {
   );
 }
 
+type DeclareClassType = {
+  children?:
+    | JSX.Element
+    | string
+    | Array<string>
+    | Array<JSX.Element>
+    | Array<JSX.Element | string>
+    | null;
+  name: string;
+};
+
+export function DeclareClass({ children, name }: DeclareClassType) {
+  console.log(children);
+
+  return (
+    <>
+      <Literal value="class" />
+      <ClassName value={name} />
+      <Bracket value="{" />
+      <Br />
+      {children}
+      <Br />
+      <Bracket value="}" />
+    </>
+  );
+}
+
+type ClassFunctionDeclareType = {
+  parameters?: Array<string>;
+  name: string;
+  children:
+    | JSX.Element
+    | string
+    | Array<string>
+    | Array<JSX.Element>
+    | Array<JSX.Element | string>
+    | null;
+};
+
+export function ClassFunctionDeclare({
+  children,
+  name,
+  parameters,
+}: ClassFunctionDeclareType) {
+  return (
+    <>
+      {" "}
+      <FunctionName value={name} />{" "}
+      <BracketExpression brackets="()">
+        {parameters !== undefined && parameters.length > 0
+          ? parameters.map((name: string, index: number) => {
+              if (index + 1 === parameters.length)
+                return <VarName value={name} />;
+              return (
+                <>
+                  <VarName value={name} />
+                  <Coma />
+                </>
+              );
+            })
+          : null}
+      </BracketExpression>
+      <Bracket value="{" />
+      <Br />
+      {children}
+      <Br /> <Bracket value="}" />
+    </>
+  );
+}
+
 type ObjectExpressionPropertysType = { property: string; value: any };
 
 type ObjectExpressionType = {
@@ -262,7 +331,9 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
                 return (
                   <>
                     {" "}
-                    <VarName value={property} /><Colon />{value}
+                    <VarName value={property} />
+                    <Colon />
+                    {value}
                     <Br />
                   </>
                 );
@@ -270,7 +341,9 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
               return (
                 <>
                   {" "}
-                  <VarName value={property} /><Colon />{value}
+                  <VarName value={property} />
+                  <Colon />
+                  {value}
                   <Coma />
                   <Br />
                 </>
@@ -281,4 +354,8 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
       <Bracket value="}" />
     </>
   );
+}
+
+export function DeclareThis() {
+  
 }

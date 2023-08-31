@@ -76,7 +76,9 @@ export function Literal({ value }: { value: string }) {
 export function FunctionName({ value }: { value: string }) {
   return <span className={jsCodeColor["functionName"]}>{value}</span>;
 }
-
+export function ClassName({ value }: { value: string }) {
+  return <span className={jsCodeColor["className"]}>{value}</span>;
+}
 
 export function Colon() {
   return <span className={jsCodeColor["sign"]}>:</span>;

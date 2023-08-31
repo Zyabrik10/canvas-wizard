@@ -48,7 +48,14 @@ export default function UpdateStars() {
       <FormatTitleH2>Update function</FormatTitleH2>
 
       <FormatTitleH3>Preview</FormatTitleH3>
-      <CodeBox>{`function update() {
+      <CodeBox>{`function drawLineBetwenTwoPoint(a,b) {
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.stroke();
+}
+
+      function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < balls.length; i++) {
@@ -73,7 +80,6 @@ export default function UpdateStars() {
 
 init();
 update();`}</CodeBox>
-
     </>
   );
 }

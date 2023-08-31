@@ -1,0 +1,437 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../../../redux/user/user-selector";
+import { adaptTheme } from "../../../../../ts/theme/adapt-theme";
+
+import {
+  FormatP,
+  FormatTitleH2,
+  FormatMark,
+  FormatTitleH3,
+} from "../../../../../code-components/format-components/format-components";
+
+import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+
+import ImageBox from "../../../../../components/ImageBox/ImageBox";
+import InfoBox from "../../../../../components/InfoBox/InfoBox";
+import EditorOnline from "../../../../../components/EditorOnline/EditorOnline";
+
+import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import {
+  BracketExpression,
+  ClassFunctionDeclare,
+  DeclareClass,
+} from "../../../../../code-components/js-code/js-code";
+
+export default function ClassBall() {
+  const { theme }: { theme: string } = useSelector(selectUser);
+
+  useEffect(() => {
+    adaptTheme(theme);
+  }, [theme]);
+
+  return (
+    
+    <>
+      <FormatTitleH2>Class Ball</FormatTitleH2>
+
+      <FormatTitleH3>Preview</FormatTitleH3>
+      <CodeBox>{`class Ball {
+  constructor({ coor, rad, vel }) {
+    // make object || default value in case we don't pass argument 
+    // it will be undefined then
+    // the right part will be pasted
+
+    this.rad = rad || randInt(1, 10);
+
+    // generate unic id for future optimization
+    this.id = balls.length + 1;
+    
+    this.coor = coor || {
+      x: randInt(this.rad, canvas.width - this.rad),
+      y: randInt(this.rad, canvas.height - this.rad),
+    };
+
+    // Generate random direction and then velocity
+    const minSpeed = 1;
+    const maxSpeed = 10;
+    const speedCoof = 50;
+    const speedDirection = {
+      left: -1,
+      right: 1,
+    };
+
+    const speedX = randInt(minSpeed, maxSpeed) / speedCoof;
+    const speedXDirection = randNum(speedDirection.left, speedDirection.right);
+    const speedY = randInt(minSpeed, maxSpeed) / speedCoof;
+    const speedYDirection = randNum(speedDirection.left, speedDirection.right);
+
+    const velTem = {
+      x: speedX * speedXDirection,
+      y: speedY * speedYDirection,
+    };
+
+    this.vel = vel || velTem;
+  }
+
+  draw() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    ctx.beginPath();
+    ctx.arc(x, y, rad, 0, 2 * pi);
+    ctx.fill();
+  }
+
+  move() {
+    const { x: vx, y: vy } = this.vel;
+
+    this.coor.x += vx;
+    this.coor.y += vy;
+  }
+
+  checkWallCollision() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    if (x + rad >= canvas.width) {
+      this.vel.x *= -1;
+      this.coor.x = canvas.width - rad;
+    } else if (x - rad <= 0) {
+      this.vel.x *= -1;
+      this.coor.x = rad;
+    }
+
+    if (y + rad >= canvas.height) {
+      this.vel.y *= -1;
+      this.coor.y = canvas.height - rad;
+    } else if (y - rad <= 0) {
+      this.vel.y *= -1;
+      this.coor.y = rad;
+    }
+  }
+
+  update() {
+    this.move();
+    this.checkWallCollision();
+    this.draw();
+  }
+}
+`}</CodeBox>
+      <FormatTitleH3>
+        Why do we need class if we can just use objects?
+      </FormatTitleH3>
+      <FormatP>
+        Class help us to mark tempelate wich can be used in future to create
+        several identical objects with different parameters.
+      </FormatP>
+      <FormatTitleH3>Class Ball</FormatTitleH3>
+      <FormatP>
+        We need to create class Ball in order to describe behavior of each ball.
+        Their movements, colors, coordinates, etc.
+      </FormatP>
+      <CodeBox filename="main.js">
+        <DeclareClass name="Ball" />
+      </CodeBox>
+      <FormatTitleH3>constructor</FormatTitleH3>
+      <FormatP>
+        Constructor takes parametrs which will be applied when instance will be
+        created. For our balls we need to locate them first{" "}
+        <FormatMark>coordinates</FormatMark> and to fill theme with some color{" "}
+        <FormatMark>color</FormatMark>. Let's put this as parameters in our
+        constructor.
+      </FormatP>
+      <CodeBox filename="main.js">
+        {`class Ball{ 
+  constructor(coor, rad){
+    this.coor = coor;
+    this.rad = rad;
+  }
+}`}
+      </CodeBox>
+      <FormatP>
+        It is pretty hard to remember the order of each parametrs. Let's put and
+        object as parametr so that we can esealy to wirte property and value and
+        not to worry about their order.
+      </FormatP>
+      <CodeBox filename="main.js">
+        {`class Ball{ 
+  constructor(params){
+    this.coor = params.coor;
+    this.rad = params.rad;
+  }
+}`}
+      </CodeBox>
+      <FormatP>Also let's destructive it.</FormatP>
+      <CodeBox filename="main.js">
+        {`class Ball{ 
+  constructor({coor, rad}){
+    this.coor = params.coor;
+    this.color = params.rad;
+  }
+}`}
+      </CodeBox>
+      <FormatTitleH3>draw Ball</FormatTitleH3>
+      <FormatP>
+        To draw our ball we need to make a fucntion that will use our parameters
+        that were passed to constructor.
+      </FormatP>
+      <FormatP>
+        For drawing circle we need to use method <FormatMark>arc</FormatMark>{" "}
+        from <FormatMark>ctx</FormatMark>.
+      </FormatP>
+      <CodeBox filename="main.js">
+        {`class Ball{ 
+  constructor({coor, rad}){
+    this.coor = params.coor;
+    this.color = params.rad;
+  }
+
+  draw(){
+    ctx.beginPath();
+    ctx.arc(this.coor.x, this.coor.y, this.rad, 0, 2 * pi);
+    ctx.fill();
+  }
+}`}
+      </CodeBox>
+      <FormatP>Let's see our first ball on canvas.</FormatP>
+      <CodeBox filename="main.js">
+        {`class Ball {
+  constructor({ coor, rad }) {
+    this.rad = rad;
+    this.coor = coor;
+  }
+
+  draw() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    ctx.beginPath();
+    ctx.arc(x, y, rad, 0, 2 * pi);
+    ctx.fill();
+  }
+}
+
+const ball = new Ball({
+  coor:{
+    x: 100,
+  y: 200
+  },
+  rad: 20
+});
+
+ball.draw();`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`class Ball {
+  constructor({ coor, rad }) {
+    this.rad = rad || randInt(1, 10);
+    this.coor = coor || {
+      x: randInt(this.rad, canvas.width - this.rad),
+      y: randInt(this.rad, canvas.height - this.rad),
+    };
+  }
+
+  draw() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    ctx.beginPath();
+    ctx.arc(x, y, rad, 0, 2 * pi);
+    ctx.fill();
+  }
+}
+
+const balls = [new Ball({}), new Ball({})];
+
+balls.forEach(ball => ball.draw());`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`const pi = Math.PI;
+const floor = Math.floor;
+const random = Math.random;
+const pow = Math.pow;
+const sqrt = Math.sqrt;
+
+const randInt = (min, max) => floor(random() * (max - min + 1) + min);
+const randNum = (...nums) => nums[floor(random() * nums.length)];
+const getDist = (a, b) => sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
+
+
+class Ball {
+  constructor({ coor, rad }) {
+    this.rad = rad || randInt(1, 10);
+    this.coor = coor || {
+      x: randInt(this.rad, canvas.width - this.rad),
+      y: randInt(this.rad, canvas.height - this.rad),
+    };
+  }
+
+  draw() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    ctx.beginPath();
+    ctx.arc(x, y, rad, 0, 2 * pi);
+    ctx.fill();
+  }
+  
+  move(){
+    this.coor.x += 1;
+    this.coor.y += 1;
+  }
+}
+
+const balls = [new Ball({}), new Ball({})];
+
+setInterval(()=>{
+  balls.forEach(ball => ball.draw());
+  balls.forEach(ball => ball.move());
+}, 100);`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`const balls = [new Ball({}), new Ball({})];
+
+setInterval(()=>{
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  balls.forEach(ball => ball.update());
+}, 100);`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`function update(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  balls.forEach(ball => ball.update());
+  update()
+}
+
+update();`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`function update(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  balls.forEach(ball => ball.update());
+  setTimeout(update, 100);
+}
+
+update();`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`function update(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  balls.forEach(ball => ball.update());
+  requestAnimationFrame(update);
+}
+
+update();`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`constructor({ coor, rad, vel }) {
+    this.rad = rad || randInt(10, 10);
+    this.coor = coor || {
+      x: randInt(this.rad, canvas.width - this.rad),
+      y: randInt(this.rad, canvas.height - this.rad),
+    };
+    
+    this.vel = vel || {
+      x: randInt(-2,2),
+      y: randInt(-2,2)
+    };
+  }`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`const minSpeed = 1;
+const maxSpeed = 10;
+const speedCoof = 50;
+const speedDirection = {
+  left: -1,
+  right: 1,
+};
+
+const speedX = randInt(minSpeed, maxSpeed) / speedCoof;
+const speedXDirection = randNum(speedDirection.left, speedDirection.right);
+const speedY = randInt(minSpeed, maxSpeed) / speedCoof;
+const speedYDirection = randNum(speedDirection.left, speedDirection.right);
+
+const velTem = {
+  x: speedX * speedXDirection,
+  y: speedY * speedYDirection,
+};
+
+this.vel = vel || velTem;`}
+      </CodeBox>
+      <CodeBox filename="main.js">
+        {`class Ball {
+  constructor({ coor, rad, vel }) {
+    this.rad = rad || randInt(10, 10);
+    this.coor = coor || {
+      x: randInt(this.rad, canvas.width - this.rad),
+      y: randInt(this.rad, canvas.height - this.rad),
+    };
+    
+    // Generate random direction and then velocity
+    const minSpeed = 1;
+    const maxSpeed = 10;
+    const speedCoof = 50;
+    const speedDirection = {
+      left: -1,
+      right: 1,
+    };
+
+    const speedX = randInt(minSpeed, maxSpeed) / speedCoof;
+    const speedXDirection = randNum(speedDirection.left, speedDirection.right);
+    const speedY = randInt(minSpeed, maxSpeed) / speedCoof;
+    const speedYDirection = randNum(speedDirection.left, speedDirection.right);
+
+    const velTem = {
+      x: speedX * speedXDirection,
+      y: speedY * speedYDirection,
+    };
+
+    this.vel = vel || velTem;
+  }
+
+  draw() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    ctx.beginPath();
+    ctx.arc(x, y, rad, 0, 2 * pi);
+    ctx.fill();
+  }
+  
+  move(){
+    this.coor.x += this.vel.x;
+    this.coor.y += this.vel.y;
+  }
+  
+    checkWallCollision() {
+    const { x, y } = this.coor;
+    const rad = this.rad;
+
+    if (x + rad >= canvas.width) {
+      this.vel.x *= -1;
+      this.coor.x = canvas.width - rad;
+    } else if (x - rad <= 0) {
+      this.vel.x *= -1;
+      this.coor.x = rad;
+    }
+
+    if (y + rad >= canvas.height) {
+      this.vel.y *= -1;
+      this.coor.y = canvas.height - rad;
+    } else if (y - rad <= 0) {
+      this.vel.y *= -1;
+      this.coor.y = rad;
+    }
+  }
+  
+  update(){
+    this.move();
+    this.checkWallCollision();
+    this.draw();
+  }
+}`}
+      </CodeBox>
+    </>
+  );
+}

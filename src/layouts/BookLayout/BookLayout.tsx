@@ -27,7 +27,7 @@ export default function BookLayout() {
           <div className={css["container"]}>
             <InfoBox type="column">
               <FormatP>
-                This project is <FormatMark>underdevelopment</FormatMark>
+                This project is <FormatMark>underdevelopment</FormatMark>. All articles are going to be updated and enhaced
               </FormatP>
             </InfoBox>
             <Outlet />
