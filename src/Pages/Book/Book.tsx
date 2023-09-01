@@ -6,12 +6,15 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/user/user-selector";
 import { adaptTheme } from "../../ts/theme/adapt-theme";
+import { FormatMark } from "../../code-components/format-components/format-components";
 
 function Code() {
-  return <pre>
-    <span>const</span> <span>canvas</span>
-   <span>const</span> <span>canvas</span>
-  </pre>
+  return (
+    <pre>
+      <span>const</span> <span>canvas</span>
+      <span>const</span> <span>canvas</span>
+    </pre>
+  );
 }
 
 export default function Book() {
@@ -21,20 +24,19 @@ export default function Book() {
     adaptTheme(theme);
   }, [theme]);
 
-
   return (
     <>
       <section>
         <h2 className={`${format_text["title"]} ${globalCss["global-title"]}`}>
-          Free Canvas Cources
+          Free Canvas Book
         </h2>
-                <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
-          Introducing [Your Website Name]: Unleash Your Creativity with Free
+        <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
+          Introducing <FormatMark>CanvasWizard</FormatMark>: Unleash Your Creativity with Free
           Canvas Courses, Books, and Projects!
         </p>
         <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           Welcome to a digital haven where artistic inspiration and educational
-          exploration converge – [Your Website Name]. We are thrilled to present
+          exploration converge – <FormatMark>CanvasWizard</FormatMark>. We are thrilled to present
           a unique platform that opens up a world of creative possibilities
           through an extensive collection of free canvas-related resources.
           Whether you're an aspiring artist, a seasoned creative enthusiast, or
@@ -61,7 +63,7 @@ export default function Book() {
           imagination.
         </p>
         <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
-          🌐 Community and Connection: At [Your Website Name], we believe in the
+          🌐 Community and Connection: At <FormatMark>CanvasWizard</FormatMark>, we believe in the
           power of a thriving creative community. Engage with fellow learners,
           share your progress, exchange ideas, and receive constructive
           feedback. Our platform fosters an environment where artists of all
@@ -76,7 +78,7 @@ export default function Book() {
           pursuit.
         </p>
         <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
-          🔒 User-Friendly Experience: Navigating [Your Website Name] is a
+          🔒 User-Friendly Experience: Navigating <FormatMark>CanvasWizard</FormatMark> is a
           breeze. Our user-friendly interface ensures that you can seamlessly
           explore courses, discover books, and embark on projects without any
           technical hurdles. Spend less time figuring out how to use the website
@@ -85,7 +87,7 @@ export default function Book() {
         <p className={`${format_text["p"]} ${globalCss["global-p"]}`}>
           Experience the boundless world of canvas artistry like never before.
           Whether you're a painter at heart, a hobbyist seeking new experiences,
-          or simply intrigued by the magic of canvas, [Your Website Name]
+          or simply intrigued by the magic of canvas, <FormatMark>CanvasWizard</FormatMark>
           invites you to join us in this exciting journey of creativity and
           learning. Unleash your imagination, refine your techniques, and
           cultivate your love for canvas art with our free courses, books, and

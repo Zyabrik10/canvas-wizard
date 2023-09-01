@@ -55,7 +55,7 @@ export default function UpdateStars() {
     ctx.stroke();
 }
 
-      function update() {
+function update() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     for (let i = 0; i < balls.length; i++) {
@@ -76,10 +76,50 @@ export default function UpdateStars() {
     }
 
     requestAnimationFrame(update);
-}
+}`}</CodeBox>
+      <FormatTitleH3>Clear canvas</FormatTitleH3>
+      <FormatP>
+        Each canvas update we clear canvas in order to make an animation.
+      </FormatP>
+      <CodeBox>{`ctx.clearRect(0, 0, canvas.width, canvas.height);`}</CodeBox>
+      <FormatTitleH3>Draw balls</FormatTitleH3>
+      <FormatP>
+        Now we need go through the balls array with loop to draw each ball and
+        also to calculate if we can draw line between one ball and another.
+      </FormatP>
+      <CodeBox>
+        {`for (let i = 0; i < balls.length; i++) {
+  ctx.fillStyle = "#fff";
+  const ball1 = balls[i];
+  ball1.update();
 
-init();
-update();`}</CodeBox>
+  for (let j = i + 1; j < balls.length; j++) {
+    const ball2 = balls[j];
+    const dist = getDist(ball1.coor, ball2.coor);
+
+    if (dist <= minRad) {
+      ctx.lineWidth = 1 - dist / minRad;
+      ctx.strokeStyle = "#fff";
+      drawLineBetwenTwoPoint(ball1.coor, ball2.coor);
+    }
+  }
+}`}
+      </CodeBox>
+      <FormatP>
+        The last one we use requestAnimationFrame to call update function each frame.
+      </FormatP>
+      <CodeBox>{`requestAnimationFrame(update);`}</CodeBox>
+      <FormatTitleH3>Draw line function</FormatTitleH3>
+      <FormatP>
+        We just move point to first ball center and draw line to other ball
+        center.
+      </FormatP>
+      <CodeBox>{`function drawLineBetwenTwoPoint(a,b) {
+    ctx.beginPath();
+    ctx.moveTo(a.x, a.y);
+    ctx.lineTo(b.x, b.y);
+    ctx.stroke();
+}`}</CodeBox>
     </>
   );
 }

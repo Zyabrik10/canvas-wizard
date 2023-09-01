@@ -52,13 +52,10 @@ export default function ReactOnWindowResizeStars() {
   canvas.width = innerWidth;
   canvas.height = innerHeight;
 });`}</CodeBox>
-
+      <FormatP>
+        On each resize of window we change canvas width an dheight accoring to
+        width and height of viewport.
+      </FormatP>
     </>
   );
 }
-
-
-
-// export function ReactOnWindowResizeStars() {
-//     return 
-// }
