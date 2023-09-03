@@ -11,11 +11,11 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <BrowserRouter basename="/canvas-wizard">
-    <React.StrictMode>
-      <Provider store={store}>
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter basename="/canvas-wizard">
         <App />
-      </Provider>
-    </React.StrictMode>
-  </BrowserRouter>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
 );
