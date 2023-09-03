@@ -17,7 +17,16 @@
 .footer-content {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+@media screen and (min-width: 666px) {
+  .footer-content {
+    flex-direction: row;
+  }
 }
 
 .footer-list {
@@ -25,14 +34,13 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  margin-left: auto;
 
   font-size: 20px;
   font-weight: 700;
   justify-content: right;
 }
 
-.footer-list-item {
+.footer-link-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,22 +56,26 @@
   font-weight: 700;
 }
 
-.footer-list-item.dark-theme:hover {
+.footer-link-button.dark-theme:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-list-item.light-theme:hover {
+.footer-link-button.light-theme:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.footer-list-item.dark-theme {
-  border: 1px solid var(--def-dark-2);
+.footer-link-button.dark-theme {
+  border: 1px solid var(--def-dark-2, #1f262e);
 }
 
-.footer-list-item.light-theme {
+.footer-link-button.light-theme {
   border: 1px solid #e2e2e2;
 }
 
+.footer-language-button {
+  position: relativ e;
+  top: -3px;
+}
 .logo-box {
   display: flex;
   align-items: center;
@@ -74,4 +86,9 @@
 
 .delimeter {
   font-size: 20px;
+}
+
+.footer-author-link {
+  display: block;
+  margin: 0 auto;
 }

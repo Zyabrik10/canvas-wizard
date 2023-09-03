@@ -47,8 +47,9 @@ export default function ProjectConfiguration() {
 
   return (
     <>
-      <FormatTitleH2>Init</FormatTitleH2>
-      <InfoBox type="row">
+      <FormatTitleH2>Project configuration</FormatTitleH2>
+      <FormatTitleH3>Stars - project</FormatTitleH3>
+      <InfoBox type="extra" dir="row">
         Before you start this project you should know:
         <FormatListUl>
           <li>
@@ -84,24 +85,27 @@ export default function ProjectConfiguration() {
         <a href="https://codepen.io">CodePen</a>.
       </EditorOnline>
 
-      <FormatTitleH3>Config files and folders</FormatTitleH3>
+      <FormatTitleH3>Configuration Files and Folders</FormatTitleH3>
       <FormatP>
-        Each project starts with creating files and folders of configuration.
+        Every project begins with the creation of configuration files and
+        folders.
       </FormatP>
       <FormatP>
-        Our configuration will be so. We create main html file and name it{" "}
-        <FormatMark>index.html</FormatMark>. Then create two folders{" "}
-        <FormatMark>js</FormatMark> and <FormatMark>css</FormatMark>.
+        In our configuration setup, we will follow these steps. First, we create
+        the main <FormatMark>HTML file</FormatMark> and name it{" "}
+        <FormatMark>index.html</FormatMark>. Next, we create two{" "}
+        <FormatMark>folders</FormatMark>
+        named <FormatMark>js</FormatMark> and <FormatMark>css</FormatMark>.
       </FormatP>
 
       <ImageBox
         src={initImage1}
         number="1.0"
-        description="Creating config files and folders"
+        description="Creating configuration files and folders"
       />
       <FormatP>
-        After, we create <FormatMark>main.js</FormatMark> and{" "}
-        <FormatMark>main.css</FormatMark> accordingly.
+        Then, we create the <FormatMark>main.js</FormatMark> and{" "}
+        <FormatMark>main.css</FormatMark> files accordingly.
       </FormatP>
 
       <ImageBox
@@ -121,15 +125,15 @@ export default function ProjectConfiguration() {
         <InitHTML />
       </CodeBox>
 
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         We make file <FormatMark>main.js</FormatMark> to be module in advance.
         To make in the furure seperates files
       </InfoBox>
 
-      <FormatTitleH3>Edit main.js</FormatTitleH3>
+      <FormatTitleH3>Initializing Our Canvas</FormatTitleH3>
 
       <FormatP>
-        Let's init our canvas to work with it in{" "}
+        Let's set up our canvas to work with it in the{" "}
         <FormatMark>main.js</FormatMark> file.
       </FormatP>
 
@@ -140,41 +144,40 @@ export default function ProjectConfiguration() {
       </CodeBox>
 
       <FormatP>
-        I`d like to make our canvas full width and height of{" "}
-        <FormatMark>viewport</FormatMark>. Canvas has propertys like width and
-        height for this.
+        Now, let's make our canvas the full width and height of the viewport.
+        The canvas has properties like <FormatMark>width</FormatMark> and{" "}
+        <FormatMark>height</FormatMark> for this purpose.
       </FormatP>
       <FormatP>
-        <FormatMark>window</FormatMark> has objects for this case:{" "}
+        The <FormatMark>window</FormatMark> object provides us with{" "}
         <FormatMark>innerWidth</FormatMark> and{" "}
-        <FormatMark>innerHeight</FormatMark> return width and height accordignly
-        of current <FormatMark>viewport</FormatMark>.
-      </FormatP>
-      <InfoBox type="column">
-        Be careful! If you set <FormatMark>width</FormatMark> and{" "}
-        <FormatMark>height</FormatMark> for canvas in{" "}
-        <FormatMark>css</FormatMark> file. That will be{" "}
+        <FormatMark>innerHeight</FormatMark>, which return the{" "}
         <FormatMark>width</FormatMark> and <FormatMark>height</FormatMark> of
-        <FormatMark>visible</FormatMark> canvas, but not{" "}
-        <FormatMark>real</FormatMark> canvas. For displaying{" "}
-        <FormatMark>real</FormatMark> canvas you need to use width and height
-        <FormatMark>attributes</FormatMark> in <FormatMark>html</FormatMark> or{" "}
-        width and height as <FormatMark>propertys</FormatMark> of canvas in{" "}
-        <FormatMark>js</FormatMark>
+        the <FormatMark>current viewport</FormatMark>.
+      </FormatP>
+      <InfoBox type="warn" dir="column">
+        <FormatP>
+          Be careful! If you set the width and height for the canvas in a CSS
+          file, those values will affect the visible canvas but not the real
+          canvas. To adjust the size of the actual canvas for drawing, you
+          should use the <FormatMark>width</FormatMark> and{" "}
+          <FormatMark>height</FormatMark> attributes in HTML or set them as
+          properties of the canvas in JavaScript
+        </FormatP>
       </InfoBox>
       <ImageBox src={img} description="innerWidth and innerHeight" />
       <CodeBox filename="main.js">
         <SetCanvasSize width="innerWidth" height="innerHeight" />
       </CodeBox>
-      <InfoBox type="column">
-        <FormatMark>innerWidth</FormatMark> and{" "}
-        <FormatMark>innerHeight</FormatMark> are propertys of global object{" "}
-        <FormatMark>window</FormatMark>. So we don`t need to write{" "}
-        <FormatMark>window.innerWidth</FormatMark> or{" "}
-        <FormatMark>window.innerHeight</FormatMark>
+      <InfoBox type="extra" dir="column">
+        <FormatP>
+          The <FormatMark>innerWidth</FormatMark> and <FormatMark>innerHeight</FormatMark> are properties of the global <FormatMark>window</FormatMark>
+          object, so there's no need to write <FormatMark>window.innerWidth</FormatMark> or
+          <FormatMark>window.innerHeight</FormatMark>
+        </FormatP>
       </InfoBox>
 
-      <FormatTitleH3>Edit main.css</FormatTitleH3>
+      <FormatTitleH3>Restore margin</FormatTitleH3>
       <FormatP>
         We need to restore margin for body for canvas to be in right position.
       </FormatP>
@@ -183,7 +186,7 @@ export default function ProjectConfiguration() {
         <VarName value="body" />{" "}
         <BracketExpression brackets="{}">
           <Br /> <Property value="margin" />
-          <Colon /> <Object value="none" />
+          <Colon /> <Object value="0" />
           <Semicoln />
           <Br />
         </BracketExpression>

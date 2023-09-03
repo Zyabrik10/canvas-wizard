@@ -1,20 +1,20 @@
 /* info box */
 .info-box {
+  --extra: rgb(0, 225, 255);
+  --warn: rgb(255, 196, 0);
+  --error: rgb(255, 0, 0);
+
   width: 100%;
   overflow-x: auto;
 
   border-radius: 10px;
 
   padding: 15px;
-  border-left: 5px solid var(--color);
-  border-right: 5px solid var(--color);
 
   margin-bottom: 20px;
 
   display: flex;
   gap: 10px;
-
-  --color: rgb(0, 225, 255);
 }
 
 .info-box.row {
@@ -38,19 +38,44 @@
 }
 
 .info-box-marker {
-  color: var(--color);
-
   display: flex;
-
-  width: 30px;
-  height: 30px;
 
   justify-content: center;
   align-items: center;
+
+  width: 30px;
+  height: 30px;
 
   border-radius: 100%;
 
   border: 2px solid currentColor;
 
   font-weight: bold;
+}
+
+.extra {
+  border-left: 5px solid var(--extra);
+  border-right: 5px solid var(--extra);
+}
+
+.extra .info-box-marker {
+  color: var(--extra);
+}
+
+.warn {
+  border-left: 5px solid var(--warn);
+  border-right: 5px solid var(--warn);
+}
+
+.warn .info-box-marker {
+  color: var(--warn);
+}
+
+.error {
+  border-left: 5px solid var(--error);
+  border-right: 5px solid var(--error);
+}
+
+.error .info-box-marker {
+  color: var(--error);
 }

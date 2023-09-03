@@ -49,7 +49,7 @@
   font-weight: 700;
 }
 
-.header-list-item {
+.header-link-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,23 +65,23 @@
   font-weight: 700;
 }
 
-.header-list-item.dark-theme:hover {
+.header-link-button.dark-theme:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.header-list-item.light-theme:hover {
+.header-link-button.light-theme:hover {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
-.header-list-item.dark-theme {
+.header-link-button.dark-theme {
   border: 1px solid var(--def-dark-2, #1f262e);
 }
 
-.header-list-item.light-theme {
+.header-link-button.light-theme {
   border: 1px solid #e2e2e2;
 }
 
 .header-language-button {
-  position: relative;
+  position: relativ e;
   top: -3px;
 }

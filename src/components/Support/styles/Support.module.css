@@ -1,0 +1,30 @@
+.support-box {
+  border-radius: 10px;
+  padding: 20px;
+  background-color: rgb(43, 13, 173);
+  color: #fff;
+}
+
+.support-button {
+  padding: 10px;
+  border-radius: 10px;
+  color: rgb(43, 13, 173);
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+
+  width: 100%;
+  max-width: 200px;
+
+  text-transform: uppercase;
+
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.support-button:hover {
+  background-color: #ddd;
+}

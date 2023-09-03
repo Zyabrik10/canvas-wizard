@@ -8,7 +8,7 @@ export function VarName({ value }: { value: string | JSX.Element}) {
   return <span className={jsCodeColor["varName"]}>{value}</span>;
 }
 
-export function Object({ value }: { value: string }) {
+export function Object({ value }: { value: string | null }) {
   return <span className={jsCodeColor["object"]}>{value}</span>;
 }
 

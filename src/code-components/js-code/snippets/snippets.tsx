@@ -11,4 +11,5 @@ export function DeclareRandom() {
       </ConstVariable>
     </>
   );
+
 }

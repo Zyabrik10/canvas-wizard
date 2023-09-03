@@ -1,8 +1,3 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../../../../redux/user/user-selector";
-import { adaptTheme } from "../../../../../ts/theme/adapt-theme";
-
 import {
   FormatP,
   FormatTitleH2,
@@ -14,24 +9,10 @@ import {
 
 import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
 
-import ImageBox from "../../../../../components/ImageBox/ImageBox";
 import InfoBox from "../../../../../components/InfoBox/InfoBox";
-import EditorOnline from "../../../../../components/EditorOnline/EditorOnline";
 
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
-import {
-  BracketExpression,
-  ClassFunctionDeclare,
-  DeclareClass,
-} from "../../../../../code-components/js-code/js-code";
 
 export default function ClassBall() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
       <FormatTitleH2>Class Ball</FormatTitleH2>
@@ -176,7 +157,7 @@ export default function ClassBall() {
     this.vel = vel || velTem;
   }`}
       </CodeBox>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           we distract our object to get propertys, but if we don't pass any
           propertys they will be <FormatMark>undefined</FormatMark>. That is why
@@ -189,7 +170,7 @@ export default function ClassBall() {
         <li>coor - coordination</li>
         <li>vel - velocity</li>
       </FormatListUl>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         We also use id. We need it in the future for optimization.
       </InfoBox>
       <FormatTitleH3>Draw function</FormatTitleH3>
@@ -204,7 +185,7 @@ export default function ClassBall() {
    ctx.fill();
 }`}
       </CodeBox>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see
         this{" "}
         <FormatLink href="/book/canvas-api" isHere>

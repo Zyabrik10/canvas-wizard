@@ -2,8 +2,6 @@ import {
   Docytype,
   Br,
   OpenTagWithAttr,
-  OneTagWithAttr,
-  OpenTag,
   CloseTag,
 } from "../colored-code-components/html/html";
 import { Body, Canvas, Head, Html, Meta, Title } from "./snippets/snippets";
@@ -23,13 +21,13 @@ export function InitHTML() {
               { name: "initial-scale", value: "1" },
             ]}
           />{" "}
-          <Title title="Canvas" />
+          <Title title="Canvas Project" />
         </Head>
         <Body>
           <Br /> <Canvas />{" "}
           <OpenTagWithAttr
             tagName="script"
-            attrs={[{ name: "src", value: "./js/main.js" }]}
+            attrs={[{ name: "src", value: "./js/main.js"}, {name:"type", value:"module"}]}
           />
           <CloseTag tagName="script" />
         </Body>

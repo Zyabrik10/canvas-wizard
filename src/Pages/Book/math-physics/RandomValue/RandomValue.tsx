@@ -1,8 +1,3 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../../../redux/user/user-selector";
-import { adaptTheme } from "../../../../ts/theme/adapt-theme";
-
 import {
   FormatP,
   FormatTitleH2,
@@ -34,14 +29,9 @@ import {
 import { RandIntFunction } from "../../../../code-components/js-code/canvas-code/canvas-code";
 
 import { DeclareRandom } from "../../../../code-components/js-code/snippets/snippets";
+import InfoBox from "../../../../components/InfoBox/InfoBox";
 
 export default function RandomValue() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
       <FormatTitleH2>Random value between min and max value</FormatTitleH2>
@@ -50,24 +40,24 @@ export default function RandomValue() {
 
       <FormatTitleH3>Function ready to be used</FormatTitleH3>
       <CodeBox>
-        <RandIntFunction />
+        <RandIntFunction  />
       </CodeBox>
 
       {/*  */}
 
-      <FormatTitleH3>Inroducing Math.random()</FormatTitleH3>
+      <FormatTitleH3 id="mathrandom">Inroducing Math.random()</FormatTitleH3>
       <FormatP>
-        Method <FormatMark>random()</FormatMark> in class{" "}
-        <FormatMark>Math</FormatMark> returns random value from{" "}
-        <FormatMark>0</FormatMark> to <FormatMark>1</FormatMark>.
+        The <FormatMark>Math.random()</FormatMark> method in
+        <FormatMark>Math</FormatMark> class returns random value between{" "}
+        <FormatMark>0</FormatMark> and <FormatMark>1</FormatMark>.
       </FormatP>
-      <FormatP>
-        But it doesn`t include <FormatMark>1</FormatMark>.
-      </FormatP>
-      <FormatP>
-        So actualy it returns value from <FormatMark>0</FormatMark> to{" "}
-        <FormatMark>0.999...</FormatMark>.
-      </FormatP>
+      <InfoBox type="extra" dir="row">
+        <FormatP>
+          But it doesn't include <FormatMark>1</FormatMark>. So actualy it
+          returns value from <FormatMark>0</FormatMark> to{" "}
+          <FormatMark>0.999...</FormatMark>
+        </FormatP>
+      </InfoBox>
       <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
@@ -80,59 +70,42 @@ export default function RandomValue() {
 
       {/*  */}
 
-      <FormatTitleH3>Get random value from 0 to any value</FormatTitleH3>
+      <FormatTitleH3>Getting a Random Value within a Range starting from 0</FormatTitleH3>
       <FormatP>
-        In oreder to make value from <FormatMark>0</FormatMark> to{" "}
-        <FormatMark>any value</FormatMark> we just need to multiply this{" "}
-        <FormatMark>any value + 1</FormatMark> on random value.
+        To get a random value within a specific range (for example, from 0 to
+        10), we multiply the random value by (the range's upper limit + 1) and
+        then round it down using
+        <FormatMark>Math.floor() </FormatMark> because of a big amout of
+        decimals.
       </FormatP>
       <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
         <Br />
-        <ConstVariable name="anyValue">
+        <ConstVariable name="someValue">
           <Number value="10" />
         </ConstVariable>
         <Br />
+        <Br />
+
         <ConsoleLog>
           <VarName value="randomValue" />
           <Sign value="*" />
           <BracketExpression brackets="()">
-            <VarName value="anyValue" />
+            <VarName value="someValue" />
             <Sign value="+" />
             <Number value="1" />
           </BracketExpression>
         </ConsoleLog>
-        <Comment value="5.9242883533580475" />
-      </CodeBox>
-      <FormatP>
-        As you can see now we have random value from <FormatMark>0</FormatMark>{" "}
-        to <FormatMark>10</FormatMark>. But random method returns random value
-        with a big amount of decimals [digits after decimal point].
-      </FormatP>
-      <FormatP>
-        So, to get random value from <FormatMark>0</FormatMark> to{" "}
-        <FormatMark>10</FormatMark> we just need to floor this number.
-      </FormatP>
-      <FormatP>
-        We can use <FormatMark>floor()</FormatMark> method in class{" "}
-        <FormatMark>Math</FormatMark>.
-      </FormatP>
-      <CodeBox>
-        <DeclareRandom />
-        <Comment value="random value from 0 to 1" />
-        <Br />
-        <ConstVariable name="anyValue">
-          <Number value="10" />
-        </ConstVariable>
+        <Comment value="7.9242883533580475" />
         <Br />
         <ConsoleLog>
           <UseObject name="Math" method="floor">
             <VarName value="randomValue" />
             <Sign value="*" />
             <BracketExpression brackets="()">
-              <VarName value="anyValue" />
+              <VarName value="someValue" />
               <Sign value="+" />
               <Number value="1" />
             </BracketExpression>
@@ -143,24 +116,17 @@ export default function RandomValue() {
 
       {/*  */}
 
-      <FormatTitleH3>
-        Get random value from 0 to 1 starting from any value
-      </FormatTitleH3>
+      <FormatTitleH3>Getting a Random Value with an Offset</FormatTitleH3>
       <FormatP>
-        Now, we want to get random value from <FormatMark>0</FormatMark> to{" "}
-        <FormatMark>1</FormatMark> starting from{" "}
-        <FormatMark>any value</FormatMark>.
-      </FormatP>
-      <FormatP>
-        All we have to do is just to add <FormatMark>any value</FormatMark> to
-        our random value.
+        Now we want to start from a certain value (e.g., from 5 to 6), you can
+        add that value to the random result. Here's how:
       </FormatP>
       <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
 
         <Br />
-        <ConstVariable name="anyValue">
+        <ConstVariable name="someValue">
           <Number value="5" />
         </ConstVariable>
         <Br />
@@ -168,7 +134,7 @@ export default function RandomValue() {
           <UseObject name="Math" method="floor">
             <VarName value="randomValue" />
             <Sign value="+" />
-            <VarName value="anyValue" />
+            <VarName value="someValue" />
           </UseObject>
         </ConsoleLog>
         <Comment value="5.256558353604628" />
@@ -179,16 +145,13 @@ export default function RandomValue() {
       {/*  */}
 
       <FormatTitleH3>
-        Get random value from any value to any value
+        Getting a Random Value within a Specified Range
       </FormatTitleH3>
       <FormatP>
-        Now we have knowledge how get random value from{" "}
-        <FormatMark>0</FormatMark> to <FormatMark>any value</FormatMark> and get
-        random value from <FormatMark>0</FormatMark> to{" "}
-        <FormatMark>1</FormatMark> starting from{" "}
-        <FormatMark>any value</FormatMark>.
+        We have knowledge how to get a random value within a range starting from 0 and with offset.
       </FormatP>
-      <FormatP>Let's try to combine theme.</FormatP>
+      <FormatP>Let's try to combine theme:</FormatP>
+
       <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
@@ -227,17 +190,15 @@ export default function RandomValue() {
         <Comment value="0 + 5 = 5, 2 + 5 = 7!!!" />
         <Br />
         <Br />
-        <Comment value="console.log(Math.floor(randomValue * (minValue + 1)) + maxValue);" />
-        <Br />
-        <Br />
 
         <ConsoleLog>
           <VarName value="randomValueBetweenMinAndMax" />
         </ConsoleLog>
         <Comment value="5, 6, 7" />
       </CodeBox>
+
       <FormatP>
-        Unfortunately we encountered a broblem. We get random value between{" "}
+        Unfortunately we encountered a problem. We get random value between{" "}
         <FormatMark>5</FormatMark>
         and <FormatMark>7</FormatMark>. But not what we expected to see from{" "}
         <FormatMark>2</FormatMark> to <FormatMark>5</FormatMark>. Why is it
@@ -255,18 +216,19 @@ export default function RandomValue() {
         <li>2 + 5 = 7 - max output value</li>
       </FormatListUl>
       <FormatP>
-        Now we undestand why we weren`t getting random value between{" "}
+        That is why we weren't getting random value between{" "}
         <FormatMark>2</FormatMark> and <FormatMark>5</FormatMark>.
       </FormatP>
       <FormatP>
         So, we need to somehow get lowwer{" "}
-        <FormatMark>minRandomValue</FormatMark>
+        <FormatMark>min output value</FormatMark>
       </FormatP>
       <FormatP>
         Let's get random value between range values of{" "}
         <FormatMark>minValue</FormatMark> and <FormatMark>maxValue</FormatMark>{" "}
         <FormatMark>5 - 2 = 3</FormatMark>.
       </FormatP>
+
       <CodeBox>
         <DeclareRandom />
         <Comment value="random value from 0 to 1" />
@@ -288,6 +250,7 @@ export default function RandomValue() {
           <Sign value="-" />
           <VarName value="minValue" />
         </ConstVariable>
+        <Comment value="5 - 2 = 3" />
         <Br />
 
         <ConstVariable name="randomValueBetweenDiffernce">
@@ -309,8 +272,9 @@ export default function RandomValue() {
         </ConsoleLog>
         <Comment value="0, 1, 2, 3" />
       </CodeBox>
+
       <FormatP>
-        Let's see what we will get if add <FormatMark>minValue</FormatMark> to
+        Let's see what we will get if we add <FormatMark>minValue</FormatMark> to
         the random value of the range{" "}
         <FormatMark>(0, 3) + 2 = (2, 5)</FormatMark>.
       </FormatP>
@@ -319,8 +283,7 @@ export default function RandomValue() {
         <li>3 + 2 = 5 - max output value</li>
       </FormatListUl>
       <FormatP>
-        Congratulations, we finnaly get this range that we need for our random
-        value between. Final result is below.
+        Congratulations, we finnaly get this range that we need. Final result is below:
       </FormatP>
       <CodeBox>
         <DeclareRandom />
@@ -366,9 +329,15 @@ export default function RandomValue() {
         </ConsoleLog>
         <Comment value="2, 3, 4, 5" />
       </CodeBox>
+
+      <FormatTitleH3>
+        Creating a Reusable Function
+      </FormatTitleH3>
+
       <FormatP>
-        Let's replace this code into function to reuse it in the future.
+        Let's wrapp this code in function to reuse it in the future:
       </FormatP>
+
       <CodeBox>
         <FunctionDeclare name="randInt" parameters={["minValue", "maxValue"]}>
           {" "}
@@ -415,10 +384,13 @@ export default function RandomValue() {
         </ConsoleLog>
         <Comment value="81" />
       </CodeBox>
+
+      <FormatTitleH3>Simplified Function</FormatTitleH3>
       <FormatP>
-        Now we understand what is going on inside of{" "}
+        We understand what is going on inside of{" "}
         <FormatMark>randInt()</FormatMark>. Let's make it smaller.
       </FormatP>
+
       <CodeBox>
         <RandIntFunction />
       </CodeBox>

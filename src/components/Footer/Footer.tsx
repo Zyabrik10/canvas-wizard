@@ -7,6 +7,7 @@ function FooterContent() {
   return (
     <div className={css["footer-content"]}>
       <FooterLogo />
+      <a className={`${css["footer-author-link"]} ${globalCss["global-link"]}`} href="https://github.com/Zyabrik10">2023 Made by @Zyabrik10 </a>
       <FooterList />
     </div>
   );
@@ -19,7 +20,7 @@ interface FooterProps {
 export default function Footer({ isContainer }: FooterProps) {
   return (
     <footer
-      className={`${css["dark-theme"]} switch-theme ${globalCss["footer"]} ${css["footer"]}`}
+      className={`${css["dark-theme"]} switch-theme ${css["footer"]}`}
       data-dark-theme={css["dark-theme"]}
       data-light-theme={css["light-theme"]}
     >

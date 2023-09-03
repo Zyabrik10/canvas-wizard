@@ -21,9 +21,9 @@ export default function HeaderList() {
         dispatch(switchTheme("light"));
         setFillColor("#141a1f");
         break;
-        case "light":
-          dispatch(switchTheme("dark"));
-          setFillColor("#fff");
+      case "light":
+        dispatch(switchTheme("dark"));
+        setFillColor("#fff");
         break;
     }
   }
@@ -32,7 +32,9 @@ export default function HeaderList() {
     <ul className={`${globalCss["global-list"]} ${css["header-list"]}`}>
       <HeaderListItem>
         <button
-          className={`${css["header-language-button"]} ${globalCss["global-button"]}`}
+          className={`${css["header-language-button"]} ${globalCss["global-button"]} ${css["header-link-button"]} switch-theme ${css["dark-theme"]}`}
+          data-dark-theme={css["dark-theme"]}
+          data-light-theme={css["light-theme"]}
           type="button"
         >
           en
@@ -40,27 +42,33 @@ export default function HeaderList() {
       </HeaderListItem>
       <HeaderListItem>
         <a
-          className={globalCss["global-link"]}
+          className={`${css["header-link-button"]} switch-theme ${css["dark-theme"]} ${globalCss["global-link"]}`}
           href="https://www.linkedin.com/in/alexander-mazurok-jfd/"
           target="_blank"
           rel="noreferrer"
+          data-dark-theme={css["dark-theme"]}
+          data-light-theme={css["light-theme"]}
         >
           <img src={linkedin_logo} alt="linkedin" />
         </a>
       </HeaderListItem>
       <HeaderListItem>
         <a
-          className={globalCss["global-link"]}
-          href="https://github.com/Zyabrik10"
-          target="_blank"
+          className={`${css["header-link-button"]} switch-theme ${css["dark-theme"]} ${globalCss["global-link"]}`}
+          data-dark-theme={css["dark-theme"]}
+          data-light-theme={css["light-theme"]}
           rel="noreferrer"
+          target="_blank"
+          href="https://github.com/Zyabrik10"
         >
           <img src={github_logo} alt="github" />
         </a>
       </HeaderListItem>
       <HeaderListItem>
         <button
-          className={globalCss["global-button"]}
+          className={`${css["header-language-button"]} ${globalCss["global-button"]} ${css["header-link-button"]} switch-theme ${css["dark-theme"]}`}
+          data-dark-theme={css["dark-theme"]}
+          data-light-theme={css["light-theme"]}
           type="button"
           onClick={changeColorButtonHandler}
         >

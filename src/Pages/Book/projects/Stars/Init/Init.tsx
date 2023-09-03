@@ -1,73 +1,78 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../../../../redux/user/user-selector";
-import { adaptTheme } from "../../../../../ts/theme/adapt-theme";
-
 import {
   FormatP,
   FormatTitleH2,
-  FormatMark,
   FormatTitleH3,
 } from "../../../../../code-components/format-components/format-components";
 
 import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
 
-import ImageBox from "../../../../../components/ImageBox/ImageBox";
-
 import InfoBox from "../../../../../components/InfoBox/InfoBox";
-import EditorOnline from "../../../../../components/EditorOnline/EditorOnline";
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
-import { BracketExpression } from "../../../../../code-components/js-code/js-code";
 import {
-  Colon,
-  Object,
-  Property,
-  Semicoln,
-  VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
+  BracketExpression,
+  ConstVariable,
+} from "../../../../../code-components/js-code/js-code";
+import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import { Number } from "../../../../../code-components/colored-code-components/js/js";
 
 export default function InitStars() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
-      <FormatTitleH2>Init</FormatTitleH2>
+      <FormatTitleH2>Declaring Initialization Variables</FormatTitleH2>
 
       <FormatTitleH3>Preview</FormatTitleH3>
-      <CodeBox>{`const balls = [];
-
-const minRad = 100;
-const ballsNum = 50;
-
-function init() {
+      <CodeBox>
+        <ConstVariable name="balls">
+          <BracketExpression brackets="[]" />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="minRad">
+          <Number value="150" />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="ballsNum">
+          <Number value="50" />
+        </ConstVariable>
+        <Br />
+        {`function init() {
   for (let i = 0; i < ballsNum; i++) {
     balls.push(new Ball({}));
   }
-}`}</CodeBox>
+}`}
+      </CodeBox>
       <FormatTitleH3>Declaring init variables</FormatTitleH3>
       <FormatP>
-        The first thing we need to do is create an array of objects that will
-        contain all our ball instances.
+        The first step is to create an array of objects that will store all our
+        ball instances.
       </FormatP>
-      <CodeBox>{`const balls = [];`}</CodeBox>
+      <CodeBox>
+        <ConstVariable name="balls">
+          <BracketExpression brackets="[]" />
+        </ConstVariable>
+      </CodeBox>
       <FormatP>
-        Decalare a viariable of line drawing distance activision as well.
+        Next, let's declare a variable for the minimum radius for drawing lines.
       </FormatP>
-      <CodeBox>{`const minRad = 100;`}</CodeBox>
-      <FormatP>And also decalre a variable of numbers of balls.</FormatP>
-      <CodeBox>{`const ballsNum = 50;`}</CodeBox>
-      <InfoBox type="row">
-        We need just to describe number 50 in our loop. It i sbad practice to
-        leave numbers without explanation why they so and etc.
+      <CodeBox>
+        <ConstVariable name="minRad">
+          <Number value="150" />
+        </ConstVariable>
+      </CodeBox>
+      <FormatP>
+        Also, declare a variable to specify the number of balls.
+      </FormatP>
+      <CodeBox>
+        <ConstVariable name="ballsNum">
+          <Number value="50" />
+        </ConstVariable>
+      </CodeBox>
+      <InfoBox type="extra" dir="row">
+        It's essential to provide an explanation for why we've chosen the number
+        50 in our loop. Leaving numbers without context is not good practice.
       </InfoBox>
-      <FormatTitleH3>Init function</FormatTitleH3>
+      <FormatTitleH3>Initialization Function</FormatTitleH3>
       <FormatP>
-        Now all we have to is just to make a loop inside of init function and
-        each interaion push Ball instance in array.
+        Now, all we have to do is create a loop inside the init function, and in
+        each iteration, we'll push a new Ball instance into the array.
       </FormatP>
       <CodeBox>{`function init() {
   for (let i = 0; i < ballsNum; i++) {

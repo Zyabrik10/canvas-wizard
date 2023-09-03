@@ -16,6 +16,7 @@ import InitStars from "./Pages/Book/projects/Stars/Init/Init";
 import UpdateStars from "./Pages/Book/projects/Stars/Update/Update";
 import ReactOnWindowResizeStars from "./Pages/Book/projects/Stars/ReactOnWindowResize/ReactOnWindowResize";
 import RandomValueFromArray from "./Pages/Book/math-physics/RandomValueFromArray/RandomValueFromArray";
+import Support from "./Pages/Support/Support";
 
 export default function App() {
   return (
@@ -26,6 +27,7 @@ export default function App() {
         </Route>
         <Route path="/book" element={<BookLayout />}>
           <Route index element={<Book />} />
+          <Route path="support" element={<Support />} />
           <Route path="about-canvas" element={<AboutCanvas />} />
           <Route path="canvas-api" element={<CanvasAPI />} />
           <Route path="random-value-between-min-max" element={<RandomValue />} />

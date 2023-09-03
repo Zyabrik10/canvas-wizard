@@ -20,6 +20,7 @@ import {
   ClassName,
 } from "../colored-code-components/js/js";
 import { Br } from "../colored-code-components/html/html";
+import { nanoid } from "nanoid";
 
 type VarType = {
   name: string;
@@ -73,7 +74,7 @@ export function BracketExpression({
 }
 
 type UseObjectType = {
-  name: string;
+  name: string | null;
   propertys?: Array<string>;
   children?: JSX.Element | string | Array<string> | Array<JSX.Element> | null;
   method?: string;
@@ -91,10 +92,10 @@ export function UseObject({
       <Dot />
       {propertys !== undefined &&
         propertys.map((name, index) => {
-          if (index + 1 === propertys.length) return <Property value={name} />;
+          if (index + 1 === propertys.length) return <Property key={nanoid()} value={name} />;
           return (
             <>
-              <Property value={name} />
+              <Property key={nanoid()} value={name} />
               <Dot />
             </>
           );
@@ -124,10 +125,10 @@ export function UseArrowFunction({ name, children, args }: ArrowFunctionType) {
       <BracketExpression brackets="()">
         {args !== undefined && args.length !== 0
           ? args.map((name, index) => {
-              if (index + 1 === args.length) return <VarName value={name} />;
+              if (index + 1 === args.length) return <VarName key={nanoid()}  value={name} />;
               return (
                 <>
-                  <VarName value={name} />
+                  <VarName key={nanoid()} value={name} />
                   <Coma />
                 </>
               );
@@ -181,10 +182,10 @@ export function FunctionDeclare({
         {parameters !== undefined && parameters.length > 0
           ? parameters.map((name: string, index: number) => {
               if (index + 1 === parameters.length)
-                return <VarName value={name} />;
+                return <VarName key={nanoid()} value={name} />;
               return (
                 <>
-                  <VarName value={name} />
+                  <VarName key={nanoid()} value={name} />
                   <Coma />
                 </>
               );
@@ -215,7 +216,7 @@ export function Return({ children }: ReturnType) {
 }
 
 type CallFunctionType = {
-  args?: Array<string>;
+  args?: Array<string> | Array<JSX.Element> | Array<JSX.Element | string>;
   name: string;
 };
 
@@ -225,17 +226,40 @@ export function CallFunction({ args, name }: CallFunctionType) {
       <FunctionName value={name} />
       <BracketExpression brackets="()">
         {args !== undefined && args.length > 0
-          ? args.map((name: string, index: number) => {
-              if (index + 1 === args.length) return <VarName value={name} />;
+          ? args.map((name: string | JSX.Element, index: number) => {
+              if (index + 1 === args.length) return <VarName key={nanoid()} value={name} />;
               return (
                 <>
-                  <VarName value={name} />
+                  <VarName key={nanoid()} value={name} />
                   <Coma />
                 </>
               );
             })
           : null}
       </BracketExpression>
+    </>
+  );
+}
+
+type CallFunctionWithChildrenType = {
+  name: string;
+  children:
+    | JSX.Element
+    | string
+    | Array<string>
+    | Array<JSX.Element>
+    | Array<JSX.Element | string>
+    | null;
+};
+
+export function CallFunctionWithChildren({
+  children,
+  name,
+}: CallFunctionWithChildrenType) {
+  return (
+    <>
+      <FunctionName value={name} />
+      <BracketExpression brackets="()">{children}</BracketExpression>
     </>
   );
 }
@@ -292,10 +316,10 @@ export function ClassFunctionDeclare({
         {parameters !== undefined && parameters.length > 0
           ? parameters.map((name: string, index: number) => {
               if (index + 1 === parameters.length)
-                return <VarName value={name} />;
+                return <VarName key={nanoid()} value={name} />;
               return (
                 <>
-                  <VarName value={name} />
+                  <VarName key={nanoid()} value={name} />
                   <Coma />
                 </>
               );
@@ -331,7 +355,7 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
                 return (
                   <>
                     {" "}
-                    <VarName value={property} />
+                    <VarName key={nanoid()} value={property} />
                     <Colon />
                     {value}
                     <Br />
@@ -341,7 +365,7 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
               return (
                 <>
                   {" "}
-                  <VarName value={property} />
+                  <VarName key={nanoid()} value={property} />
                   <Colon />
                   {value}
                   <Coma />
@@ -356,6 +380,3 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
   );
 }
 
-export function DeclareThis() {
-  
-}

@@ -12,6 +12,7 @@ type ChildrenType =
 
 type FormatTextType = {
   children: ChildrenType;
+  id?: string;
 };
 
 type FormatLinkType = {
@@ -38,9 +39,9 @@ export function FormatTitleH2({ children }: FormatTextType) {
   );
 }
 
-export function FormatTitleH3({ children }: FormatTextType) {
+export function FormatTitleH3({ children, id }: FormatTextType) {
   return (
-    <h3 className={`${globalCss["global-title"]} ${formatText["titleh3"]}`}>
+    <h3 className={`${globalCss["global-title"]} ${formatText["titleh3"]}`} id={id}>
       {children}
     </h3>
   );

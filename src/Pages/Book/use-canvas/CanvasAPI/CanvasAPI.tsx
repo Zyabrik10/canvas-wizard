@@ -1,7 +1,4 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../../../redux/user/user-selector";
-import { adaptTheme } from "../../../../ts/theme/adapt-theme";
+import globalCss from "../../../../css/global.module.css";
 
 import {
   FormatP,
@@ -20,6 +17,7 @@ import {
   DeclareCanvas,
   DeclareCtx,
   UseCtxFunction,
+  UseCtxVar,
 } from "../../../../code-components/js-code/canvas-code/canvas-code";
 
 import InfoBox from "../../../../components/InfoBox/InfoBox";
@@ -31,31 +29,82 @@ import strokeImg from "../../../../img/canvas-api/stroke.png";
 import FillRectImg from "../../../../img/canvas-api/fill.png";
 import arcImg from "../../../../img/canvas-api/arc.png";
 import mlToImg from "../../../../img/canvas-api/mlTo.png";
+import strokeStyleImg from "../../../../img/canvas-api/strokeStyle.png";
+import fillStyleImg from "../../../../img/canvas-api/fillStyle.png";
+import lineWidthImg from "../../../../img/canvas-api/lineWidth.png";
+
+import EditorOnline from "../../../../components/EditorOnline/EditorOnline";
 
 export default function CanvasAPI() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
       <FormatTitleH2>Canvas API</FormatTitleH2>
       <FormatP>
-        <FormatMark>CANVAS API</FormatMark> is a set of methods that allow you
-        to create and manage your canvas. You can use the following functions in
-        order to work with it:
+        <FormatMark>CANVAS API</FormatMark> is a collection of methods that
+        allow you to create and manage your canvas. You can use the following
+        functions in order to work with it:
       </FormatP>
       <FormatListUl>
-        <li>fillRect</li>
-        <li>clearRect</li>
-        <li>fill</li>
-        <li>stroke</li>
-        <li>rect</li>
-        <li>arc</li>
-        <li>lineTo</li>
-        <li>moveTo</li>
+        <li>
+          <a href="#fillRect" className={`${globalCss["global-link"]}`}>
+            fillRect
+          </a>
+        </li>
+        <li>
+          <a href="#clearRect" className={`${globalCss["global-link"]}`}>
+            clearRect
+          </a>
+        </li>
+        <li>
+          <a href="#beginPath" className={`${globalCss["global-link"]}`}>
+            beginPath
+          </a>
+        </li>
+        <li>
+          <a href="#fill" className={`${globalCss["global-link"]}`}>
+            fill
+          </a>
+        </li>
+        <li>
+          <a href="#stroke" className={`${globalCss["global-link"]}`}>
+            stroke
+          </a>
+        </li>
+        <li>
+          <a href="#fillStyle" className={`${globalCss["global-link"]}`}>
+            fillStyle
+          </a>
+        </li>
+        <li>
+          <a href="#strokeStyle" className={`${globalCss["global-link"]}`}>
+            strokeStyle
+          </a>
+        </li>
+        <li>
+          <a href="#rect" className={`${globalCss["global-link"]}`}>
+            rect
+          </a>
+        </li>
+        <li>
+          <a href="#arc" className={`${globalCss["global-link"]}`}>
+            arc
+          </a>
+          </li>
+        <li>
+          <a href="#lineTo" className={`${globalCss["global-link"]}`}>
+            lineTo
+          </a>
+          </li>
+        <li>
+          <a href="#moveTo" className={`${globalCss["global-link"]}`}>
+            moveTo
+          </a>
+          </li>
+        <li>
+          <a href="#lineWidth" className={`${globalCss["global-link"]}`}>
+            lineWidth
+          </a>
+          </li>
       </FormatListUl>
 
       <FormatTitleH3>Get access to CANVAS API</FormatTitleH3>
@@ -72,32 +121,30 @@ export default function CanvasAPI() {
         <Comment value="Our context" />
       </CodeBox>
       <FormatP>
-        First we declare a variable wich contains a canvas element. We can find
-        canvas using:{" "}
-        <FormatMark>
-          document.querySelector(["canvas", ".canvas", "#canvas"])
-        </FormatMark>
-        .
+        First, we declare a variable that contains the canvas element. We can
+        find the canvas using the{" "}
+        <FormatMark>document.querySelector</FormatMark> method with appropriate
+        selectors like <FormatMark>canvas</FormatMark>,{" "}
+        <FormatMark>.canvas</FormatMark>, or <FormatMark>#canvas</FormatMark>.
       </FormatP>
       <CodeBox>
         <DeclareCanvas />
       </CodeBox>
       <FormatP>
         Then we need to get our context using canvas method{" "}
-        <FormatMark>getContext</FormatMark> and <FormatMark>2d</FormatMark>
-        as argument.
+        <FormatMark>getContext</FormatMark> and pass <FormatMark>2d</FormatMark>
+        as an argument.
       </FormatP>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           There are more kind of parametrs of{" "}
-          <FormatMark>getContext</FormatMark>. But we don`t need theme right
-          now.
+          <FormatMark>getContext</FormatMark>. But we don't need them right now.
         </FormatP>
       </InfoBox>
       <CodeBox>
         <DeclareCtx />
       </CodeBox>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           Now we have an access to <FormatMark>CANVAS API</FormatMark>.
         </FormatP>
@@ -114,13 +161,15 @@ export default function CanvasAPI() {
         description="Canvas coordinates"
         number="1.1"
       />
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           Canvas coordinates (0, 0) start from upper left corner.{" "}
         </FormatP>
       </InfoBox>
 
-      <FormatTitleH3>fillRect</FormatTitleH3>
+      {/* FILL RECT */}
+
+      <FormatTitleH3 id="fillRect">fillRect</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction
           method="fillRect"
@@ -128,33 +177,32 @@ export default function CanvasAPI() {
         />
       </CodeBox>
       <FormatP>
-        fillRect - is a method that draws reactangle and fills it at once.
+        fillRect - is a method that draws rectangle and fills it at once.
       </FormatP>
       <FormatP>Method takes 4 parametrs:</FormatP>
       <FormatListUl>
-        <li>x - an x position of reactangle</li>
-        <li>y - an y position of reactangle</li>
-        <li>width - width of reactangle</li>
-        <li>height - height of reactangle</li>
+        <li>x - an x position of rectangle</li>
+        <li>y - an y position of rectangle</li>
+        <li>width - width of rectangle</li>
+        <li>height - height of rectangle</li>
       </FormatListUl>
       <ImageBox
         src={fillRectImg}
         description="ctx.fillRect(x, y, width, height)"
       />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
+      <EditorOnline
         title="Untitled"
         src="https://codepen.io/Zyabrik10/embed/zYyvaRa?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/zYyvaRa">Untitled</a> by
         Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
 
-      <FormatTitleH3>clearRect</FormatTitleH3>
+      {/* CLEAR RECT */}
+
+      <FormatTitleH3 id="clearRect">clearRect</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction
           method="clearRect"
@@ -166,10 +214,10 @@ export default function CanvasAPI() {
       </FormatP>
       <FormatP>Method takes 4 parametrs:</FormatP>
       <FormatListUl>
-        <li>x - an x position of reactangle</li>
-        <li>y - an y position of reactangle</li>
-        <li>width - width of reactangle</li>
-        <li>height - height of reactangle</li>
+        <li>x - an x position of rectangle</li>
+        <li>y - an y position of rectangle</li>
+        <li>width - width of rectangle</li>
+        <li>height - height of rectangle</li>
       </FormatListUl>
 
       <ImageBox
@@ -177,13 +225,9 @@ export default function CanvasAPI() {
         description="ctx.clearRect
         (x, y, width, height)"
       />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
-        scrolling="no"
+      <EditorOnline
         title="clearReact(x, y, width, height)"
         src="https://codepen.io/Zyabrik10/embed/mdaeKGJ?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/mdaeKGJ">
@@ -191,54 +235,127 @@ export default function CanvasAPI() {
         </a>{" "}
         by Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
 
-      <FormatTitleH3>fill</FormatTitleH3>
+      {/* BEGIN PATH */}
+
+      <FormatTitleH3 id="beginPath">beginPath</FormatTitleH3>
+      <CodeBox>
+        <UseCtxFunction method="beginPath" />
+      </CodeBox>
+      <FormatP>
+        beginPath - begins a new path or resets the current path.
+      </FormatP>
+      <InfoBox type="extra" dir="row">
+        Image path like a box. Inside of this box elements will be connected
+        with each other. New path - new element
+      </InfoBox>
+
+      {/* FILL */}
+
+      <FormatTitleH3 id="fill">fill</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction method="fill" />
       </CodeBox>
-      <FormatP>fill - fill marked area.</FormatP>
+      <FormatP>
+        fill - fills the current path with the current fillStyle
+      </FormatP>
       <ImageBox src={FillRectImg} description="ctx.fill()" />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
-        scrolling="no"
+      <EditorOnline
         title="Untitled"
         src="https://codepen.io/Zyabrik10/embed/mdaeKgV?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/mdaeKgV">Untitled</a> by
         Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
 
-      <FormatTitleH3>stroke</FormatTitleH3>
+      {/* FILL STYLE */}
+
+      <FormatTitleH3 id="fillStyle">fillStyle</FormatTitleH3>
+      <CodeBox>
+        <UseCtxVar varName="fillStyle" value="<your color code>" />
+      </CodeBox>
+      <FormatP>fillStyle - set color wich will be used to fill path.</FormatP>
+      <InfoBox type="extra" dir="row">
+        <FormatP>#fff - by default</FormatP>
+      </InfoBox>
+      <ImageBox src={fillStyleImg} description="ctx.fillStyle" />
+      <FormatP>
+        Color can be passed by <FormatMark>rgba</FormatMark>
+        <FormatMark>words</FormatMark>
+        <FormatMark>hex</FormatMark>
+        <FormatMark>hsl</FormatMark>
+      </FormatP>
+      <EditorOnline
+        title="fillStyle"
+        src="https://codepen.io/Zyabrik10/embed/VwqjJaV?default-tab=html%2Cresult"
+      >
+        See the Pen{" "}
+        <a href="https://codepen.io/Zyabrik10/pen/mdaeKgV">Untitled</a> by
+        Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
+        <a href="https://codepen.io">CodePen</a>.
+      </EditorOnline>
+
+      {/* STROKE */}
+
+      <FormatTitleH3 id="stroke">stroke</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction method="stroke" />
       </CodeBox>
-      <FormatP>stroke - stroke area.</FormatP>
+      <FormatP>
+        stroke - stroke the current path with the current strokeStyle [#fff - by
+        default]
+      </FormatP>
       <ImageBox src={strokeImg} description="ctx.stroke();" />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
-        scrolling="no"
+      <EditorOnline
         title="Untitled"
         src="https://codepen.io/Zyabrik10/embed/ZEVbRdj?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/ZEVbRdj">Untitled</a> by
         Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
 
-      <FormatTitleH3>rect</FormatTitleH3>
+      {/* STROKE  STYLE */}
+
+      <FormatTitleH3 id="strokeStyle">strokeStyle</FormatTitleH3>
+      <CodeBox>
+        <UseCtxVar varName="strokeStyle" value="<your color code>" />
+      </CodeBox>
+      <FormatP>
+        strokeStyle - set color wich will be used to stroke path.
+      </FormatP>
+      <InfoBox type="extra" dir="row">
+        <FormatP>#fff - by default</FormatP>
+      </InfoBox>
+      <ImageBox src={strokeStyleImg} description="ctx.strokeStyle" />
+      <FormatP>
+        Color can be passed by <FormatMark>rgba</FormatMark>
+        <FormatMark>words</FormatMark>
+        <FormatMark>hex</FormatMark>
+        <FormatMark>hsl</FormatMark>
+      </FormatP>
+      <EditorOnline
+        title="strokeStyle"
+        src="https://codepen.io/Zyabrik10/embed/qBLNzay?default-tab=html%2Cresult"
+      >
+        See the Pen{" "}
+        <a href="https://codepen.io/Zyabrik10/pen/mdaeKgV">Untitled</a> by
+        Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
+        <a href="https://codepen.io">CodePen</a>.
+      </EditorOnline>
+
+      {/* RECT */}
+
+      <FormatTitleH3 id="rect">rect</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction method="rect" args={["x", "y", "width", "height"]} />
       </CodeBox>
       <FormatP>rect - mark rectangle area with transparent color.</FormatP>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           To fill or stroke marked rectangle use <FormatMark>fill()</FormatMark>{" "}
           or <FormatMark>stroke()</FormatMark>
@@ -246,27 +363,25 @@ export default function CanvasAPI() {
       </InfoBox>
       <FormatP>Method takes 4 parametrs:</FormatP>
       <FormatListUl>
-        <li>x - an x position of reactangle</li>
-        <li>y - an y position of reactangle</li>
-        <li>width - width of reactangle</li>
-        <li>height - height of reactangle</li>
+        <li>x - an x position of rectangle</li>
+        <li>y - an y position of rectangle</li>
+        <li>width - width of rectangle</li>
+        <li>height - height of rectangle</li>
       </FormatListUl>
       <ImageBox src={FillRectImg} description="ctx.rect(x, y, width, height)" />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
-        scrolling="no"
+      <EditorOnline
         title="Untitled"
         src="https://codepen.io/Zyabrik10/embed/mdaeKgV?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/mdaeKgV">Untitled</a> by
         Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
 
-      <FormatTitleH3>arc</FormatTitleH3>
+      {/* ARC */}
+
+      <FormatTitleH3 id="arc">arc</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction
           method="arc"
@@ -281,7 +396,7 @@ export default function CanvasAPI() {
         />
       </CodeBox>
       <FormatP>arc - mark a circle area with transparent color.</FormatP>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           To fill or stroke marked arc use <FormatMark>fill()</FormatMark> or{" "}
           <FormatMark>stroke()</FormatMark>
@@ -292,7 +407,7 @@ export default function CanvasAPI() {
         <li>x - x position of circle center</li>
         <li>y - y position of circle center</li>
         <li>radius - radius of circle</li>
-        <li>height - height of reactangle</li>
+        <li>height - height of rectangle</li>
         <li>startAngle - starting angle [in radians]</li>
         <li>endAngle - ending angle [in radians]</li>
       </FormatListUl>
@@ -301,13 +416,9 @@ export default function CanvasAPI() {
         src={arcImg}
         description="ctx.arc(x, y, radius, startAngle, endAngle, counterClockWise)"
       />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
-        scrolling="no"
+      <EditorOnline
         title="arc(x, y, radius, startAngle, endAngle, counterClockWise)"
         src="https://codepen.io/Zyabrik10/embed/zYyvLqb?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/zYyvLqb">
@@ -315,14 +426,16 @@ export default function CanvasAPI() {
         </a>{" "}
         by Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
 
-      <FormatTitleH3>moveTo</FormatTitleH3>
+      {/* MOVETO */}
+
+      <FormatTitleH3 id="moveTo">moveTo</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction method="moveTo" args={["x", "y"]} />
       </CodeBox>
       <FormatP>moveTo - mark a start point of a line.</FormatP>
-      <InfoBox type="row">
+      <InfoBox type="extra" dir="row">
         <FormatP>
           In order to draw line we need use <FormatMark>lineTo()</FormatMark>{" "}
           method to mark end point and then use{" "}
@@ -335,7 +448,9 @@ export default function CanvasAPI() {
         <li>y - y position of point</li>
       </FormatListUl>
 
-      <FormatTitleH3>lineTo</FormatTitleH3>
+      {/* LINETO */}
+
+      <FormatTitleH3 id="lineTo">lineTo</FormatTitleH3>
       <CodeBox>
         <UseCtxFunction method="lineTo" args={["x", "y"]} />
       </CodeBox>
@@ -348,13 +463,9 @@ export default function CanvasAPI() {
       </FormatListUl>
 
       <ImageBox src={mlToImg} description="ctx.moveTo(x, y) ctx.moveTo(x, y)" />
-      <iframe
-        height="400"
-        style={{ width: "100%", marginBottom: "30px" }}
-        scrolling="no"
+      <EditorOnline
         title="moveTo(x, y) and lineTo(x, y)"
         src="https://codepen.io/Zyabrik10/embed/KKbdbRw?default-tab=html%2Cresult"
-        loading="lazy"
       >
         See the Pen{" "}
         <a href="https://codepen.io/Zyabrik10/pen/KKbdbRw">
@@ -362,7 +473,28 @@ export default function CanvasAPI() {
         </a>{" "}
         by Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
-      </iframe>
+      </EditorOnline>
+
+      {/* LINEWIDTH */}
+
+      <FormatTitleH3 id="lineWidth">lineWidth</FormatTitleH3>
+      <CodeBox>
+        <UseCtxVar varName="lineWidth" value="<width>" />
+      </CodeBox>
+      <FormatP>
+        lineWidth - set <FormatMark>width</FormatMark> of line to stroke in{" "}
+        <FormatMark>pixels</FormatMark>.
+      </FormatP>
+      <ImageBox src={lineWidthImg} description="ctx.lineWidth" />
+      <EditorOnline
+        title="lineWidth"
+        src="https://codepen.io/Zyabrik10/embed/YzdWorM?default-tab=html%2Cresult"
+      >
+        See the Pen{" "}
+        <a href="https://codepen.io/Zyabrik10/pen/mdaeKgV">Untitled</a> by
+        Zyabrik10 (<a href="https://codepen.io/Zyabrik10">@Zyabrik10</a>) on{" "}
+        <a href="https://codepen.io">CodePen</a>.
+      </EditorOnline>
     </>
   );
 }

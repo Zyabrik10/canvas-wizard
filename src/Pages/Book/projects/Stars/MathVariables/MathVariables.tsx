@@ -1,10 +1,3 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../../../../redux/user/user-selector";
-import { adaptTheme } from "../../../../../ts/theme/adapt-theme";
-
-import img from "../../../../../img/projects/config/innerWidth-innerHeight.png";
-
 import {
   FormatP,
   FormatTitleH2,
@@ -16,113 +9,192 @@ import {
 
 import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
 
-import ImageBox from "../../../../../components/ImageBox/ImageBox";
-
-import initImage1 from "../../../../../img/projects/config/img1.png";
-import initImage2 from "../../../../../img/projects/config/img2.png";
 import InfoBox from "../../../../../components/InfoBox/InfoBox";
-import { InitHTML } from "../../../../../code-components/html-code/html-code";
-import EditorOnline from "../../../../../components/EditorOnline/EditorOnline";
 import {
-  DeclareCanvas,
-  DeclareCtx,
-  SetCanvasSize,
-} from "../../../../../code-components/js-code/canvas-code/canvas-code";
+  CallFunction,
+  ConsoleLog,
+  ConstVariable,
+  UseObject,
+} from "../../../../../code-components/js-code/js-code";
 import { Br } from "../../../../../code-components/colored-code-components/html/html";
-import { BracketExpression } from "../../../../../code-components/js-code/js-code";
 import {
-  Colon,
-  Object,
-  Property,
-  Semicoln,
+  GetDistFunction,
+  RandIntFunction,
+  RandNumFunction,
+} from "../../../../../code-components/js-code/canvas-code/canvas-code";
+import {
+  Comment,
+  Number,
   VarName,
 } from "../../../../../code-components/colored-code-components/js/js";
+import {
+  ObjectA,
+  ObjectB,
+} from "../../../math-physics/DistanceBetweenObjects/Code/Code";
+import { nanoid } from "nanoid";
 
 export default function MathVariables() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
       <FormatTitleH2>Math variables</FormatTitleH2>
 
       <FormatTitleH3>Preview</FormatTitleH3>
       <CodeBox filename="main.js">
-        {`const pi = Math.PI;
-const floor = Math.floor;
-const random = Math.random;
-const pow = Math.pow;
-const sqrt = Math.sqrt;
-
-const randInt = (min, max) => floor(random() * (max - min + 1) + min);
-const randNum = (...nums) => nums[floor(random() * nums.length)];
-const getDist = (a, b) => sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));`}
+        <ConstVariable name="pi">
+          <UseObject name="Math" propertys={["PI"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="floor">
+          <UseObject name="Math" propertys={["floor"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="random">
+          <UseObject name="Math" propertys={["random"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="sqrt">
+          <UseObject name="Math" propertys={["sqrt"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="pow">
+          <UseObject name="Math" propertys={["pow"]} />
+        </ConstVariable>
+        <Br />
+        <Br />
+        <RandIntFunction isMath={false} />
+        <Br />
+        <RandNumFunction isMath={false} />
+        <Br />
+        <GetDistFunction isMath={false} />
       </CodeBox>
       <FormatP>
-        Now to make quick access for our code expiriance to be more flexable and
-        sutisfaying let's put <FormatMark>Math</FormatMark> methods to a
-        varibales accordingly. So now we won`t need to address by class{" "}
-        <FormatMark>Math</FormatMark> to get this method.
+        To make our code more flexible and easier to use, let's assign some{" "}
+        <FormatMark>Math</FormatMark>
+        methods to variables. This way, we won't have to keep referring to the
+        <FormatMark>Math</FormatMark> class every time we need these methods.
       </FormatP>
       <CodeBox filename="main.js">
-        {`const pi = Math.PI;
-const floor = Math.floor;
-const random = Math.random;
-const pow = Math.pow;
-const sqrt = Math.sqrt;
-
-console.log(pi) // 3.14
-console.log(floor(5.8)) // 5
-console.log(random()) // 0.1052091339071819
-console.log(pow(2, 2)) // 2
-console.log(sqrt(36)) // 6`}
+        <ConstVariable name="pi">
+          <UseObject name="Math" propertys={["PI"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="floor">
+          <UseObject name="Math" propertys={["floor"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="random">
+          <UseObject name="Math" propertys={["random"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="sqrt">
+          <UseObject name="Math" propertys={["sqrt"]} />
+        </ConstVariable>
+        <Br />
+        <ConstVariable name="pow">
+          <UseObject name="Math" propertys={["pow"]} />
+        </ConstVariable>
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <VarName value="pi" />
+        </ConsoleLog>
+        <Comment value="3.14" />
+        <Br />
+        <ConsoleLog>
+          <CallFunction name="floor" args={[<Number key={""} value="5.8" />]} />
+        </ConsoleLog>
+        <Comment value="5" />
+        <Br />
+        <ConsoleLog>
+          <CallFunction name="random" />
+        </ConsoleLog>
+        <Comment value="0.1052091339071819" />
+        <Br />
+        <ConsoleLog>
+          <CallFunction
+            name="pow"
+            args={[
+              <Number key={""} value="2" />,
+              <Number key={""} value="2" />,
+            ]}
+          />
+        </ConsoleLog>
+        <Comment value="4" />
+        <Br />
+        <ConsoleLog>
+          <CallFunction name="sqrt" args={[<Number key={""} value="36" />]} />
+        </ConsoleLog>
+        <Comment value="6" />
       </CodeBox>
+      <FormatTitleH3>Our own functions</FormatTitleH3>
       <FormatP>We also will need some own functions.</FormatP>
+      <InfoBox type="warn" dir="row">
+        <FormatP>
+          The code below is part of a code above, so we're omitting the Math
+          class here. When you copy this code, remember to include the code
+          above as well.
+        </FormatP>
+      </InfoBox>
       <CodeBox filename="main.js">
-              {`const randInt = (min, max) => floor(random() * (max - min + 1) + min);
-const randNum = (...nums) => nums[floor(random() * nums.length)];
-const getDist = (a, b) => sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
-
-console.log(randInt(1, 10)); // 7
-console.log(randNum(1, 2, 3, 5, 6, 7, 8, 9, 10)); // 4
-
-const A = {
-    x: 2,
-    y: 2,
-}
-
-const B = {
-    x: 8,
-    y: 10,
-}
-
-console.log(getDist(A, B)); // 10`}
-          </CodeBox>
-          <InfoBox type="row">
-              <FormatP>
-                If you  don`t understand how these functions work, here are links on their articles:
-              </FormatP>
-              <FormatListUl>
-                  <li>
-                      <FormatLink href="/book/random-value-between-min-max" isHere={true}>
-                          randInt()
-                      </FormatLink>
-                  </li>
-                  <li>
-                      <FormatLink href="/book/random-value-array" isHere={true}>
-                            randNum()
-                      </FormatLink>
-                  </li>
-                  <li>
-                      <FormatLink href="/book/distance-between-objects" isHere={true}>
-                            getDist()
-                      </FormatLink>
-                  </li>
-              </FormatListUl>
-          </InfoBox>
+        <RandIntFunction isMath={false} />
+        <Br />
+        <RandNumFunction isMath={false} />
+        <Br />
+        <GetDistFunction isMath={false} />
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <CallFunction name="randInt" args={["1", "10"]} />
+        </ConsoleLog>
+        <Comment value="7" />
+        <Br />
+        <ConsoleLog>
+          <CallFunction
+            name="randNum"
+            args={[
+              <Number value="1" key={nanoid()} />,
+              <Number value="2" key={nanoid()} />,
+              <Number value="3" key={nanoid()} />,
+              <Number value="4" key={nanoid()} />,
+              <Number value="5" key={nanoid()} />,
+            ]}
+          />
+        </ConsoleLog>
+        <Comment value="4" />
+        <Br />
+        <Br />
+        <ObjectA />
+        <Br />
+        <ObjectB />
+        <Br />
+        <Br />
+        <ConsoleLog>
+          <CallFunction name="getDist" args={["A", "B"]} />
+        </ConsoleLog>
+        <Comment value="10" />
+      </CodeBox>
+      <InfoBox type="extra" dir="row">
+        <FormatP>
+          If you're unsure how these functions work, you can check these articles:
+        </FormatP>
+        <FormatListUl>
+          <li>
+            <FormatLink href="/book/random-value-between-min-max" isHere={true}>
+              randInt()
+            </FormatLink>
+          </li>
+          <li>
+            <FormatLink href="/book/random-value-array" isHere={true}>
+              randNum()
+            </FormatLink>
+          </li>
+          <li>
+            <FormatLink href="/book/distance-between-objects" isHere={true}>
+              getDist()
+            </FormatLink>
+          </li>
+        </FormatListUl>
+      </InfoBox>
     </>
   );
 }

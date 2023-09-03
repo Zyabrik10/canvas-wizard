@@ -15,7 +15,18 @@ import {
   FormatP,
 } from "../../code-components/format-components/format-components";
 
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/user/user-selector";
+import { adaptTheme } from "../../ts/theme/adapt-theme";
+
 export default function BookLayout() {
+  const { theme }: { theme: string } = useSelector(selectUser);
+
+  useEffect(() => {
+    adaptTheme(theme);
+  }, [theme]);
+
   return (
     <>
       <Header isContainer={false} position="static" />
@@ -25,9 +36,11 @@ export default function BookLayout() {
         <main className={`${css["main"]} ${globalCss["main"]}`}>
           <MobileSideMenu />
           <div className={css["container"]}>
-            <InfoBox type="column">
+            <InfoBox type="extra" dir="column">
               <FormatP>
-                This project is <FormatMark>underdevelopment</FormatMark>. All articles are going to be updated and enhaced
+                This project is <FormatMark>under development</FormatMark>. All
+                articles are going to be updated and enhanced. The same thing
+                applies to the website.
               </FormatP>
             </InfoBox>
             <Outlet />

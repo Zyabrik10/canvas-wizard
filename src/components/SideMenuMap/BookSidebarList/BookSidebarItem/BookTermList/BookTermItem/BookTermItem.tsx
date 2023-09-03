@@ -22,9 +22,9 @@ export default function BookTermItem({ title, path }: Term) {
     <li>
       <NavLink
         className={`${css["book-term-link"]} ${globalCss["global-link"]} ${css["dark-theme"]} switch-theme`}
-        to={path}
         data-dark-theme={css["dark-theme"]}
         data-light-theme={css["light-theme"]}
+        to={path}
         onClick={linkHandler}
       >
         {title}

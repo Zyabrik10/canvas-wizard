@@ -38,7 +38,7 @@ export default function About() {
           />
           <Link
             className={`${css["about-button"]} ${globalCss["global-link"]}`}
-            to="Book"
+            to="book/projects/stars/project-configuration"
           >
             How To Do
           </Link>

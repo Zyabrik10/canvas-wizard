@@ -1,5 +1,5 @@
 import globalCss from "../../../../css/global.module.css";
-import css from '../../styles/Footer.module.css';
+import css from "../../styles/Footer.module.css";
 
 interface Link {
   path: string;
@@ -9,13 +9,11 @@ interface Link {
 
 export default function FooterListItem({ path, text, logo }: Link) {
   return (
-    <li
-      className={`switch-theme ${css["footer-list-item"]} ${css["dark-theme"]}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
-    >
+    <li>
       <a
-        className={globalCss["global-link"]}
+        className={`${css["footer-link-button"]} switch-theme ${css["dark-theme"]} ${globalCss["global-link"]}`}
+        data-dark-theme={css["dark-theme"]}
+        data-light-theme={css["light-theme"]}
         href={path}
         target="_blank"
         rel="noreferrer"
