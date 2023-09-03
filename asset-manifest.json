@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/canvas-wizard/static/css/main.f24a9e1c.css",
-    "main.js": "/canvas-wizard/static/js/main.31f336b4.js",
+    "main.css": "/canvas-wizard/static/css/main.d8f923d9.css",
+    "main.js": "/canvas-wizard/static/js/main.418221c8.js",
     "static/media/light-logo.svg": "/canvas-wizard/static/media/light-logo.ee71a4aad76d42a8dd522819c30d3a95.svg",
     "static/media/instagram-logo.svg": "/canvas-wizard/static/media/instagram-logo.1dc9397ae21c2b7a0ee2e22dcb0a31f5.svg",
     "static/media/science-logo.svg": "/canvas-wizard/static/media/science-logo.0aad8fd10fd39c68465b089b0fbeb880.svg",
@@ -14,13 +14,13 @@
     "static/media/project-logo.svg": "/canvas-wizard/static/media/project-logo.841d509efb883a6c985e9d6730108b81.svg",
     "index.html": "/canvas-wizard/index.html",
     "static/media/arrow1.svg": "/canvas-wizard/static/media/arrow1.37c7656d33d1fea0d52507318a493766.svg",
-    "static/media/arrow2.svg": "/canvas-wizard/static/media/arrow2.720393b75ddeaf44fbd1d517995c6140.svg",
+    "static/media/arrow2.svg": "/canvas-wizard/static/media/arrow2.f021c5e6c3ff14c794c53fb6adce290f.svg",
     "static/media/api-logo.svg": "/canvas-wizard/static/media/api-logo.3cfcf2b29ce91d5ab1c345b15707a0de.svg",
-    "main.f24a9e1c.css.map": "/canvas-wizard/static/css/main.f24a9e1c.css.map",
-    "main.31f336b4.js.map": "/canvas-wizard/static/js/main.31f336b4.js.map"
+    "main.d8f923d9.css.map": "/canvas-wizard/static/css/main.d8f923d9.css.map",
+    "main.418221c8.js.map": "/canvas-wizard/static/js/main.418221c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.f24a9e1c.css",
-    "static/js/main.31f336b4.js"
+    "static/css/main.d8f923d9.css",
+    "static/js/main.418221c8.js"
   ]
 }
