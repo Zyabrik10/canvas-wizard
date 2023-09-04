@@ -3,12 +3,12 @@ import css from "./styles/BookLayout.module.css";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 import SideMenuMap from "../../components/SideMenuMap/SideMenuMap";
 import MobileSideMenuBox from "../../components/MobileSideMenuBox/MobileSideMenuBox";
 import MobileSideMenu from "../../components/MobileSideMenuBox/MobileSideMenu/MobileSideMenu";
-import SideExtraInfo from "../../components/SideExtraInfo/SideExtraInfo";
+// import SideExtraInfo from "../../components/SideExtraInfo/SideExtraInfo";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import {
   FormatMark,
@@ -22,6 +22,7 @@ import { adaptTheme } from "../../ts/theme/adapt-theme";
 
 export default function BookLayout() {
   const { theme }: { theme: string } = useSelector(selectUser);
+  const location = useLocation();
 
   useEffect(() => {
     adaptTheme(theme);
@@ -36,7 +37,18 @@ export default function BookLayout() {
         <main className={`${css["main"]} ${globalCss["main"]}`}>
           <MobileSideMenu />
           <div className={css["container"]}>
-            <InfoBox type="extra" dir="column">
+            {location.state ? (
+              <Link
+                className={`${globalCss["global-link"]} ${css["back-button"]} switch-theme ${css["dark-theme"]}`}
+                to={location.state.pathname}
+                state={location}
+                data-dark-theme={css["dark-theme"]}
+                data-light-theme={css["light-theme"]}
+              >
+                ←
+              </Link>
+            ) : null}
+            <InfoBox type="warn" dir="column">
               <FormatP>
                 This project is <FormatMark>under development</FormatMark>. All
                 articles are going to be updated and enhanced. The same thing

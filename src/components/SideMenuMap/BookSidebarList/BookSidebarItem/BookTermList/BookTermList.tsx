@@ -24,7 +24,6 @@ export default function BookTermList({ terms }: { terms: Array<Term> }) {
   return (
     <ul
       className={`${globalCss["global-list"]}`}
-      // style={{ display: "none" }}
     >
       {terms.map(({ title, path }: Term) => (
         <BookTermItem

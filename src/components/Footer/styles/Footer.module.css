@@ -6,7 +6,7 @@
 
 .footer.dark-theme {
   background: rgba(16, 20, 24, 0.7);
-  box-shadow: 0px -1px 0px 1px var(--def-dark-2) inset;
+  box-shadow: 0px 1px 0px 1px var(--def-dark-2) inset;
 }
 
 .footer.light-theme {

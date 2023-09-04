@@ -1,5 +1,5 @@
 import globalCss from "../../../../../../css/global.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import css from "../../../../styles/SideMenuMap.module.css";
 
 import { useDispatch } from "react-redux";
@@ -12,6 +12,8 @@ type Term = {
 
 export default function BookTermItem({ title, path }: Term) {
   const dispatch = useDispatch();
+
+  const location = useLocation();
 
   function linkHandler() {
     dispatch(toggleMobileMenu(false));
@@ -26,6 +28,7 @@ export default function BookTermItem({ title, path }: Term) {
         data-light-theme={css["light-theme"]}
         to={path}
         onClick={linkHandler}
+        state={location}
       >
         {title}
       </NavLink>

@@ -10,9 +10,17 @@ import InfoBox from "../../../../../components/InfoBox/InfoBox";
 import {
   BracketExpression,
   ConstVariable,
+  DecalreFor,
+  FunctionDeclare,
+  InitClassInstance,
+  UseObject,
 } from "../../../../../code-components/js-code/js-code";
 import { Br } from "../../../../../code-components/colored-code-components/html/html";
-import { Number } from "../../../../../code-components/colored-code-components/js/js";
+import {
+  Number,
+  Semicoln,
+  VarName,
+} from "../../../../../code-components/colored-code-components/js/js";
 
 export default function InitStars() {
   return (
@@ -33,11 +41,35 @@ export default function InitStars() {
           <Number value="50" />
         </ConstVariable>
         <Br />
-        {`function init() {
-  for (let i = 0; i < ballsNum; i++) {
-    balls.push(new Ball({}));
-  }
-}`}
+        <Br />
+        <FunctionDeclare name="init">
+          {" "}
+          <DecalreFor variable={{
+            name: "i",
+            value: <Number value="0"/>
+          }}
+            compare={{
+              sign: "<",
+              value: "ballsNum"
+              }
+            }
+            iteration={{
+              oprator: "++",
+              value: ""
+            }}
+          >
+              <Br />
+              {"  "}
+              <UseObject name="balls" method="push">
+                <InitClassInstance name="Ball">
+                  <BracketExpression brackets="{}" />
+                </InitClassInstance>
+              </UseObject>
+              <Semicoln />
+
+              <Br />{" "}
+          </DecalreFor>
+        </FunctionDeclare>
       </CodeBox>
       <FormatTitleH3>Declaring init variables</FormatTitleH3>
       <FormatP>
@@ -74,11 +106,35 @@ export default function InitStars() {
         Now, all we have to do is create a loop inside the init function, and in
         each iteration, we'll push a new Ball instance into the array.
       </FormatP>
-      <CodeBox>{`function init() {
-  for (let i = 0; i < ballsNum; i++) {
-    balls.push(new Ball({}));
-  }
-}`}</CodeBox>
+      <CodeBox>
+        <FunctionDeclare name="init">
+          {" "}
+          <DecalreFor variable={{
+            name: "i",
+            value: <Number value="0"/>
+          }}
+            compare={{
+              sign: "<",
+              value: "ballsNum"
+              }
+            }
+            iteration={{
+              oprator: "++",
+              value: ""
+            }}>
+              <Br />
+              {"  "}
+              <UseObject name="balls" method="push">
+                <InitClassInstance name="Ball">
+                  <BracketExpression brackets="{}" />
+                </InitClassInstance>
+              </UseObject>
+              <Semicoln />
+
+              <Br />{" "}
+          </DecalreFor>
+        </FunctionDeclare>
+      </CodeBox>
     </>
   );
 }

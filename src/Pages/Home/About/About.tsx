@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Aboutlist from "./AboutList/AboutList";
 
 import globalCss from "../../../css/global.module.css";
@@ -7,6 +7,7 @@ import css from "./styles/About.module.css";
 import arrow_logo from "../../../img/logo/arrow1.svg";
 
 export default function About() {
+  const location = useLocation();
   return (
     <section
       className={`switch-theme ${css['about']} ${css["dark-theme"]} ${globalCss["global-section"]}`}
@@ -39,6 +40,7 @@ export default function About() {
           <Link
             className={`${css["about-button"]} ${globalCss["global-link"]}`}
             to="book/projects/stars/project-configuration"
+            state={location}
           >
             How To Do
           </Link>

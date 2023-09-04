@@ -46,66 +46,76 @@ export default function CanvasAPI() {
       </FormatP>
       <FormatListUl>
         <li>
-          <a href="#fillRect" className={`${globalCss["global-link"]}`}>
+          <a href="#fillRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             fillRect
           </a>
         </li>
         <li>
-          <a href="#clearRect" className={`${globalCss["global-link"]}`}>
+          <a href="#clearRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             clearRect
           </a>
         </li>
         <li>
-          <a href="#beginPath" className={`${globalCss["global-link"]}`}>
+          <a href="#beginPath" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             beginPath
           </a>
         </li>
         <li>
-          <a href="#fill" className={`${globalCss["global-link"]}`}>
+          <a href="#fill" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             fill
           </a>
         </li>
         <li>
-          <a href="#stroke" className={`${globalCss["global-link"]}`}>
+          <a href="#stroke" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             stroke
           </a>
         </li>
         <li>
-          <a href="#fillStyle" className={`${globalCss["global-link"]}`}>
+          <a href="#fillStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             fillStyle
           </a>
         </li>
         <li>
-          <a href="#strokeStyle" className={`${globalCss["global-link"]}`}>
+          <a href="#strokeStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             strokeStyle
           </a>
         </li>
         <li>
-          <a href="#rect" className={`${globalCss["global-link"]}`}>
+          <a href="#rect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             rect
           </a>
         </li>
         <li>
-          <a href="#arc" className={`${globalCss["global-link"]}`}>
+          <a href="#arc" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             arc
           </a>
-          </li>
+        </li>
         <li>
-          <a href="#lineTo" className={`${globalCss["global-link"]}`}>
+          <a href="#lineTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             lineTo
           </a>
-          </li>
+        </li>
         <li>
-          <a href="#moveTo" className={`${globalCss["global-link"]}`}>
+          <a href="#moveTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             moveTo
           </a>
-          </li>
+        </li>
         <li>
-          <a href="#lineWidth" className={`${globalCss["global-link"]}`}>
+          <a href="#lineWidth" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
             lineWidth
           </a>
-          </li>
+        </li>
       </FormatListUl>
+
+      <table>
+        <thead>
+          <tr>
+            <th>
+            </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
 
       <FormatTitleH3>Get access to CANVAS API</FormatTitleH3>
       <FormatP>

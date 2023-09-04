@@ -2,9 +2,12 @@ import globalCss from "../../../../css/global.module.css";
 import css from "../../styles/SideMenuMap.module.css";
 
 import BookTermList from "./BookTermList/BookTermList";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import arrow from "../../../../img/logo/arrow2.svg";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../../redux/user/user-selector";
+import { adaptTheme } from "../../../../ts/theme/adapt-theme";
 
 type Term = {
   title: string;
@@ -20,9 +23,16 @@ type Book = {
 export default function BookSidebarItem({ title, terms}: Book) {
   const [isOpenedSubMenu, setIsOpenedSubMenu] = useState<boolean>(false);
 
+  const { theme } = useSelector(selectUser);
+
+  useEffect(() => {
+    adaptTheme(theme);
+  }, [theme]);
+
   function buttonHandler() {
     setIsOpenedSubMenu(!isOpenedSubMenu);
   }
+
   return (
     <li
       className={`${css["dark-theme"]} ${css["sidebar-item"]} switch-theme`}

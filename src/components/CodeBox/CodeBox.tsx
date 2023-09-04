@@ -2,7 +2,6 @@ import globalCss from "../../css/global.module.css";
 import css from "./styles/CodeBox.module.css";
 
 import { JSX, useRef, useState } from "react";
-import { setTextRange } from "typescript";
 
 type ChildrenType =
   | Array<string>
@@ -26,7 +25,7 @@ export function CodeBox({ id, children, filename }: CodeBoxType) {
     const copyText = parentElement.querySelector(".code")!;
 
     
-    navigator.clipboard.writeText(copyText.textContent!);
+    navigator.clipboard.writeText(copyText.textContent!.trim());
     setText("copied");
 
     setTimeout(()=> setText("copy"), 2000);

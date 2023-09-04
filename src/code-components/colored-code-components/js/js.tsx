@@ -1,5 +1,7 @@
 import jsCodeColor from "../../../css//code-color/js/js-code-color.module.css";
 
+import { JSX } from 'react';
+
 export function VarDec({ value }: { value: string }) {
   return <span className={jsCodeColor["varDec"]}>{value} </span>;
 }
@@ -61,11 +63,11 @@ export function ArrowFunction() {
   return <span className={jsCodeColor["equal"]}> {"=>"} </span>;
 }
 
-export function Sign({ value }: { value: string }) {
+export function Sign({ value }: { value: string}) {
   return <span className={jsCodeColor["sign"]}> {value} </span>;
 }
 
-export function Number({ value }: { value: string }) {
+export function Number({ value }: { value: string | JSX.Element }) {
   return <span className={jsCodeColor["number"]}>{value}</span>;
 }
 

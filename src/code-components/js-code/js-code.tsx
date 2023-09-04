@@ -18,6 +18,8 @@ import {
   ArrowFunction,
   Colon,
   ClassName,
+  Number,
+  Sign,
 } from "../colored-code-components/js/js";
 import { Br } from "../colored-code-components/html/html";
 import { nanoid } from "nanoid";
@@ -31,6 +33,18 @@ export function ConstVariable({ name, children }: VarType) {
   return (
     <>
       <VarDec value="const" />
+      <VarName value={name} />
+      <Equal />
+      {children}
+      <Semicoln />
+    </>
+  );
+}
+
+export function LetVariable({ name, children }: VarType) {
+  return (
+    <>
+      <VarDec value="let" />
       <VarName value={name} />
       <Equal />
       {children}
@@ -92,7 +106,8 @@ export function UseObject({
       <Dot />
       {propertys !== undefined &&
         propertys.map((name, index) => {
-          if (index + 1 === propertys.length) return <Property key={nanoid()} value={name} />;
+          if (index + 1 === propertys.length)
+            return <Property key={nanoid()} value={name} />;
           return (
             <>
               <Property key={nanoid()} value={name} />
@@ -125,7 +140,8 @@ export function UseArrowFunction({ name, children, args }: ArrowFunctionType) {
       <BracketExpression brackets="()">
         {args !== undefined && args.length !== 0
           ? args.map((name, index) => {
-              if (index + 1 === args.length) return <VarName key={nanoid()}  value={name} />;
+              if (index + 1 === args.length)
+                return <VarName key={nanoid()} value={name} />;
               return (
                 <>
                   <VarName key={nanoid()} value={name} />
@@ -227,7 +243,8 @@ export function CallFunction({ args, name }: CallFunctionType) {
       <BracketExpression brackets="()">
         {args !== undefined && args.length > 0
           ? args.map((name: string | JSX.Element, index: number) => {
-              if (index + 1 === args.length) return <VarName key={nanoid()} value={name} />;
+              if (index + 1 === args.length)
+                return <VarName key={nanoid()} value={name} />;
               return (
                 <>
                   <VarName key={nanoid()} value={name} />
@@ -380,3 +397,66 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
   );
 }
 
+type InitClassInstanceType = {
+  name: string;
+  children:
+    | JSX.Element
+    | string
+    | Array<string>
+    | Array<JSX.Element>
+    | Array<JSX.Element | string>
+    | null;
+};
+
+export function InitClassInstance({ name, children }: InitClassInstanceType) {
+  return (
+    <>
+      <Literal value="new" />
+      <Literal value={name} />
+      <BracketExpression brackets="()">{children}</BracketExpression>
+    </>
+  );
+}
+
+type ForType = {
+  children:
+    | JSX.Element
+    | string
+    | Array<string>
+    | Array<JSX.Element>
+    | Array<JSX.Element | string>
+    | null;
+  variable: {
+    name: string;
+    value: JSX.Element | string;
+  };
+  compare: {
+    sign: "<" | ">" | ">=" | "<=",
+    value: string
+  }
+  iteration: {
+    oprator: "+=" | "++",
+    value: string | JSX.Element 
+  }
+};
+
+export function DecalreFor({ children, variable, compare, iteration }: ForType) {
+  return (
+    <>
+      <Literal value="for" />
+      <BracketExpression brackets="()">
+        <LetVariable name={variable.name}>
+          <Number value={variable.value} />
+        </LetVariable>
+        <VarName value={variable.name} />
+        <Sign value={compare.sign} />
+        <VarName value={compare.value} />
+        <Semicoln />
+        <VarName value={variable.name} />
+       {iteration.oprator}
+        <Number value={iteration.value} />
+      </BracketExpression>
+      <BracketExpression brackets="{}">{children}</BracketExpression>
+    </>
+  );
+}

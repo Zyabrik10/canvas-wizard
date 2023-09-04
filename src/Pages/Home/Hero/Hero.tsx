@@ -1,8 +1,9 @@
 import globalCss from "../../../css/global.module.css";
 import css from "./styles/Hero.module.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export default function Hero() {
+  const location = useLocation();
   return (
     <section
       className={`${css["hero"]} ${css["dark-theme"]} ${globalCss["global-section"]} switch-theme`}
@@ -25,6 +26,7 @@ export default function Hero() {
           to="/book/about-canvas"
           data-dark-theme={css["dark-theme"]}
           data-light-theme={css["light-theme"]}
+          state={location}
         >
           Start Learning
         </Link>
