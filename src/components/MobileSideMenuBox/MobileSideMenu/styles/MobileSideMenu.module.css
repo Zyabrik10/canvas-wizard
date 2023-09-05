@@ -21,7 +21,7 @@
   background: #fff;
 }
 
-@media screen and (min-width: 1050px) {
+@media screen and (min-width: 1200px) {
   .mobile-menu-wrapper {
     display: none;
   }

@@ -16,7 +16,7 @@ export default function Support() {
       <FormatP>
         This is a free project. But it takes lots of amout of time to develope
         it and also to write a good article. You will realy help the project to
-        be free and motivate to develope with money you think this project
+        continue bieng free and motivate to develope with fund you think this project
         deserved.
       </FormatP>
       <FormatP>

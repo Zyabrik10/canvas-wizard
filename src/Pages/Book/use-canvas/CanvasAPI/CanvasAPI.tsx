@@ -46,62 +46,62 @@ export default function CanvasAPI() {
       </FormatP>
       <FormatListUl>
         <li>
-          <a href="#fillRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#fillRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             fillRect
           </a>
         </li>
         <li>
-          <a href="#clearRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#clearRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             clearRect
           </a>
         </li>
         <li>
-          <a href="#beginPath" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#beginPath" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             beginPath
           </a>
         </li>
         <li>
-          <a href="#fill" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#fill" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             fill
           </a>
         </li>
         <li>
-          <a href="#stroke" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#stroke" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             stroke
           </a>
         </li>
         <li>
-          <a href="#fillStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#fillStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             fillStyle
           </a>
         </li>
         <li>
-          <a href="#strokeStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#strokeStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             strokeStyle
           </a>
         </li>
         <li>
-          <a href="#rect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#rect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             rect
           </a>
         </li>
         <li>
-          <a href="#arc" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#arc" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             arc
           </a>
         </li>
         <li>
-          <a href="#lineTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#lineTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             lineTo
           </a>
         </li>
         <li>
-          <a href="#moveTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#moveTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             moveTo
           </a>
         </li>
         <li>
-          <a href="#lineWidth" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid inherit"}}>
+          <a href="#lineWidth" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
             lineWidth
           </a>
         </li>

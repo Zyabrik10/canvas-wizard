@@ -70,19 +70,14 @@ export default function ClassBall() {
         The constructor is a special method that gets called when an object of
         the type is created. It's also where you initialize your properties and
         set their initial values.
-        <b>Note:</b>
-        <i>
-          The name of the function should always match the name of its
-          containing class.
-        </i>
       </FormatP>
-      <FormatP>Our constructor will be so</FormatP>
+      <FormatP>Our constructor will be so:</FormatP>
       <CodeBox>
           <Contructor />
       </CodeBox>
       <InfoBox type="extra" dir="row">
         <FormatP>
-          we distract our object to get propertys, but if we don't pass any
+          We distract our object to get propertys, but if we don't pass any
           propertys they will be <FormatMark>undefined</FormatMark>. That is why
           we check <FormatMark>object || default</FormatMark>
         </FormatP>
@@ -94,7 +89,9 @@ export default function ClassBall() {
         <li>vel - velocity</li>
       </FormatListUl>
       <InfoBox type="extra" dir="row">
-        We also use id. We need it in the future for optimization.
+        <FormatP>
+          We also use id. We need it in the future for optimization.
+        </FormatP>
       </InfoBox>
       <FormatTitleH3>Draw function</FormatTitleH3>
       <FormatP>To display our balls we need to draw theme on canvas.</FormatP>
@@ -143,11 +140,11 @@ export default function ClassBall() {
         </ClassFunctionDeclare>
       </CodeBox>
       <InfoBox type="extra" dir="row">
-        If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see
-        this{" "}
-        <FormatLink href="/book/canvas-api" isHere>
-          CANVAS API
-        </FormatLink>
+        <FormatP>If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see this{" "}
+          <FormatLink href="/book/canvas-api#arc" isHere>
+            CANVAS API
+          </FormatLink>
+        </FormatP>
       </InfoBox>
       <FormatTitleH3>Move function</FormatTitleH3>
       <FormatP>

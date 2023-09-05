@@ -16,17 +16,17 @@ export default function Aboutlist() {
     {
       logo: api_logo,
       title: "Canvas API",
-      text: `What is Canvas API and how to deal with it properly`,
+      text: `What is the Canvas API and How to Use It Properly`,
     },
     {
       logo: project_logo,
       title: "Canvas Project",
-      text: `How to built Canvas project using JavaScript`,
+      text: `How to Build a Canvas Project Using JavaScript`,
     },
     {
       logo: science_logo,
       title: "Math And Physics",
-      text: "How to use math and physics for canvas projects",
+      text: "How to Apply Math and Physics to Canvas Projects",
     },
   ];
   return (

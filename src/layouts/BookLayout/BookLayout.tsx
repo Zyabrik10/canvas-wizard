@@ -37,7 +37,7 @@ export default function BookLayout() {
         <main className={`${css["main"]} ${globalCss["main"]}`}>
           <MobileSideMenu />
           <div className={css["container"]}>
-            {location.state ? (
+            {/* {location.state ? (
               <Link
                 className={`${globalCss["global-link"]} ${css["back-button"]} switch-theme ${css["dark-theme"]}`}
                 to={location.state.pathname}
@@ -47,7 +47,7 @@ export default function BookLayout() {
               >
                 ←
               </Link>
-            ) : null}
+            ) : null} */}
             <InfoBox type="warn" dir="column">
               <FormatP>
                 This project is <FormatMark>under development</FormatMark>. All
