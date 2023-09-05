@@ -24,7 +24,7 @@ export default function Support() {
       <CodeBox>5375418810243352</CodeBox>
       <FormatTitleH3>Euros</FormatTitleH3>
       <CodeBox>5375419909440263</CodeBox>
-      <FormatTitleH3>Hryvnas</FormatTitleH3>
+      <FormatTitleH3>Hrywna</FormatTitleH3>
       <CodeBox>4441114460724253</CodeBox>
     </>
   );

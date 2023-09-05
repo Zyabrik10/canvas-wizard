@@ -1,3 +1,4 @@
+import { Br } from "../../../../../code-components/colored-code-components/html/html";
 import {
   FormatP,
   FormatTitleH2,
@@ -6,11 +7,33 @@ import {
   FormatListUl,
   FormatLink,
 } from "../../../../../code-components/format-components/format-components";
+import {
+  BracketExpression,
+  ClassFunctionDeclare,
+  ConstVariable,
+  DeclareClass,
+  UseObject,
+} from "../../../../../code-components/js-code/js-code";
 
 import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
 
 import InfoBox from "../../../../../components/InfoBox/InfoBox";
 
+import {
+  Coma,
+  Equal,
+  Sign,
+  VarName,
+  Number,
+  Semicoln,
+  VarDec,
+} from "../../../../../code-components/colored-code-components/js/js";
+
+import Contructor from "./snippets/constructor/constructor";
+import Draw from "./snippets/draw/draw";
+import Move from "./snippets/move/move";
+import Update from "./snippets/update/update";
+import CheckWallCollision from "./snippets/checkWallCollision/checkWallCollision";
 
 export default function ClassBall() {
   return (
@@ -18,88 +41,23 @@ export default function ClassBall() {
       <FormatTitleH2>Class Ball</FormatTitleH2>
 
       <FormatTitleH3>Preview</FormatTitleH3>
-      <CodeBox>{`class Ball {
-  constructor({ coor, rad, vel }) {
-    // make object || default value in case we don't pass argument 
-    // it will be undefined then
-    // the right part will be pasted
-
-    this.rad = rad || randInt(1, 10);
-
-    // generate unic id for future optimization
-    this.id = balls.length + 1;
-    
-    this.coor = coor || {
-      x: randInt(this.rad, canvas.width - this.rad),
-      y: randInt(this.rad, canvas.height - this.rad),
-    };
-
-    // Generate random direction and then velocity
-    const minSpeed = 1;
-    const maxSpeed = 10;
-    const speedCoof = 50;
-    const speedDirection = {
-      left: -1,
-      right: 1,
-    };
-
-    const speedX = randInt(minSpeed, maxSpeed) / speedCoof;
-    const speedXDirection = randNum(speedDirection.left, speedDirection.right);
-    const speedY = randInt(minSpeed, maxSpeed) / speedCoof;
-    const speedYDirection = randNum(speedDirection.left, speedDirection.right);
-
-    const velTem = {
-      x: speedX * speedXDirection,
-      y: speedY * speedYDirection,
-    };
-
-    this.vel = vel || velTem;
-  }
-
-  draw() {
-    const { x, y } = this.coor;
-    const rad = this.rad;
-
-    ctx.beginPath();
-    ctx.arc(x, y, rad, 0, 2 * pi);
-    ctx.fill();
-  }
-
-  move() {
-    const { x: vx, y: vy } = this.vel;
-
-    this.coor.x += vx;
-    this.coor.y += vy;
-  }
-
-  checkWallCollision() {
-    const { x, y } = this.coor;
-    const rad = this.rad;
-
-    if (x + rad >= canvas.width) {
-      this.vel.x *= -1;
-      this.coor.x = canvas.width - rad;
-    } else if (x - rad <= 0) {
-      this.vel.x *= -1;
-      this.coor.x = rad;
-    }
-
-    if (y + rad >= canvas.height) {
-      this.vel.y *= -1;
-      this.coor.y = canvas.height - rad;
-    } else if (y - rad <= 0) {
-      this.vel.y *= -1;
-      this.coor.y = rad;
-    }
-  }
-
-  update() {
-    this.move();
-    this.checkWallCollision();
-    this.draw();
-  }
-}
-`}</CodeBox>
+      <CodeBox>
+        <DeclareClass name="Ball">
+          <Contructor />
+          <Br />
+          <Br />
+          <Draw/>
+          <Br />
+          <Br />
+          <Move />
+          <Br />
+          <Br />
+          <CheckWallCollision/>
+          <Br />
+          <Br />
+          <Update />
+        </DeclareClass>
+      </CodeBox>
       <FormatTitleH3>
         Why do we need class if we can just use objects?
       </FormatTitleH3>
@@ -120,42 +78,7 @@ export default function ClassBall() {
       </FormatP>
       <FormatP>Our constructor will be so</FormatP>
       <CodeBox>
-        {`constructor({ coor, rad, vel }) {
-    // make object || default value in case we don't pass argument 
-    // it will be undefined then
-    // the right part will be pasted
-
-    this.rad = rad || randInt(1, 10);
-
-    // generate unic id for future optimization
-    this.id = balls.length + 1;
-    
-    this.coor = coor || {
-      x: randInt(this.rad, canvas.width - this.rad),
-      y: randInt(this.rad, canvas.height - this.rad),
-    };
-
-    // Generate random direction and then velocity
-    const minSpeed = 1;
-    const maxSpeed = 10;
-    const speedCoof = 50;
-    const speedDirection = {
-      left: -1,
-      right: 1,
-    };
-
-    const speedX = randInt(minSpeed, maxSpeed) / speedCoof;
-    const speedXDirection = randNum(speedDirection.left, speedDirection.right);
-    const speedY = randInt(minSpeed, maxSpeed) / speedCoof;
-    const speedYDirection = randNum(speedDirection.left, speedDirection.right);
-
-    const velTem = {
-      x: speedX * speedXDirection,
-      y: speedY * speedYDirection,
-    };
-
-    this.vel = vel || velTem;
-  }`}
+          <Contructor />
       </CodeBox>
       <InfoBox type="extra" dir="row">
         <FormatP>
@@ -176,14 +99,48 @@ export default function ClassBall() {
       <FormatTitleH3>Draw function</FormatTitleH3>
       <FormatP>To display our balls we need to draw theme on canvas.</FormatP>
       <CodeBox>
-        {`draw() {
-   const { x, y } = this.coor;
-   const rad = this.rad;
-
-   ctx.beginPath();
-   ctx.arc(x, y, rad, 0, 2 * pi);
-   ctx.fill();
-}`}
+        <ClassFunctionDeclare name="draw">
+          {"   "}
+          <VarDec value="const" />
+          <BracketExpression brackets="{}">
+            <VarName value="x" />
+            <Coma />
+            <VarName value="y" />
+          </BracketExpression>
+          <Equal />
+          <UseObject name="this" propertys={["coor"]} />
+          <Semicoln />
+          <Br />
+          {"   "}
+          <ConstVariable name="rad">
+            <UseObject name="this" propertys={["rad"]} />
+          </ConstVariable>
+          <Br />
+          <Br />
+          {"   "}
+          <UseObject name="this" method="beginPath" />
+          <Semicoln />
+          <Br />
+          {"   "}
+          <UseObject name="this" method="arc">
+            <VarName value="x" />
+            <Coma />
+            <VarName value="y" />
+            <Coma />
+            <VarName value="rad" />
+            <Coma />
+            <Number value="0" />
+            <Coma />
+            <Number value="2" />
+            <Sign value="*" />
+            <VarName value="pi" />
+          </UseObject>
+          <Semicoln />
+          <Br />
+          {"   "}
+          <UseObject name="this" method="fill" />
+          <Semicoln />
+        </ClassFunctionDeclare>
       </CodeBox>
       <InfoBox type="extra" dir="row">
         If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see
@@ -198,49 +155,22 @@ export default function ClassBall() {
         balls.
       </FormatP>
       <CodeBox>
-        {`move() {
-  const { x: vx, y: vy } = this.vel;
-
-  this.coor.x += vx;
-  this.coor.y += vy;
-}`}
+        <Move />
       </CodeBox>
       <FormatTitleH3>checkWallCollision function</FormatTitleH3>
       <FormatP>
         If we want balls not to go through walls we need to prohibit it.
       </FormatP>
       <CodeBox>
-        {`checkWallCollision() {
-  const { x, y } = this.coor;
-  const rad = this.rad;
-
-  if (x + rad >= canvas.width) {
-    this.vel.x *= -1;
-    this.coor.x = canvas.width - rad;
-  } else if (x - rad <= 0) {
-    this.vel.x *= -1;
-    this.coor.x = rad;
-  }
-
-  if (y + rad >= canvas.height) {
-    this.vel.y *= -1;
-    this.coor.y = canvas.height - rad;
-  } else if (y - rad <= 0) {
-    this.vel.y *= -1;
-    this.coor.y = rad;
-  }
-}`}
+        <CheckWallCollision />
       </CodeBox>
       <FormatTitleH3>update function</FormatTitleH3>
       <FormatP>
-        Every changes we do to our ball is its update. So let's put all our updates in one function update.
+        Every changes we do to our ball is its update. So let's put all our
+        updates in one function update.
       </FormatP>
       <CodeBox>
-        {`update() {
-  this.move();
-  this.checkWallCollision();
-  this.draw();
-}`}
+        <Update />
       </CodeBox>
     </>
   );

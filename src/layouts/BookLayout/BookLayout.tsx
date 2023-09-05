@@ -55,6 +55,19 @@ export default function BookLayout() {
                 applies to the website.
               </FormatP>
             </InfoBox>
+            <InfoBox type="extra" dir="row">
+              <FormatP>
+                This is a free project, and in order for it to continue being free, please consider                 <Link
+                  to="/book/support"
+                  className={globalCss["global-link"]}
+                  style={{
+                    borderBottom: "1px solid rgb(0, 255, 255)",
+                  }}
+                >
+                  supporting
+                </Link>{" "} it.
+              </FormatP>
+            </InfoBox>
             <Outlet />
           </div>
         </main>

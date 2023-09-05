@@ -309,7 +309,7 @@ export function DeclareClass({ children, name }: DeclareClassType) {
 }
 
 type ClassFunctionDeclareType = {
-  parameters?: Array<string>;
+  parameters?: Array<string> | Array<JSX.Element> | Array<JSX.Element | string>;
   name: string;
   children:
     | JSX.Element
@@ -331,12 +331,11 @@ export function ClassFunctionDeclare({
       <FunctionName value={name} />{" "}
       <BracketExpression brackets="()">
         {parameters !== undefined && parameters.length > 0
-          ? parameters.map((name: string, index: number) => {
-              if (index + 1 === parameters.length)
-                return <VarName key={nanoid()} value={name} />;
+          ? parameters.map((e, index: number) => {
+              if (index + 1 === parameters.length) return e;
               return (
                 <>
-                  <VarName key={nanoid()} value={name} />
+                  {e}
                   <Coma />
                 </>
               );
@@ -397,6 +396,51 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
   );
 }
 
+export function ClassObjectExpression({ propertys }: ObjectExpressionType) {
+  return (
+    <>
+      <Bracket value="{" />
+      <Br />
+      {propertys !== undefined && propertys.length > 0
+        ? propertys.map(
+            (
+              { property, value }: ObjectExpressionPropertysType,
+              index: number
+            ) => {
+              if (index + 1 === propertys.length)
+                return (
+                  <>
+                    {"    "}
+
+                    <VarName key={nanoid()} value={property} />
+                    <Colon />
+                    {" "}
+                    {value}
+                    <Br />
+                  </>
+                );
+
+              return (
+                <>
+                  {"    "}
+                  <VarName key={nanoid()} value={property} />
+                  <Colon />
+                    {" "}
+
+                  {value}
+                  <Coma />
+                  <Br />
+                </>
+              );
+            }
+          )
+        : null}
+      {"  "}
+      <Bracket value="}" />
+    </>
+  );
+}
+
 type InitClassInstanceType = {
   name: string;
   children:
@@ -431,16 +475,21 @@ type ForType = {
     value: JSX.Element | string;
   };
   compare: {
-    sign: "<" | ">" | ">=" | "<=",
-    value: string
-  }
+    sign: "<" | ">" | ">=" | "<=";
+    value: string;
+  };
   iteration: {
-    oprator: "+=" | "++",
-    value: string | JSX.Element 
-  }
+    oprator: "+=" | "++";
+    value: string | JSX.Element;
+  };
 };
 
-export function DecalreFor({ children, variable, compare, iteration }: ForType) {
+export function DecalreFor({
+  children,
+  variable,
+  compare,
+  iteration,
+}: ForType) {
   return (
     <>
       <Literal value="for" />
@@ -453,7 +502,7 @@ export function DecalreFor({ children, variable, compare, iteration }: ForType) 
         <VarName value={compare.value} />
         <Semicoln />
         <VarName value={variable.name} />
-       {iteration.oprator}
+        {iteration.oprator}
         <Number value={iteration.value} />
       </BracketExpression>
       <BracketExpression brackets="{}">{children}</BracketExpression>
