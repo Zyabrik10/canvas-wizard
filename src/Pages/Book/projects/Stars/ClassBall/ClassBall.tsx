@@ -77,7 +77,7 @@ export default function ClassBall() {
       </CodeBox>
       <InfoBox type="extra" dir="row">
         <FormatP>
-          We distract our object to get propertys, but if we don't pass any
+          We use destruction for our object to get propertys, but if we don't pass any
           propertys they will be <FormatMark>undefined</FormatMark>. That is why
           we check <FormatMark>object || default</FormatMark>
         </FormatP>
@@ -85,7 +85,7 @@ export default function ClassBall() {
       <FormatP>In this constructor we have such parameters:</FormatP>
       <FormatListUl>
         <li>rad - radius</li>
-        <li>coor - coordination</li>
+        <li>coor - coordinates</li>
         <li>vel - velocity</li>
       </FormatListUl>
       <InfoBox type="extra" dir="row">

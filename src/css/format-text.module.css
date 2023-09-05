@@ -25,6 +25,10 @@
   display: inline-block;
   padding: 0 5px;
   border: 1px solid;
+
+  border-radius: 5px;
+
+  transition: 0.2s ease;
 }
 
 .link.dark-theme {
@@ -37,12 +41,14 @@
   border-color: rgb(11, 79, 204);
 }
 
-.link.dark-theme:hover {
+.link.dark-theme:hover,
+.link.dark-theme:focus {
   background-color: rgb(26, 200, 206);
   color: #fff;
 }
 
-.link.light-theme:hover {
+.link.light-theme:hover,
+.link.light-theme:focus {
   background-color: rgb(11, 79, 204);
   color: #fff;
 }

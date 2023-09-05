@@ -8,8 +8,8 @@
 .support-button {
   padding: 10px;
   border-radius: 10px;
-  color: rgb(43, 13, 173);
-  background-color: #fff;
+  color: #fff;
+  border: 2px solid #fff;
   font-weight: bold;
   font-size: 20px;
 
@@ -22,9 +22,15 @@
 
   text-transform: uppercase;
 
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.support-button:hover {
-  background-color: #ddd;
+.support-button:hover,
+.support-button:focus {
+  background-color: #fff;
+  color: rgb(43, 13, 173);
+}
+
+.support-button:active {
+  background-color: #aaa;
 }

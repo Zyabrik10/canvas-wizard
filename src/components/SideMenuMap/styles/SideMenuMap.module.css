@@ -47,13 +47,17 @@
   align-items: center;
   text-align: left;
   width: 100%;
+
+  transition: background-color 0.2s ease;
 }
 
-.sidebar-item-button.dark-theme:hover {
+.sidebar-item-button.dark-theme:hover,
+.sidebar-item-button.dark-theme:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.sidebar-item-button.light-theme:hover {
+.sidebar-item-button.light-theme:hover,
+.sidebar-item-button.light-theme:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -65,13 +69,17 @@
   display: block;
   padding: 10px;
   margin-left: 10px;
+
+  transition: background-color 0.2s ease;
 }
 
-.book-term-link.dark-theme:hover {
+.book-term-link.dark-theme:hover,
+.book-term-link.dark-theme:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.book-term-link.light-theme:hover {
+.book-term-link.light-theme:hover,
+.book-term-link.light-theme:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 

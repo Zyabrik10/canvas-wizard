@@ -11,6 +11,7 @@ import MobileSideMenu from "../../components/MobileSideMenuBox/MobileSideMenu/Mo
 // import SideExtraInfo from "../../components/SideExtraInfo/SideExtraInfo";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import {
+  FormatLink,
   FormatMark,
   FormatP,
 } from "../../code-components/format-components/format-components";
@@ -57,15 +58,9 @@ export default function BookLayout() {
             </InfoBox>
             <InfoBox type="extra" dir="row">
               <FormatP>
-                This is a free project, and in order for it to continue being free, please consider                 <Link
-                  to="/book/support"
-                  className={globalCss["global-link"]}
-                  style={{
-                    borderBottom: "1px solid rgb(0, 255, 255)",
-                  }}
-                >
-                  supporting
-                </Link>{" "} it.
+                This is a free project, and in order for it to continue being
+                free, please consider{" "}
+                <FormatLink href="/book/support">supporting</FormatLink> it.
               </FormatP>
             </InfoBox>
             <Outlet />

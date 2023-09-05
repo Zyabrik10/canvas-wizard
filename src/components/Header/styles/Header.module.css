@@ -23,10 +23,11 @@
   display: inline-block;
   padding: 10px;
   border-radius: 5px;
-  transition: background-color 0.1s ease;
+  transition: background-color 0.2s ease;
 }
 
-.header-nav-link.dark-theme:hover {
+.header-nav-link.dark-theme:hover,
+.header-nav-link.dark-theme:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -63,13 +64,17 @@
   color: var(--def-light-dark);
   font-size: 24px;
   font-weight: 700;
+
+  transition: background-color 0.2s ease;
 }
 
-.header-link-button.dark-theme:hover {
+.header-link-button.dark-theme:hover,
+.header-link-button.dark-theme:focus {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.header-link-button.light-theme:hover {
+.header-link-button.light-theme:hover,
+.header-link-button.light-theme:focus {
   background-color: rgba(0, 0, 0, 0.1);
 }
 

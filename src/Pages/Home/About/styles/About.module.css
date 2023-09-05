@@ -172,4 +172,11 @@
   line-height: normal;
 
   color: #fff;
+
+  transition: background 0.2s ease;
+}
+
+.about-button:hover,
+.about-button:focus {
+  background: #0064d6;
 }
