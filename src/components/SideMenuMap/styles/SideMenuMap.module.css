@@ -2,6 +2,7 @@
   display: none;
   width: 100%;
   max-width: 250px;
+  background-color: inherit;
 }
 
 @media screen and (min-width: 1200px) {
@@ -25,6 +26,7 @@
   top: 10px;
   height: 100vh;
   overflow-y: auto;
+  background-color: inherit;
 }
 
 .sidebar-item {
