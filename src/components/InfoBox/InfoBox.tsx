@@ -1,7 +1,9 @@
 import { JSX } from "react";
 
 import css from "./styles/InfoBox.module.css";
-// import globalCss from "../../css/global.module.css";
+
+import { selectUser } from '../../redux/user/user-selector';
+import { useSelector } from 'react-redux';
 
 type InfoBoxType = {
   children:
@@ -15,6 +17,9 @@ type InfoBoxType = {
 };
 
 export default function InfoBox({ children, type, dir }: InfoBoxType) {
+  const { theme } = useSelector(selectUser);
+  const currentTheme = `${theme}-theme`;
+  
   const direction = dir === "row" ? css["row"] : css["column"];
   const signs = {
     extra: "!",
@@ -38,9 +43,7 @@ export default function InfoBox({ children, type, dir }: InfoBoxType) {
 
   return (
     <div
-      className={`${css["info-box"]} ${css["dark-theme"]} switch-theme ${direction} ${infoTypeClass}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
+      className={`${css["info-box"]} ${css[currentTheme]}  ${direction} ${infoTypeClass}`}
     >
       <div>
         <span className={css["info-box-marker"]}>{signs[type]}</span>

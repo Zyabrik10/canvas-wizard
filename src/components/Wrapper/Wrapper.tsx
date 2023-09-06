@@ -1,4 +1,6 @@
 import { JSX } from "react";
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/user/user-selector";
 import css from "./styles/Wrapper.module.css";
 
 type Props = {
@@ -6,13 +8,10 @@ type Props = {
 };
 
 export default function Wrapper({ children }: Props) {
+  const { theme } = useSelector(selectUser);
+  const currentTheme = `${theme}-theme`;
+
   return (
-    <div
-      className={`switch-theme ${css["dark-theme"]} ${css["wrapper"]}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
-    >
-      {children}
-    </div>
+    <div className={`${css[currentTheme]} ${css["wrapper"]}`}>{children}</div>
   );
 }

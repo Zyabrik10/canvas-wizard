@@ -28,7 +28,6 @@ import {
   UseArrowFunction,
 } from "../../../../code-components/js-code/js-code";
 
-
 import InfoBox from "../../../../components/InfoBox/InfoBox";
 import ImageBox from "../../../../components/ImageBox/ImageBox";
 
@@ -291,7 +290,7 @@ export default function RandomValueFromArray() {
           </BracketExpression>
         </UseArrowFunction>
       </CodeBox>
-            <InfoBox type="extra" dir="column">
+      <InfoBox type="extra" dir="column">
         <FormatMark>...nums</FormatMark> is <FormatMark>rest</FormatMark>
         opration. It gathers all value into array.{" "}
         <FormatMark>(1, 2, 3)</FormatMark> into{" "}

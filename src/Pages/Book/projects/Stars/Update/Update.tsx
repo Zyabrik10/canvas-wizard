@@ -352,7 +352,7 @@ export default function UpdateStars() {
       <CodeBox>
         {" "}
         <CallFunction name="requestAnimationFrame" args={["update"]} />
-        <Semicoln/>
+        <Semicoln />
       </CodeBox>
       <FormatTitleH3>Drawing a Line Function</FormatTitleH3>
       <FormatP>

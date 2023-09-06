@@ -40,7 +40,7 @@ export default function RandomValue() {
 
       <FormatTitleH3>Function ready to be used</FormatTitleH3>
       <CodeBox>
-        <RandIntFunction  />
+        <RandIntFunction />
       </CodeBox>
 
       {/*  */}
@@ -70,7 +70,9 @@ export default function RandomValue() {
 
       {/*  */}
 
-      <FormatTitleH3>Getting a Random Value within a Range starting from 0</FormatTitleH3>
+      <FormatTitleH3>
+        Getting a Random Value within a Range starting from 0
+      </FormatTitleH3>
       <FormatP>
         To get a random value within a specific range (for example, from 0 to
         10), we multiply the random value by (the range's upper limit + 1) and
@@ -148,7 +150,8 @@ export default function RandomValue() {
         Getting a Random Value within a Specified Range
       </FormatTitleH3>
       <FormatP>
-        We have knowledge how to get a random value within a range starting from 0 and with offset.
+        We have knowledge how to get a random value within a range starting from
+        0 and with offset.
       </FormatP>
       <FormatP>Let's try to combine theme:</FormatP>
 
@@ -274,8 +277,8 @@ export default function RandomValue() {
       </CodeBox>
 
       <FormatP>
-        Let's see what we will get if we add <FormatMark>minValue</FormatMark> to
-        the random value of the range{" "}
+        Let's see what we will get if we add <FormatMark>minValue</FormatMark>{" "}
+        to the random value of the range{" "}
         <FormatMark>(0, 3) + 2 = (2, 5)</FormatMark>.
       </FormatP>
       <FormatListUl>
@@ -283,7 +286,8 @@ export default function RandomValue() {
         <li>3 + 2 = 5 - max output value</li>
       </FormatListUl>
       <FormatP>
-        Congratulations, we finnaly get this range that we need. Final result is below:
+        Congratulations, we finnaly get this range that we need. Final result is
+        below:
       </FormatP>
       <CodeBox>
         <DeclareRandom />
@@ -330,9 +334,7 @@ export default function RandomValue() {
         <Comment value="2, 3, 4, 5" />
       </CodeBox>
 
-      <FormatTitleH3>
-        Creating a Reusable Function
-      </FormatTitleH3>
+      <FormatTitleH3>Creating a Reusable Function</FormatTitleH3>
 
       <FormatP>
         Let's wrapp this code in function to reuse it in the future:

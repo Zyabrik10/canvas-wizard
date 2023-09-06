@@ -3,11 +3,19 @@ import FooterList from "./FooterList/FooterList";
 import FooterLogo from "./FooterLogo/FooterLogo";
 import css from "./styles/Footer.module.css";
 
+import { useSelector } from "react-redux";
+import { selectUser } from "../../redux/user/user-selector";
+
 function FooterContent() {
   return (
     <div className={css["footer-content"]}>
       <FooterLogo />
-      <a className={`${css["footer-author-link"]} ${globalCss["global-link"]}`} href="https://github.com/Zyabrik10">2023 Made by @Zyabrik10 </a>
+      <a
+        className={`${css["footer-author-link"]} ${globalCss["global-link"]}`}
+        href="https://github.com/Zyabrik10"
+      >
+        2023 Made by @Zyabrik10{" "}
+      </a>
       <FooterList />
     </div>
   );
@@ -18,14 +26,15 @@ interface FooterProps {
 }
 
 export default function Footer({ isContainer }: FooterProps) {
+  const { theme } = useSelector(selectUser);
+  const currentTheme = `${theme}-theme`;
+
   return (
     <footer
-      className={`${css["dark-theme"]} switch-theme ${css["footer"]}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
+      className={`${css[currentTheme]} ${css["footer"]}`}
     >
       {isContainer ? (
-        <div className={globalCss.container} style={{padding:"0"}}>
+        <div className={globalCss.container} style={{ padding: "0" }}>
           <FooterContent />
         </div>
       ) : (

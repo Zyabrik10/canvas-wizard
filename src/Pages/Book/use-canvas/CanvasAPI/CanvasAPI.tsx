@@ -36,6 +36,7 @@ import lineWidthImg from "../../../../img/canvas-api/lineWidth.png";
 import EditorOnline from "../../../../components/EditorOnline/EditorOnline";
 
 export default function CanvasAPI() {
+
   return (
     <>
       <FormatTitleH2>Canvas API</FormatTitleH2>
@@ -46,62 +47,110 @@ export default function CanvasAPI() {
       </FormatP>
       <FormatListUl>
         <li>
-          <a href="#fillRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#fillRect"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             fillRect
           </a>
         </li>
         <li>
-          <a href="#clearRect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#clearRect"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             clearRect
           </a>
         </li>
         <li>
-          <a href="#beginPath" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#beginPath"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             beginPath
           </a>
         </li>
         <li>
-          <a href="#fill" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#fill"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             fill
           </a>
         </li>
         <li>
-          <a href="#stroke" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#stroke"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             stroke
           </a>
         </li>
         <li>
-          <a href="#fillStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#fillStyle"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             fillStyle
           </a>
         </li>
         <li>
-          <a href="#strokeStyle" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#strokeStyle"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             strokeStyle
           </a>
         </li>
         <li>
-          <a href="#rect" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#rect"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             rect
           </a>
         </li>
         <li>
-          <a href="#arc" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#arc"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             arc
           </a>
         </li>
         <li>
-          <a href="#lineTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#lineTo"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             lineTo
           </a>
         </li>
         <li>
-          <a href="#moveTo" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#moveTo"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             moveTo
           </a>
         </li>
         <li>
-          <a href="#lineWidth" className={`${globalCss["global-link"]}`} style={{borderBottom: "1px solid currentColor"}}>
+          <a
+            href="#lineWidth"
+            className={`${globalCss["global-link"]}`}
+            style={{ borderBottom: "1px solid currentColor" }}
+          >
             lineWidth
           </a>
         </li>
@@ -110,8 +159,7 @@ export default function CanvasAPI() {
       <table>
         <thead>
           <tr>
-            <th>
-            </th>
+            <th></th>
           </tr>
         </thead>
         <tbody></tbody>

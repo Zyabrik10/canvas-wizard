@@ -46,13 +46,13 @@ export default function ClassBall() {
           <Contructor />
           <Br />
           <Br />
-          <Draw/>
+          <Draw />
           <Br />
           <Br />
           <Move />
           <Br />
           <Br />
-          <CheckWallCollision/>
+          <CheckWallCollision />
           <Br />
           <Br />
           <Update />
@@ -73,13 +73,13 @@ export default function ClassBall() {
       </FormatP>
       <FormatP>Our constructor will be so:</FormatP>
       <CodeBox>
-          <Contructor />
+        <Contructor />
       </CodeBox>
       <InfoBox type="extra" dir="row">
         <FormatP>
-          We use destruction for our object to get propertys, but if we don't pass any
-          propertys they will be <FormatMark>undefined</FormatMark>. That is why
-          we check <FormatMark>object || default</FormatMark>
+          We use destruction for our object to get propertys, but if we don't
+          pass any propertys they will be <FormatMark>undefined</FormatMark>.
+          That is why we check <FormatMark>object || default</FormatMark>
         </FormatP>
       </InfoBox>
       <FormatP>In this constructor we have such parameters:</FormatP>
@@ -140,7 +140,9 @@ export default function ClassBall() {
         </ClassFunctionDeclare>
       </CodeBox>
       <InfoBox type="extra" dir="row">
-        <FormatP>If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see this{" "}
+        <FormatP>
+          If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see
+          this{" "}
           <FormatLink href="/book/canvas-api#arc" isHere>
             CANVAS API
           </FormatLink>

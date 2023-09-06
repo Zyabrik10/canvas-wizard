@@ -19,8 +19,8 @@ import { Br } from "../../../../../code-components/colored-code-components/html/
 import {
   Number,
   Semicoln,
-  VarName,
 } from "../../../../../code-components/colored-code-components/js/js";
+
 
 export default function InitStars() {
   return (
@@ -44,30 +44,29 @@ export default function InitStars() {
         <Br />
         <FunctionDeclare name="init">
           {" "}
-          <DecalreFor variable={{
-            name: "i",
-            value: <Number value="0"/>
-          }}
+          <DecalreFor
+            variable={{
+              name: "i",
+              value: <Number value="0" />,
+            }}
             compare={{
               sign: "<",
-              value: "ballsNum"
-              }
-            }
+              value: "ballsNum",
+            }}
             iteration={{
               oprator: "++",
-              value: ""
+              value: "",
             }}
           >
-              <Br />
-              {"  "}
-              <UseObject name="balls" method="push">
-                <InitClassInstance name="Ball">
-                  <BracketExpression brackets="{}" />
-                </InitClassInstance>
-              </UseObject>
-              <Semicoln />
-
-              <Br />{" "}
+            <Br />
+            {"  "}
+            <UseObject name="balls" method="push">
+              <InitClassInstance name="Ball">
+                <BracketExpression brackets="{}" />
+              </InitClassInstance>
+            </UseObject>
+            <Semicoln />
+            <Br />{" "}
           </DecalreFor>
         </FunctionDeclare>
       </CodeBox>
@@ -109,29 +108,29 @@ export default function InitStars() {
       <CodeBox>
         <FunctionDeclare name="init">
           {" "}
-          <DecalreFor variable={{
-            name: "i",
-            value: <Number value="0"/>
-          }}
+          <DecalreFor
+            variable={{
+              name: "i",
+              value: <Number value="0" />,
+            }}
             compare={{
               sign: "<",
-              value: "ballsNum"
-              }
-            }
+              value: "ballsNum",
+            }}
             iteration={{
               oprator: "++",
-              value: ""
-            }}>
-              <Br />
-              {"  "}
-              <UseObject name="balls" method="push">
-                <InitClassInstance name="Ball">
-                  <BracketExpression brackets="{}" />
-                </InitClassInstance>
-              </UseObject>
-              <Semicoln />
-
-              <Br />{" "}
+              value: "",
+            }}
+          >
+            <Br />
+            {"  "}
+            <UseObject name="balls" method="push">
+              <InitClassInstance name="Ball">
+                <BracketExpression brackets="{}" />
+              </InitClassInstance>
+            </UseObject>
+            <Semicoln />
+            <Br />{" "}
           </DecalreFor>
         </FunctionDeclare>
       </CodeBox>

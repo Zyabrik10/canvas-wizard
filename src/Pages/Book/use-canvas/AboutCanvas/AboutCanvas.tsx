@@ -20,6 +20,7 @@ import { Canvas } from "../../../../code-components/html-code/snippets/snippets"
 import { InitHTML } from "../../../../code-components/html-code/html-code";
 
 export default function AboutCanvas() {
+
   return (
     <>
       <FormatTitleH2>What is Canvas?</FormatTitleH2>

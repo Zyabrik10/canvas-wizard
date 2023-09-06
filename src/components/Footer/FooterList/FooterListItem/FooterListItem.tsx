@@ -1,6 +1,9 @@
 import globalCss from "../../../../css/global.module.css";
 import css from "../../styles/Footer.module.css";
 
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../../redux/user/user-selector";
+
 interface Link {
   path: string;
   text: string;
@@ -8,12 +11,13 @@ interface Link {
 }
 
 export default function FooterListItem({ path, text, logo }: Link) {
+  const { theme } = useSelector(selectUser);
+  const currentTheme = `${theme}-theme`;
+
   return (
     <li>
       <a
-        className={`${css["footer-link-button"]} switch-theme ${css["dark-theme"]} ${globalCss["global-link"]}`}
-        data-dark-theme={css["dark-theme"]}
-        data-light-theme={css["light-theme"]}
+        className={`${css["footer-link-button"]} ${css[currentTheme]} ${globalCss["global-link"]}`}
         href={path}
         target="_blank"
         rel="noreferrer"

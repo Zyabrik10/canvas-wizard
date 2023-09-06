@@ -1,8 +1,3 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../../../../redux/user/user-selector";
-import { adaptTheme } from "../../../../../ts/theme/adapt-theme";
-
 import img from "../../../../../img/projects/config/innerWidth-innerHeight.png";
 
 import {
@@ -39,12 +34,6 @@ import {
 } from "../../../../../code-components/colored-code-components/js/js";
 
 export default function ProjectConfiguration() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
       <FormatTitleH2>Project configuration</FormatTitleH2>

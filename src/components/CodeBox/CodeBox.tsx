@@ -24,11 +24,17 @@ export function CodeBox({ id, children, filename }: CodeBoxType) {
     const parentElement = buttonRef.current?.parentElement!;
     const copyText = parentElement.querySelector(".code")!;
 
-    
     navigator.clipboard.writeText(copyText.textContent!.trim());
     setText("copied");
 
-    setTimeout(()=> setText("copy"), 2000);
+    buttonRef.current!.style.cursor = "auto";
+    buttonRef.current!.setAttribute("disabled", "true");
+
+    setTimeout(() => {
+      setText("copy");
+      buttonRef.current!.style.cursor = "pointer";
+      buttonRef.current!.removeAttribute("disabled");
+    }, 2000);
   }
 
   return (

@@ -175,7 +175,8 @@ export default function MathVariables() {
       </CodeBox>
       <InfoBox type="extra" dir="row">
         <FormatP>
-          If you're unsure how these functions work, you can check these articles:
+          If you're unsure how these functions work, you can check these
+          articles:
         </FormatP>
         <FormatListUl>
           <li>

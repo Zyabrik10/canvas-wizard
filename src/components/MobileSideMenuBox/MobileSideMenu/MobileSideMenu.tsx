@@ -9,18 +9,14 @@ import { selectMobileMenu } from "../../../redux/mobileMenu/mobileMenu-selector"
 import { toggleMobileMenu } from "../../../redux/mobileMenu/mobileMenu-redux";
 
 import { selectUser } from "../../../redux/user/user-selector";
-import { useEffect } from "react";
-import { adaptTheme } from "../../../ts/theme/adapt-theme";
 
 export default function MobileSideMenu() {
   const { isOpend } = useSelector(selectMobileMenu);
   const dispatch = useDispatch();
-
+  
   const { theme } = useSelector(selectUser);
+  const currentTheme = `${theme}-theme`;
 
-  useEffect(() => {
-    if (isOpend) adaptTheme(theme);
-  });
 
   function buttonHandler() {
     dispatch(toggleMobileMenu(false));
@@ -28,15 +24,11 @@ export default function MobileSideMenu() {
   }
   return isOpend ? (
     <div
-      className={`${css["mobile-menu-wrapper"]} switch-theme ${css["dark-theme"]}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
+      className={`${css["mobile-menu-wrapper"]} ${css[currentTheme]}`}
     >
       <div>
         <button
-          className={`${css["close-button"]} ${globalCss["global-button"]} ${css["dark-theme"]} switch-theme`}
-          data-dark-them={css["dark-theme"]}
-          data-light-them={css["light-theme"]}
+          className={`${css["close-button"]} ${globalCss["global-button"]} ${css[currentTheme]}`}
           onClick={buttonHandler}
         >
           &times;

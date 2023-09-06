@@ -3,12 +3,11 @@ import css from "./styles/BookLayout.module.css";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 import SideMenuMap from "../../components/SideMenuMap/SideMenuMap";
 import MobileSideMenuBox from "../../components/MobileSideMenuBox/MobileSideMenuBox";
 import MobileSideMenu from "../../components/MobileSideMenuBox/MobileSideMenu/MobileSideMenu";
-// import SideExtraInfo from "../../components/SideExtraInfo/SideExtraInfo";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import {
   FormatLink,
@@ -16,19 +15,7 @@ import {
   FormatP,
 } from "../../code-components/format-components/format-components";
 
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { selectUser } from "../../redux/user/user-selector";
-import { adaptTheme } from "../../ts/theme/adapt-theme";
-
 export default function BookLayout() {
-  const { theme }: { theme: string } = useSelector(selectUser);
-  const location = useLocation();
-
-  useEffect(() => {
-    adaptTheme(theme);
-  }, [theme]);
-
   return (
     <>
       <Header isContainer={false} position="static" />

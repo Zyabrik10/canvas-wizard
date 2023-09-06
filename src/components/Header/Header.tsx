@@ -4,6 +4,9 @@ import HeaderLogo from "./HeaderLogo/HeaderLogo";
 import { HeaderNav } from "./HeaderNavList/HeaderNavList";
 import css from "./styles/Header.module.css";
 
+import { useSelector } from "react-redux";
+import { selectUser } from '../../redux/user/user-selector';
+
 type HeaderProps = {
   isContainer: boolean;
   position?: "fixed" | "static";
@@ -24,12 +27,13 @@ export default function Header({
   position = "fixed",
 }: HeaderProps) {
 
+  const { theme } = useSelector(selectUser);
+
+  const currentTheme = `${theme}-theme`;
 
   return (
     <header
-      className={`switch-theme ${css["header"]} ${css["dark-theme"]}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
+      className={`${css["header"]} ${css[currentTheme]}`}
       style={{
         position
       }}
