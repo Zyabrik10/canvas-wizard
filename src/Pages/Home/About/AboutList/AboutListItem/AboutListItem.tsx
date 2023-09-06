@@ -1,4 +1,6 @@
+import { useSelector } from "react-redux";
 import globalCss from "../../../../../css/global.module.css";
+import { selectUser } from "../../../../../redux/user/user-selector";
 import css from "../../styles/About.module.css";
 
 interface Item {
@@ -8,12 +10,11 @@ interface Item {
 }
 
 export default function AboutListItem({ logo, title, text }: Item) {
+  const { theme } = useSelector(selectUser);
+  const currentTheme = `${theme}-theme`;
+
   return (
-    <li
-      className={`${css["dark-theme"]} ${css["about-list-item"]} switch-theme`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
-    >
+    <li className={`${css[currentTheme]} ${css["about-list-item"]}`}>
       <img
         className={`${css["about-item-logo"]} ${globalCss["global-img"]}`}
         src={logo}
@@ -21,16 +22,12 @@ export default function AboutListItem({ logo, title, text }: Item) {
         loading="lazy"
       />
       <p
-        className={`${css["dark-theme"]} switch-theme ${css["about-item-title"]} ${globalCss["global-p"]}`}
-        data-dark-theme={css["dark-theme"]}
-        data-light-theme={css["light-theme"]}
+        className={`${css[currentTheme]} ${css["about-item-title"]} ${globalCss["global-p"]}`}
       >
         {title}
       </p>
       <p
-        className={`${css["dark-theme"]} switch-theme ${css["about-item-text"]} ${globalCss["global-p"]}`}
-        data-dark-theme={css["dark-theme"]}
-        data-light-theme={css["light-theme"]}
+        className={`${css[currentTheme]} ${css["about-item-text"]} ${globalCss["global-p"]}`}
       >
         {text}
       </p>

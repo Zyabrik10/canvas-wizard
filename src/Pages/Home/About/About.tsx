@@ -6,13 +6,17 @@ import css from "./styles/About.module.css";
 
 import arrow_logo from "../../../img/logo/arrow1.svg";
 
+import { useSelector } from "react-redux";
+import { selectUser } from "../../../redux/user/user-selector";
+
 export default function About() {
   const location = useLocation();
+
+  const { theme } = useSelector(selectUser);
+  const currentThem = `${theme}-theme`;
   return (
     <section
-      className={`switch-theme ${css['about']} ${css["dark-theme"]} ${globalCss["global-section"]}`}
-      data-dark-theme={css["dark-theme"]}
-      data-light-theme={css["light-theme"]}
+      className={`${css["about"]} ${css[currentThem]} ${globalCss["global-section"]}`}
     >
       <div className={globalCss["container"]}>
         <h2

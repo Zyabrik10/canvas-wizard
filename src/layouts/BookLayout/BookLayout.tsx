@@ -47,7 +47,7 @@ export default function BookLayout() {
               <FormatP>
                 This is a free project, and in order for it to continue being
                 free, please consider{" "}
-                <FormatLink href="/book/support">supporting</FormatLink> it.
+                <FormatLink href="/book/support" isHere>supporting</FormatLink> it.
               </FormatP>
             </InfoBox>
             <Outlet />
