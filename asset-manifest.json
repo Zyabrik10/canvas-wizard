@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/canvas-wizard/static/css/main.81f3b7b6.css",
-    "main.js": "/canvas-wizard/static/js/main.41eb0e77.js",
+    "main.js": "/canvas-wizard/static/js/main.7079079b.js",
     "static/media/light-logo.svg": "/canvas-wizard/static/media/light-logo.ee71a4aad76d42a8dd522819c30d3a95.svg",
     "static/media/instagram-logo.svg": "/canvas-wizard/static/media/instagram-logo.1dc9397ae21c2b7a0ee2e22dcb0a31f5.svg",
     "static/media/science-logo.svg": "/canvas-wizard/static/media/science-logo.0aad8fd10fd39c68465b089b0fbeb880.svg",
@@ -17,10 +17,10 @@
     "static/media/arrow2.svg": "/canvas-wizard/static/media/arrow2.f021c5e6c3ff14c794c53fb6adce290f.svg",
     "static/media/api-logo.svg": "/canvas-wizard/static/media/api-logo.3cfcf2b29ce91d5ab1c345b15707a0de.svg",
     "main.81f3b7b6.css.map": "/canvas-wizard/static/css/main.81f3b7b6.css.map",
-    "main.41eb0e77.js.map": "/canvas-wizard/static/js/main.41eb0e77.js.map"
+    "main.7079079b.js.map": "/canvas-wizard/static/js/main.7079079b.js.map"
   },
   "entrypoints": [
     "static/css/main.81f3b7b6.css",
-    "static/js/main.41eb0e77.js"
+    "static/js/main.7079079b.js"
   ]
 }
