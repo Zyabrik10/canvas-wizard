@@ -1,5 +1,10 @@
 .image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 
@@ -12,15 +17,22 @@
 .image-box-img {
   margin: 0 auto;
   border-radius: 10px;
+  -o-object-fit: cover;
   object-fit: cover;
   max-width: 100%;
   max-height: 500px;
+
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 
   box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .image-box-description {
   margin: 0 auto;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
 
   display: flex;
   gap: 10px;

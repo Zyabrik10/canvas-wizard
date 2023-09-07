@@ -17,12 +17,29 @@
 }
 
 .hero.dark-theme {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#001425),
+    to(#141a1f)
+  );
+  background: -o-linear-gradient(top, #001425 0%, #141a1f 100%);
   background: linear-gradient(180deg, #001425 0%, #141a1f 100%);
   border-bottom: 1px solid var(--def-dark-2);
 }
 
 .hero.light-theme {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#efefef),
+    to(#fff)
+  );
+  background: -o-linear-gradient(top, #efefef 0%, #fff 100%);
   background: linear-gradient(180deg, #efefef 0%, #fff 100%);
+  -webkit-box-shadow: 0px -1px 0px 1px #e2e2e2 inset;
   box-shadow: 0px -1px 0px 1px #e2e2e2 inset;
 }
 
@@ -89,7 +106,18 @@
 
   border-radius: 10px;
 
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(var(--primary-bl)),
+    to(#004da8)
+  );
+
+  background: -o-linear-gradient(top, var(--primary-bl) 0%, #004da8 100%);
+
   background: linear-gradient(180deg, var(--primary-bl) 0%, #004da8 100%);
+  -webkit-box-shadow: 0px 0px 10px 2px var(--primary-bl);
   box-shadow: 0px 0px 10px 2px var(--primary-bl);
 
   padding: 10px;
@@ -101,12 +129,31 @@
 
   text-align: center;
 
+  -webkit-transition: background 0.3s ease, -webkit-box-shadow 0.3s ease;
+
+  transition: background 0.3s ease, -webkit-box-shadow 0.3s ease;
+
+  -o-transition: box-shadow 0.3s ease, background 0.3s ease;
+
   transition: box-shadow 0.3s ease, background 0.3s ease;
+
+  transition: box-shadow 0.3s ease, background 0.3s ease,
+    -webkit-box-shadow 0.3s ease;
 }
 
 .hero-button:hover,
 .hero-button:focus {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(var(--primary-bl)),
+    to(#003474)
+  );
+  background: -o-linear-gradient(top, var(--primary-bl) 0%, #003474 100%);
   background: linear-gradient(180deg, var(--primary-bl) 0%, #003474 100%);
+  -webkit-box-shadow: 0px 0px 10px 2px var(--primary-bl),
+    0px 0px 25px 2px var(--primary-bl), 0px 0px 50px 2px var(--primary-bl);
   box-shadow: 0px 0px 10px 2px var(--primary-bl),
     0px 0px 25px 2px var(--primary-bl), 0px 0px 50px 2px var(--primary-bl);
 }

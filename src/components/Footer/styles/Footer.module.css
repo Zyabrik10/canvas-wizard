@@ -1,23 +1,38 @@
 .footer {
   padding: 10px 20px;
   width: 100%;
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
 }
 
 .footer.dark-theme {
   background: rgba(16, 20, 24, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 1px var(--def-dark-2) inset;
   box-shadow: 0px 1px 0px 1px var(--def-dark-2) inset;
 }
 
 .footer.light-theme {
   background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 1px #e2e2e2 inset;
   box-shadow: 0px 1px 0px 1px #e2e2e2 inset;
 }
 
 .footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: reverse;
+
+  -ms-flex-direction: column-reverse;
 
   flex-direction: column-reverse;
   gap: 20px;
@@ -25,24 +40,40 @@
 
 @media screen and (min-width: 666px) {
   .footer-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
   }
 }
 
 .footer-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 10px;
 
   font-size: 20px;
   font-weight: 700;
+  -webkit-box-pack: right;
+  -ms-flex-pack: right;
   justify-content: right;
 }
 
 .footer-link-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 
   padding: 5px;
@@ -54,6 +85,10 @@
   color: var(--def-light-dark);
   font-size: 24px;
   font-weight: 700;
+
+  -webkit-transition: background-color 0.2s ease;
+
+  -o-transition: background-color 0.2s ease;
 
   transition: background-color 0.2s ease;
 }
@@ -81,7 +116,11 @@
   top: -3px;
 }
 .logo-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 10px;
   font-size: 18px;

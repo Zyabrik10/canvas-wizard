@@ -30,6 +30,10 @@
 
   opacity: 0;
 
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+
+  -o-transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
+
   transition: opacity 0.2s ease, background 0.2s ease, color 0.2s ease;
 }
 

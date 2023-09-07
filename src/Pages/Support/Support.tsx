@@ -16,9 +16,11 @@ export default function Support() {
         card to another.
       </FormatP>
       <InfoBox dir="row" type="warn">
-        Please note that Monobank may apply a tax, typically around 4%,
-        according to your bank's policies. Additionally, Monobank accepts money
-        transfers starting from $1.
+        <FormatP>
+          Please note that Monobank may apply a tax, typically around 4%,
+          according to your bank's policies. Additionally, Monobank accepts
+          money transfers starting from $1.
+        </FormatP>
       </InfoBox>
       <FormatTitleH3>Dollars</FormatTitleH3>
       <CodeBox>5375418810243352</CodeBox>

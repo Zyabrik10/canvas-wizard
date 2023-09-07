@@ -45,10 +45,18 @@
 
 .sidebar-item-button {
   padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   text-align: left;
   width: 100%;
+
+  -webkit-transition: background-color 0.2s ease;
+
+  -o-transition: background-color 0.2s ease;
 
   transition: background-color 0.2s ease;
 }
@@ -64,6 +72,8 @@
 }
 
 .item-button-title {
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
   flex-grow: 2;
 }
 
@@ -71,6 +81,10 @@
   display: block;
   padding: 10px;
   margin-left: 10px;
+
+  -webkit-transition: background-color 0.2s ease;
+
+  -o-transition: background-color 0.2s ease;
 
   transition: background-color 0.2s ease;
 }

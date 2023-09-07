@@ -1,10 +1,26 @@
 @import url("../../../../css/variables.css");
 
 .project.dark-theme {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#141a1f),
+    to(#001425)
+  );
+  background: -o-linear-gradient(top, #141a1f 0%, #001425 100%);
   background: linear-gradient(180deg, #141a1f 0%, #001425 100%);
 }
 
 .project.light-theme {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fff),
+    to(#efefef)
+  );
+  background: -o-linear-gradient(top, #fff 0%, #efefef 100%);
   background: linear-gradient(180deg, #fff 0%, #efefef 100%);
 }
 

@@ -3,6 +3,7 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -94,12 +95,18 @@ body {
 
 /* cell */
 .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: var(--flex-items-gap);
 }
 
 .flex-container li {
+  -ms-flex-preferred-size: calc(
+    (100% - (var(--flex-items) - 1) * var(--flex-items-gap)) / var(--flex-items)
+  );
   flex-basis: calc(
     (100% - (var(--flex-items) - 1) * var(--flex-items-gap)) / var(--flex-items)
   );

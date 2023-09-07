@@ -21,7 +21,6 @@ import {
   Semicoln,
 } from "../../../../../code-components/colored-code-components/js/js";
 
-
 export default function InitStars() {
   return (
     <>
@@ -97,8 +96,11 @@ export default function InitStars() {
         </ConstVariable>
       </CodeBox>
       <InfoBox type="extra" dir="row">
-        It's essential to provide an explanation for why we've chosen the number
-        50 in our loop. Leaving numbers without context is not good practice.
+        <FormatP>
+          It's essential to provide an explanation for why we've chosen the
+          number 50 in our loop. Leaving numbers without context is not good
+          practice.
+        </FormatP>
       </InfoBox>
       <FormatTitleH3>Initialization Function</FormatTitleH3>
       <FormatP>
