@@ -1,6 +1,6 @@
 import ProjectsList from "./ProjectsList/ProjectsLit";
 import globalCss from "../../../css/global.module.css";
-import css from "./styles/Projects.module.css";
+import css from "./Projects.module.css";
 
 export default function Projects() {
   return (
