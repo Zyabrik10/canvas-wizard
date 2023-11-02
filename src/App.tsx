@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import Wrapper from "./components/Wrapper/Wrapper";
+import { Wrapper } from "./components/index";
 
 import { HomeLayout, BookLayout, ErrorLayout } from "./layouts/index";
 

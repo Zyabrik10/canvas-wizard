@@ -3,7 +3,7 @@ import {
   FormatTitleH2,
   FormatTitleH3,
 } from "code-components/format-components/format-components";
-import { CodeBox } from "components/CodeBox/CodeBox";
+import { CodeBox } from "components/index";
 import InfoBox from "components/InfoBox/InfoBox";
 
 export default function Support() {

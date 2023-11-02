@@ -5,7 +5,7 @@ import {
   FormatLink,
 } from "code-components/format-components/format-components";
 
-import { CodeBox } from "components/CodeBox/CodeBox";
+import { CodeBox } from "components/index";
 
 import InfoBox from "components/InfoBox/InfoBox";
 
@@ -14,7 +14,7 @@ import {
   CloseTag,
 } from "code-components/colored-code-components/html/html";
 
-import EditorOnline from "components/EditorOnline/EditorOnline";
+import {EditorOnline} from "components/index";
 
 import { Canvas } from "code-components/html-code/snippets/snippets";
 import { InitHTML } from "code-components/html-code/html-code";

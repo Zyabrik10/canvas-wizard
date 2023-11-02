@@ -9,15 +9,15 @@ import {
   FormatLink,
 } from "code-components/format-components/format-components";
 
-import { CodeBox } from "components/CodeBox/CodeBox";
+import { CodeBox } from "components/index";
 
-import ImageBox from "components/ImageBox/ImageBox";
+import {ImageBox }from "components/index";
 
 import initImage1 from "img/projects/config/img1.png";
 import initImage2 from "img/projects/config/img2.png";
 import InfoBox from "components/InfoBox/InfoBox";
 import { InitHTML } from "code-components/html-code/html-code";
-import EditorOnline from "components/EditorOnline/EditorOnline";
+import {EditorOnline} from "components/index";
 import {
   DeclareCanvas,
   DeclareCtx,

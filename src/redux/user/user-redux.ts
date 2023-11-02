@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getUser, saveUser } from "../../ts/local-storage/local-storage";
+import { getUser, saveUser } from "ts/local-storage/local-storage";
 
 type UserState = {
   theme: string,

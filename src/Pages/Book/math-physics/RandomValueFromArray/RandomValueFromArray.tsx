@@ -6,10 +6,10 @@ import {
   FormatLink,
 } from "code-components/format-components/format-components";
 
-import { CodeBox } from "components/CodeBox/CodeBox";
+import { CodeBox } from "components/index";
 
 import InfoBox from "components/InfoBox/InfoBox";
-import ImageBox from "components/ImageBox/ImageBox";
+import {ImageBox }from "components/index";
 import {
   CodeBox1,
   CodeBox2,

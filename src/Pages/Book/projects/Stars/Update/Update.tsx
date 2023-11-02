@@ -24,7 +24,7 @@ import {
   UseObject,
 } from "code-components/js-code/js-code";
 
-import { CodeBox } from "components/CodeBox/CodeBox";
+import { CodeBox } from "components/index";
 
 export default function UpdateStars() {
   return (

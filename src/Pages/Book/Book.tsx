@@ -2,8 +2,7 @@ import {
   FormatP,
   FormatTitleH2,
 } from "code-components/format-components/format-components";
-import Support from "components/Support/Support";
-
+import { Support } from "components/index";
 
 export default function Book() {
   return (
@@ -52,7 +51,6 @@ export default function Book() {
         </FormatP>
 
         <Support />
-
       </section>
     </>
   );

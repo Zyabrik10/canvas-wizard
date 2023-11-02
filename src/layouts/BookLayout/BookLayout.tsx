@@ -1,12 +1,12 @@
 import globalCss from "css/global.module.css";
 import css from "./BookLayout.module.css";
 
-import Header from "components/Header/Header";
-import Footer from "components/Footer/Footer";
+import { Header } from "components/index";
+import {Footer} from "components/index";
 import { Outlet } from "react-router-dom";
 
-import SideMenuMap from "components/SideMenuMap/SideMenuMap";
-import MobileSideMenuBox from "components/MobileSideMenuBox/MobileSideMenuBox";
+import {SideMenuMap} from "components/index";
+import {MobileSideMenuBox} from "components/index";
 import MobileSideMenu from "components/MobileSideMenuBox/components/MobileSideMenu/MobileSideMenu";
 import InfoBox from "components/InfoBox/InfoBox";
 import {

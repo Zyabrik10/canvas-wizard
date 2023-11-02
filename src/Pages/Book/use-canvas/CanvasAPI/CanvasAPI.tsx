@@ -8,7 +8,7 @@ import {
   FormatListUl,
 } from "code-components/format-components/format-components";
 
-import { CodeBox } from "components/CodeBox/CodeBox";
+import { CodeBox } from "components/index";
 
 import { Comment } from "code-components/colored-code-components/js/js";
 import { Br } from "code-components/colored-code-components/html/html";
@@ -21,7 +21,7 @@ import {
 } from "code-components/js-code/canvas-code/canvas-code";
 
 import InfoBox from "components/InfoBox/InfoBox";
-import ImageBox from "components/ImageBox/ImageBox";
+import {ImageBox }from "components/index";
 
 import fillRectImg from "img/canvas-api/fillRect.png";
 import clearRectImg from "img/canvas-api/clearRect.png";
@@ -33,7 +33,7 @@ import strokeStyleImg from "img/canvas-api/strokeStyle.png";
 import fillStyleImg from "img/canvas-api/fillStyle.png";
 import lineWidthImg from "img/canvas-api/lineWidth.png";
 
-import EditorOnline from "components/EditorOnline/EditorOnline";
+import {EditorOnline} from "components/index";
 
 export default function CanvasAPI() {
 

@@ -16,7 +16,7 @@ type CodeBoxType = {
   filename?: string;
 };
 
-export function CodeBox({ id, children, filename }: CodeBoxType) {
+export default function CodeBox({ id, children, filename }: CodeBoxType) {
   const [text, setText] = useState<string>("copy");
   const buttonRef = useRef<HTMLButtonElement>(null);
 
