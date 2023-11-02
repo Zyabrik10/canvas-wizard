@@ -1,15 +1,15 @@
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Comment,
   Number,
   Sign,
   VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   BracketExpression,
   ConstVariable,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
 export function SomeValue() {
   return (

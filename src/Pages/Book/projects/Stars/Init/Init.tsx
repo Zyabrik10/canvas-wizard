@@ -2,11 +2,11 @@ import {
   FormatP,
   FormatTitleH2,
   FormatTitleH3,
-} from "../../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import InfoBox from "../../../../../components/InfoBox/InfoBox";
+import InfoBox from "components/InfoBox/InfoBox";
 import {
   BracketExpression,
   ConstVariable,
@@ -14,12 +14,12 @@ import {
   FunctionDeclare,
   InitClassInstance,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+} from "code-components/js-code/js-code";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Number,
   Semicoln,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 
 export default function InitStars() {
   return (

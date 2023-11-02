@@ -1,4 +1,4 @@
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   FormatP,
   FormatTitleH2,
@@ -6,18 +6,18 @@ import {
   FormatTitleH3,
   FormatListUl,
   FormatLink,
-} from "../../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 import {
   BracketExpression,
   ClassFunctionDeclare,
   ConstVariable,
   DeclareClass,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
-import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import InfoBox from "../../../../../components/InfoBox/InfoBox";
+import InfoBox from "components/InfoBox/InfoBox";
 
 import {
   Coma,
@@ -27,7 +27,7 @@ import {
   Number,
   Semicoln,
   VarDec,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 
 import Contructor from "./snippets/constructor/constructor";
 import Draw from "./snippets/draw/draw";

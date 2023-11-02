@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Coma,
   Literal,
@@ -7,14 +7,14 @@ import {
   Semicoln,
   Sign,
   VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   FormatP,
   FormatTitleH2,
   FormatMark,
   FormatTitleH3,
-} from "../../../../../code-components/format-components/format-components";
-import { UseCtxVar } from "../../../../../code-components/js-code/canvas-code/canvas-code";
+} from "code-components/format-components/format-components";
+import { UseCtxVar } from "code-components/js-code/canvas-code/canvas-code";
 import {
   BracketExpression,
   CallFunction,
@@ -22,9 +22,9 @@ import {
   DecalreFor,
   FunctionDeclare,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
-import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
 export default function UpdateStars() {
   return (

@@ -1,8 +1,8 @@
 import {
   FormatP,
   FormatTitleH2,
-} from "../../code-components/format-components/format-components";
-import Support from "../../components/Support/Support";
+} from "code-components/format-components/format-components";
+import Support from "components/Support/Support";
 
 
 export default function Book() {

@@ -1,13 +1,13 @@
 import { Link, useLocation } from "react-router-dom";
 import {AboutList} from "./components/index";
 
-import globalCss from "../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./About.module.css";
 
-import arrow_logo from "../../../img/logo/arrow1.svg";
+import arrow_logo from "img/logo/arrow1.svg";
 
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 export default function About() {
   const location = useLocation();

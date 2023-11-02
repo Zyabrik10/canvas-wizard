@@ -1,8 +1,8 @@
-import globalCss from "../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./Hero.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 export default function Hero() {
   const { theme } = useSelector(selectUser);

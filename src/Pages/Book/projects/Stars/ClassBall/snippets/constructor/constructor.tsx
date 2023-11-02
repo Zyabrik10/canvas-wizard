@@ -5,7 +5,7 @@ import {
   ClassObjectExpression,
   ConstVariable,
   UseObject,
-} from "../../../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
 import {
   Coma,
@@ -15,8 +15,8 @@ import {
   VarName,
   Number,
   Semicoln,
-} from "../../../../../../../code-components/colored-code-components/js/js";
-import { Br } from "../../../../../../../code-components/colored-code-components/html/html";
+} from "code-components/colored-code-components/js/js";
+import { Br } from "code-components/colored-code-components/html/html";
 import { nanoid } from "nanoid";
 
 export default function Contructor() {

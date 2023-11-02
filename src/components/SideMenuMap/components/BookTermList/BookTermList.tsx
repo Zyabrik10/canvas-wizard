@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import globalCss from "../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import { BookTermItem } from "./components/index";
 
 type Term = {

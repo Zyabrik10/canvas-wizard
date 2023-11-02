@@ -1,5 +1,5 @@
-import { initCanvas } from "../../ts/canvas/home-canvas/canvas-config";
-import { initCanvasUpdating } from "../../ts/canvas/home-canvas/main";
+import { initCanvas } from "ts/canvas/home-canvas/canvas-config";
+import { initCanvasUpdating } from "ts/canvas/home-canvas/main";
 
 import { useEffect } from "react";
 

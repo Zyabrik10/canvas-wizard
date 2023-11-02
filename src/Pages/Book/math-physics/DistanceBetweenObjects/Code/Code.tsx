@@ -4,7 +4,7 @@ import {
   ObjectExpression,
   Return,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
 import {
   Coma,
@@ -12,8 +12,8 @@ import {
   Number,
   Sign,
   VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+} from "code-components/colored-code-components/js/js";
+import { Br } from "code-components/colored-code-components/html/html";
 
 export function ObjectA() {
   return (

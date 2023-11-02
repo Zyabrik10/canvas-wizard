@@ -1,4 +1,4 @@
-import jsCodeColor from "../../../css//code-color/js/js-code-color.module.css";
+import jsCodeColor from "css/code-color/js/js-code-color.module.css";
 
 import { JSX } from 'react';
 

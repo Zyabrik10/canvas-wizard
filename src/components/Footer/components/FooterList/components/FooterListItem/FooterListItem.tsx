@@ -1,8 +1,8 @@
-import globalCss from "../../../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./FooterListItem.module.css";
 
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../../../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 interface Link {
   path: string;

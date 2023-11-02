@@ -1,9 +1,9 @@
-import { Br } from "../../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Comment,
   Sign,
   VarName,
-} from "../../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   BracketExpression,
   CallFunction,
@@ -12,7 +12,7 @@ import {
   UseObject,
   FunctionDeclare,
   Return,
-} from "../../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 import {
   LastElement,
   LastElementIndex,

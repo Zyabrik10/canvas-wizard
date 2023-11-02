@@ -1,15 +1,15 @@
-import { Br } from "../../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Coma,
   Comment,
   VarName,
-} from "../../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   CallFunction,
   ConsoleLog,
   ConstVariable,
   UseObject,
-} from "../../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 import {
   AbsoluteLengthVars,
   FunctionGetDist,

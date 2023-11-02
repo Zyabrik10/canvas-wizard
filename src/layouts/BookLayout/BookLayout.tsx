@@ -1,19 +1,19 @@
-import globalCss from "../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./BookLayout.module.css";
 
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
+import Header from "components/Header/Header";
+import Footer from "components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 
-import SideMenuMap from "../../components/SideMenuMap/SideMenuMap";
-import MobileSideMenuBox from "../../components/MobileSideMenuBox/MobileSideMenuBox";
-import MobileSideMenu from "../../components/MobileSideMenuBox/components/MobileSideMenu/MobileSideMenu";
-import InfoBox from "../../components/InfoBox/InfoBox";
+import SideMenuMap from "components/SideMenuMap/SideMenuMap";
+import MobileSideMenuBox from "components/MobileSideMenuBox/MobileSideMenuBox";
+import MobileSideMenu from "components/MobileSideMenuBox/components/MobileSideMenu/MobileSideMenu";
+import InfoBox from "components/InfoBox/InfoBox";
 import {
   FormatLink,
   FormatMark,
   FormatP,
-} from "../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
 export default function BookLayout() {
   return (

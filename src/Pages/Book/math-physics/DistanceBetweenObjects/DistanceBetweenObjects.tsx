@@ -3,11 +3,11 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatTitleH3,
-} from "../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import { GetDistFunction } from "../../../../code-components/js-code/canvas-code/canvas-code";
+import { GetDistFunction } from "code-components/js-code/canvas-code/canvas-code";
 
 import {
   CodeBox1,

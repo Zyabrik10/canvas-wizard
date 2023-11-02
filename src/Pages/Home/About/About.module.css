@@ -1,4 +1,4 @@
-@import url("../../../css/variables.css");
+@import url("css/variables.css");
 
 .about.dark-theme {
   background: var(--default-dark);

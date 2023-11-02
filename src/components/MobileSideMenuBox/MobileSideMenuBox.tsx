@@ -1,10 +1,10 @@
 import css from "./MobileSideMenuBox.module.css";
-import globalCss from "../../css/global.module.css";
-import menu_bar from "../../img/logo/menu-bar.svg";
+import globalCss from "css/global.module.css";
+import menu_bar from "img/logo/menu-bar.svg";
 
-import { toggleMobileMenu } from "../../redux/mobileMenu/mobileMenu-redux";
+import { toggleMobileMenu } from "redux/mobileMenu/mobileMenu-redux";
 import { useDispatch, useSelector } from "react-redux";
-import { selectUser } from "../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 export default function MobileSideMenuBox() {
   const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import img from "../../../../../img/projects/config/innerWidth-innerHeight.png";
+import img from "img/projects/config/innerWidth-innerHeight.png";
 
 import {
   FormatP,
@@ -7,31 +7,31 @@ import {
   FormatTitleH3,
   FormatListUl,
   FormatLink,
-} from "../../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import ImageBox from "../../../../../components/ImageBox/ImageBox";
+import ImageBox from "components/ImageBox/ImageBox";
 
-import initImage1 from "../../../../../img/projects/config/img1.png";
-import initImage2 from "../../../../../img/projects/config/img2.png";
-import InfoBox from "../../../../../components/InfoBox/InfoBox";
-import { InitHTML } from "../../../../../code-components/html-code/html-code";
-import EditorOnline from "../../../../../components/EditorOnline/EditorOnline";
+import initImage1 from "img/projects/config/img1.png";
+import initImage2 from "img/projects/config/img2.png";
+import InfoBox from "components/InfoBox/InfoBox";
+import { InitHTML } from "code-components/html-code/html-code";
+import EditorOnline from "components/EditorOnline/EditorOnline";
 import {
   DeclareCanvas,
   DeclareCtx,
   SetCanvasSize,
-} from "../../../../../code-components/js-code/canvas-code/canvas-code";
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
-import { BracketExpression } from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/canvas-code/canvas-code";
+import { Br } from "code-components/colored-code-components/html/html";
+import { BracketExpression } from "code-components/js-code/js-code";
 import {
   Colon,
   Object,
   Property,
   Semicoln,
   VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 
 export default function ProjectConfiguration() {
   return (

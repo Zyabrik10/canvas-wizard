@@ -1,5 +1,5 @@
-import globalCss from "../../css/global.module.css";
-import formatText from "../../css/format-text.module.css";
+import globalCss from "css/global.module.css";
+import formatText from "css/format-text.module.css";
 import { JSX } from "react";
 import { Link } from "react-router-dom";
 

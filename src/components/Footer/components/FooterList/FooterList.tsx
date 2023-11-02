@@ -1,12 +1,12 @@
 import {FooterListItem} from "./components/index";
 import { nanoid } from "nanoid";
-import globalCss from '../../../../css/global.module.css';
+import globalCss from 'css/global.module.css';
 import css from './FooterList.module.css';
 
-import linkedin_logo from "../../../../img/logo/linkedin-logo.svg";
-import github_logo from "../../../../img/logo/github-logo.svg";
-import instagram_logo from "../../../../img/logo/instagram-logo.svg";
-import codepen_logo from "../../../../img/logo/codepen-logo.svg";
+import linkedin_logo from "img/logo/linkedin-logo.svg";
+import github_logo from "img/logo/github-logo.svg";
+import instagram_logo from "img/logo/instagram-logo.svg";
+import codepen_logo from "img/logo/codepen-logo.svg";
 
 export default function FooterList() {
   interface Link {

@@ -1,12 +1,12 @@
 import {
   ClassFunctionDeclare,
   UseObject,
-} from "../../../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
 import {
   Semicoln,
-} from "../../../../../../../code-components/colored-code-components/js/js";
-import { Br } from "../../../../../../../code-components/colored-code-components/html/html";
+} from "code-components/colored-code-components/js/js";
+import { Br } from "code-components/colored-code-components/html/html";
 
 export default function Update() {
   return (

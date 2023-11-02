@@ -4,13 +4,13 @@ import {
   FormatMark,
   FormatTitleH3,
   FormatListUl,
-} from "../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import { RandIntFunction } from "../../../../code-components/js-code/canvas-code/canvas-code";
+import { RandIntFunction } from "code-components/js-code/canvas-code/canvas-code";
 
-import InfoBox from "../../../../components/InfoBox/InfoBox";
+import InfoBox from "components/InfoBox/InfoBox";
 import {
   CodeBox1,
   CodeBox2,

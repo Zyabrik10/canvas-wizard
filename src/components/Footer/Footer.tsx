@@ -1,11 +1,11 @@
-import globalCss from "../../css/global.module.css";
+import globalCss from "css/global.module.css";
 
 import { FooterList, FooterLogo } from "./components/index";
 
 import css from "./Footer.module.css";
 
 import { useSelector } from "react-redux";
-import { selectUser } from "../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 function FooterContent() {
   return (

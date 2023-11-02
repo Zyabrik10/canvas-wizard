@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import logo from '../../../../img/logo/logo.svg';
-import globalCss from '../../../../css/global.module.css';
+import logo from 'img/logo/logo.svg';
+import globalCss from 'css/global.module.css';
 import css from './HeaderLogo.module.css';
 
 export default function HeaderLogo() {

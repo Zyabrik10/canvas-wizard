@@ -1,14 +1,14 @@
 import css from "./MobileSideMenu.module.css";
-import globalCss from "../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 
-import { BookSideBarList } from "../../../SideMenuMap/components/index";
+import { BookSideBarList } from "components/SideMenuMap/components/index";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectMobileMenu } from "../../../../redux/mobileMenu/mobileMenu-selector";
+import { selectMobileMenu } from "redux/mobileMenu/mobileMenu-selector";
 
-import { toggleMobileMenu } from "../../../../redux/mobileMenu/mobileMenu-redux";
+import { toggleMobileMenu } from "redux/mobileMenu/mobileMenu-redux";
 
-import { selectUser } from "../../../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 export default function MobileSideMenu() {
   const { isOpend } = useSelector(selectMobileMenu);

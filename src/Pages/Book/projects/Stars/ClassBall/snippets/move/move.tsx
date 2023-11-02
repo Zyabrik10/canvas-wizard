@@ -2,7 +2,7 @@ import {
   BracketExpression,
   ClassFunctionDeclare,
   UseObject,
-} from "../../../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
 import {
   Coma,
@@ -11,8 +11,8 @@ import {
   VarName,
   Semicoln,
   VarDec,
-} from "../../../../../../../code-components/colored-code-components/js/js";
-import { Br } from "../../../../../../../code-components/colored-code-components/html/html";
+} from "code-components/colored-code-components/js/js";
+import { Br } from "code-components/colored-code-components/html/html";
 
 export default function Move() {
   return (

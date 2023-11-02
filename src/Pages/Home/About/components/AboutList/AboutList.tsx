@@ -1,10 +1,10 @@
 import { nanoid } from "nanoid";
 import AboutListItem from "./components/AboutListItem/AboutListItem";
-import api_logo from '../../../../../img/logo/api-logo.svg';
-import project_logo from '../../../../../img/logo/project-logo.svg';
-import science_logo from '../../../../../img/logo/science-logo.svg';
+import api_logo from 'img/logo/api-logo.svg';
+import project_logo from 'img/logo/project-logo.svg';
+import science_logo from 'img/logo/science-logo.svg';
 import css from './AboutList.module.css';
-import globalCss from '../../../../../css/global.module.css';
+import globalCss from 'css/global.module.css';
 
 export default function Aboutlist() {
   interface Item {

@@ -3,21 +3,21 @@ import {
   FormatTitleH2,
   FormatMark,
   FormatLink,
-} from "../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import InfoBox from "../../../../components/InfoBox/InfoBox";
+import InfoBox from "components/InfoBox/InfoBox";
 
 import {
   OpenTag,
   CloseTag,
-} from "../../../../code-components/colored-code-components/html/html";
+} from "code-components/colored-code-components/html/html";
 
-import EditorOnline from "../../../../components/EditorOnline/EditorOnline";
+import EditorOnline from "components/EditorOnline/EditorOnline";
 
-import { Canvas } from "../../../../code-components/html-code/snippets/snippets";
-import { InitHTML } from "../../../../code-components/html-code/html-code";
+import { Canvas } from "code-components/html-code/snippets/snippets";
+import { InitHTML } from "code-components/html-code/html-code";
 
 export default function AboutCanvas() {
 

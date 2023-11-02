@@ -1,4 +1,4 @@
-import htmlCodeColor from "../../../css/code-color/html/html-code-color.module.css";
+import htmlCodeColor from "css/code-color/html/html-code-color.module.css";
 import { JSX } from "react";
 
 type Tag = {

@@ -2,7 +2,7 @@ import { JSX } from "react";
 
 import css from "./InfoBox.module.css";
 
-import { selectUser } from '../../redux/user/user-selector';
+import { selectUser } from 'redux/user/user-selector';
 import { useSelector } from 'react-redux';
 
 type InfoBoxType = {

@@ -1,10 +1,10 @@
-import globalCss from "../../../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import { NavLink, useLocation } from "react-router-dom";
 import css from "./BookTermItem.module.css";
 
 import { useDispatch, useSelector } from "react-redux";
-import { toggleMobileMenu } from "../../../../../../redux/mobileMenu/mobileMenu-redux";
-import { selectUser } from "../../../../../../redux/user/user-selector";
+import { toggleMobileMenu } from "redux/mobileMenu/mobileMenu-redux";
+import { selectUser } from "redux/user/user-selector";
 
 type Term = {
   title: string;

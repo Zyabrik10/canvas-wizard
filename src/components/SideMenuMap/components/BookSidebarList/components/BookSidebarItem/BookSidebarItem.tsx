@@ -1,12 +1,12 @@
-import globalCss from "../../../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./BookSidebarItem.module.css";
 
 import { BookTermList } from "../../../index";
 import { useState } from "react";
 
-import arrow from "../../../../../../img/logo/arrow2.svg";
+import arrow from "img/logo/arrow2.svg";
 import { useSelector } from "react-redux";
-import { selectUser } from "../../../../../../redux/user/user-selector";
+import { selectUser } from "redux/user/user-selector";
 
 type Term = {
   title: string;

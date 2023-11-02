@@ -1,23 +1,23 @@
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Coma,
   Quote,
   Semicoln,
   Sign,
   Text,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   FormatP,
   FormatTitleH2,
   FormatTitleH3,
-} from "../../../../../code-components/format-components/format-components";
-import { SetCanvasHeight, SetCanvasWidth } from "../../../../../code-components/js-code/canvas-code/canvas-code";
+} from "code-components/format-components/format-components";
+import { SetCanvasHeight, SetCanvasWidth } from "code-components/js-code/canvas-code/canvas-code";
 import {
   BracketExpression,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
-import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
 export default function ReactOnWindowResizeStars() {
   return (

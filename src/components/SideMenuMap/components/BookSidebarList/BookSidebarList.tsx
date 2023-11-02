@@ -1,9 +1,9 @@
-import globalCss from "../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./BookSidebarList.module.css";
 
 import BookSidebarItem from "./components/BookSidebarItem/BookSidebarItem";
 
-import { selectBooks } from "../../../../redux/books/books-selector";
+import { selectBooks } from "redux/books/books-selector";
 import { useSelector } from "react-redux";
 import { nanoid } from "nanoid";
 

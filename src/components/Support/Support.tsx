@@ -2,10 +2,10 @@ import {
   FormatMark,
   FormatP,
   FormatTitleH2,
-} from "../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 import { Link } from "react-router-dom";
 
-import globalCss from "../../css/global.module.css";
+import globalCss from "css/global.module.css";
 
 import css from "./Support.module.css";
 

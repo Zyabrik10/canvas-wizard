@@ -1,14 +1,14 @@
-import globalCss from "../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 import css from "./HeaderList.module.css";
-import linkedin_logo from "../../../../img/logo/linkedin-logo.svg";
-import github_logo from "../../../../img/logo/github-logo.svg";
-import dark_logo from "../../../../img/logo/moon.svg";
-import light_logo from "../../../../img/logo/light-logo.svg";
+import linkedin_logo from "img/logo/linkedin-logo.svg";
+import github_logo from "img/logo/github-logo.svg";
+import dark_logo from "img/logo/moon.svg";
+import light_logo from "img/logo/light-logo.svg";
 
 import { useSelector, useDispatch } from "react-redux";
-import { selectUser } from "../../../../redux/user/user-selector";
-import { switchTheme } from "../../../../redux/user/user-redux";
-import { setFillColor } from "../../../../ts/canvas/home-canvas/init";
+import { selectUser } from "redux/user/user-selector";
+import { switchTheme } from "redux/user/user-redux";
+import { setFillColor } from "ts/canvas/home-canvas/init";
 
 export default function HeaderList() {
   const dispatch = useDispatch();

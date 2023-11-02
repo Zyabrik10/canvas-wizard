@@ -4,12 +4,12 @@ import {
   FormatMark,
   FormatTitleH3,
   FormatLink,
-} from "../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import InfoBox from "../../../../components/InfoBox/InfoBox";
-import ImageBox from "../../../../components/ImageBox/ImageBox";
+import InfoBox from "components/InfoBox/InfoBox";
+import ImageBox from "components/ImageBox/ImageBox";
 import {
   CodeBox1,
   CodeBox2,

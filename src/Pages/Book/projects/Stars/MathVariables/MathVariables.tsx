@@ -5,28 +5,28 @@ import {
   FormatTitleH3,
   FormatListUl,
   FormatLink,
-} from "../../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import InfoBox from "../../../../../components/InfoBox/InfoBox";
+import InfoBox from "components/InfoBox/InfoBox";
 import {
   CallFunction,
   ConsoleLog,
   ConstVariable,
   UseObject,
-} from "../../../../../code-components/js-code/js-code";
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+} from "code-components/js-code/js-code";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   GetDistFunction,
   RandIntFunction,
   RandNumFunction,
-} from "../../../../../code-components/js-code/canvas-code/canvas-code";
+} from "code-components/js-code/canvas-code/canvas-code";
 import {
   Comment,
   Number,
   VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   ObjectA,
   ObjectB,

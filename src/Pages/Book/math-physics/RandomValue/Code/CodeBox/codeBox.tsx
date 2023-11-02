@@ -1,10 +1,10 @@
-import { Br } from "../../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Comment,
   Number,
   Sign,
   VarName,
-} from "../../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   BracketExpression,
   CallFunction,
@@ -13,8 +13,8 @@ import {
   Return,
   UseObject,
   FunctionDeclare,
-} from "../../../../../../code-components/js-code/js-code";
-import { DeclareRandom } from "../../../../../../code-components/js-code/snippets/snippets";
+} from "code-components/js-code/js-code";
+import { DeclareRandom } from "code-components/js-code/snippets/snippets";
 import {
   MinMaxValue,
   MinRandomValue,

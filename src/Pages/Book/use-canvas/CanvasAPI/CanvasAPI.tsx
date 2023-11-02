@@ -1,4 +1,4 @@
-import globalCss from "../../../../css/global.module.css";
+import globalCss from "css/global.module.css";
 
 import {
   FormatP,
@@ -6,34 +6,34 @@ import {
   FormatMark,
   FormatTitleH3,
   FormatListUl,
-} from "../../../../code-components/format-components/format-components";
+} from "code-components/format-components/format-components";
 
-import { CodeBox } from "../../../../components/CodeBox/CodeBox";
+import { CodeBox } from "components/CodeBox/CodeBox";
 
-import { Comment } from "../../../../code-components/colored-code-components/js/js";
-import { Br } from "../../../../code-components/colored-code-components/html/html";
+import { Comment } from "code-components/colored-code-components/js/js";
+import { Br } from "code-components/colored-code-components/html/html";
 
 import {
   DeclareCanvas,
   DeclareCtx,
   UseCtxFunction,
   UseCtxVar,
-} from "../../../../code-components/js-code/canvas-code/canvas-code";
+} from "code-components/js-code/canvas-code/canvas-code";
 
-import InfoBox from "../../../../components/InfoBox/InfoBox";
-import ImageBox from "../../../../components/ImageBox/ImageBox";
+import InfoBox from "components/InfoBox/InfoBox";
+import ImageBox from "components/ImageBox/ImageBox";
 
-import fillRectImg from "../../../../img/canvas-api/fillRect.png";
-import clearRectImg from "../../../../img/canvas-api/clearRect.png";
-import strokeImg from "../../../../img/canvas-api/stroke.png";
-import FillRectImg from "../../../../img/canvas-api/fill.png";
-import arcImg from "../../../../img/canvas-api/arc.png";
-import mlToImg from "../../../../img/canvas-api/mlTo.png";
-import strokeStyleImg from "../../../../img/canvas-api/strokeStyle.png";
-import fillStyleImg from "../../../../img/canvas-api/fillStyle.png";
-import lineWidthImg from "../../../../img/canvas-api/lineWidth.png";
+import fillRectImg from "img/canvas-api/fillRect.png";
+import clearRectImg from "img/canvas-api/clearRect.png";
+import strokeImg from "img/canvas-api/stroke.png";
+import FillRectImg from "img/canvas-api/fill.png";
+import arcImg from "img/canvas-api/arc.png";
+import mlToImg from "img/canvas-api/mlTo.png";
+import strokeStyleImg from "img/canvas-api/strokeStyle.png";
+import fillStyleImg from "img/canvas-api/fillStyle.png";
+import lineWidthImg from "img/canvas-api/lineWidth.png";
 
-import EditorOnline from "../../../../components/EditorOnline/EditorOnline";
+import EditorOnline from "components/EditorOnline/EditorOnline";
 
 export default function CanvasAPI() {
 

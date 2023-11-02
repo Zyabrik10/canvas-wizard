@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 import css from "./FooterLogo.module.css";
-import globalCss from '../../../../css/global.module.css';
+import globalCss from 'css/global.module.css';
 
-import logo from '../../../../img/logo/logo.svg';
+import logo from 'img/logo/logo.svg';
 
 export default function HeaderLogo() {
   return (

@@ -1,16 +1,16 @@
-import { Br } from "../../../../../code-components/colored-code-components/html/html";
+import { Br } from "code-components/colored-code-components/html/html";
 import {
   Coma,
   Number,
   Sign,
   VarName,
-} from "../../../../../code-components/colored-code-components/js/js";
+} from "code-components/colored-code-components/js/js";
 import {
   BracketExpression,
   ConstVariable,
   UseObject,
   UseArrowFunction,
-} from "../../../../../code-components/js-code/js-code";
+} from "code-components/js-code/js-code";
 
 export function GetNum() {
   return (
