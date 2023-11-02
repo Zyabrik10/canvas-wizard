@@ -1,7 +1,3 @@
-// import globalCss from "../../css/global.module.css";
-// import css from "./styles/BookPage.module.css";
-
-
 import {
   FormatP,
   FormatTitleH2,
