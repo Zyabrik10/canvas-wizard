@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/canvas-wizard/static/css/main.309b7d8b.css",
-    "main.js": "/canvas-wizard/static/js/main.9771fbec.js",
+    "main.css": "/canvas-wizard/static/css/main.b1512422.css",
+    "main.js": "/canvas-wizard/static/js/main.fc9b6e58.js",
     "static/media/light-logo.svg": "/canvas-wizard/static/media/light-logo.ee71a4aad76d42a8dd522819c30d3a95.svg",
     "static/media/instagram-logo.svg": "/canvas-wizard/static/media/instagram-logo.1dc9397ae21c2b7a0ee2e22dcb0a31f5.svg",
     "static/media/science-logo.svg": "/canvas-wizard/static/media/science-logo.0aad8fd10fd39c68465b089b0fbeb880.svg",
@@ -16,11 +16,11 @@
     "static/media/arrow1.svg": "/canvas-wizard/static/media/arrow1.37c7656d33d1fea0d52507318a493766.svg",
     "static/media/arrow2.svg": "/canvas-wizard/static/media/arrow2.285412545b542ae1d247dabf8304708f.svg",
     "static/media/api-logo.svg": "/canvas-wizard/static/media/api-logo.3cfcf2b29ce91d5ab1c345b15707a0de.svg",
-    "main.309b7d8b.css.map": "/canvas-wizard/static/css/main.309b7d8b.css.map",
-    "main.9771fbec.js.map": "/canvas-wizard/static/js/main.9771fbec.js.map"
+    "main.b1512422.css.map": "/canvas-wizard/static/css/main.b1512422.css.map",
+    "main.fc9b6e58.js.map": "/canvas-wizard/static/js/main.fc9b6e58.js.map"
   },
   "entrypoints": [
-    "static/css/main.309b7d8b.css",
-    "static/js/main.9771fbec.js"
+    "static/css/main.b1512422.css",
+    "static/js/main.fc9b6e58.js"
   ]
 }
