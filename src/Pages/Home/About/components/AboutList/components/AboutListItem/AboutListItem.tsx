@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import globalCss from "../../../../../css/global.module.css";
-import { selectUser } from "../../../../../redux/user/user-selector";
-import css from "../../styles/About.module.css";
+import globalCss from "../../../../../../../css/global.module.css";
+import { selectUser } from "../../../../../../../redux/user/user-selector";
+import css from "./AboutListItem.module.css";
 
 interface Item {
   logo: string;

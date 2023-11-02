@@ -1,0 +1,1 @@
+export { default as AboutList } from './AboutList/AboutList'; 

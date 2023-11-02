@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
-import Aboutlist from "./AboutList/AboutList";
+import {AboutList} from "./components/index";
 
 import globalCss from "../../../css/global.module.css";
-import css from "./styles/About.module.css";
+import css from "./About.module.css";
 
 import arrow_logo from "../../../img/logo/arrow1.svg";
 
@@ -29,7 +29,7 @@ export default function About() {
         </p>
         <div className={css["about-main-box"]}>
           <canvas id="stars-canvas"></canvas>
-          <Aboutlist />
+          <AboutList />
         </div>
         <div
           className={`${css["about-button-box"]} ${globalCss["global-button"]}`}
