@@ -1,11 +1,11 @@
 import globalCss from "../../css/global.module.css";
-import HeaderList from "./HeaderList/HeaderList";
-import HeaderLogo from "./HeaderLogo/HeaderLogo";
-import { HeaderNav } from "./HeaderNavList/HeaderNavList";
-import css from "./styles/Header.module.css";
+
+import { HeaderList, HeaderLogo, HeaderNav } from "./components/index";
+
+import css from "./Header.module.css";
 
 import { useSelector } from "react-redux";
-import { selectUser } from '../../redux/user/user-selector';
+import { selectUser } from "../../redux/user/user-selector";
 
 type HeaderProps = {
   isContainer: boolean;
@@ -26,7 +26,6 @@ export default function Header({
   isContainer,
   position = "fixed",
 }: HeaderProps) {
-
   const { theme } = useSelector(selectUser);
 
   const currentTheme = `${theme}-theme`;
@@ -35,11 +34,11 @@ export default function Header({
     <header
       className={`${css["header"]} ${css[currentTheme]}`}
       style={{
-        position
+        position,
       }}
     >
       {isContainer ? (
-        <div className={`${globalCss.container}`} style={{padding:"0"}}>
+        <div className={`${globalCss.container}`} style={{ padding: "0" }}>
           <HeaderContent />
         </div>
       ) : (

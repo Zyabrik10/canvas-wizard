@@ -1,4 +1,4 @@
-import css from "./styles/EditorOnline.module.css";
+import css from "./EditorOnline.module.css";
 import { JSX } from "react";
 
 type EditorOnlineType = {

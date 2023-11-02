@@ -1,6 +1,6 @@
 import { JSX } from "react";
 
-import css from "./styles/InfoBox.module.css";
+import css from "./InfoBox.module.css";
 
 import { selectUser } from '../../redux/user/user-selector';
 import { useSelector } from 'react-redux';

@@ -1,0 +1,53 @@
+.footer {
+  padding: 10px 20px;
+  width: 100%;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
+.footer.dark-theme {
+  background: rgba(16, 20, 24, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 1px var(--def-dark-2) inset;
+  box-shadow: 0px 1px 0px 1px var(--def-dark-2) inset;
+}
+
+.footer.light-theme {
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0px 1px 0px 1px #e2e2e2 inset;
+  box-shadow: 0px 1px 0px 1px #e2e2e2 inset;
+}
+
+.footer-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-box-direction: reverse;
+
+  -ms-flex-direction: column-reverse;
+
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+@media screen and (min-width: 666px) {
+  .footer-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+}
+
+.footer-author-link {
+  display: block;
+  margin: 0 auto;
+}

@@ -1,0 +1,7 @@
+.book-sidebar-list {
+  position: sticky;
+  top: 10px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: inherit;
+}

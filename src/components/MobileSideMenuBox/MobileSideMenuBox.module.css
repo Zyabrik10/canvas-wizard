@@ -1,0 +1,26 @@
+@import url("../../css/variables.css");
+
+.mobile-sidemenu-box {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  padding: 20px;
+  display: block;
+}
+
+.mobile-sidemenu-box.dark-theme {
+  border-bottom: 1px solid var(--def-dark-2);
+  background-color: var(--default-dark);
+}
+
+.mobile-sidemenu-box.light-theme {
+  -webkit-box-shadow: 0px -1px 0px 1px #e2e2e2 inset;
+  box-shadow: 0px -1px 0px 1px #e2e2e2 inset;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+  .mobile-sidemenu-box {
+    display: none;
+  }
+}

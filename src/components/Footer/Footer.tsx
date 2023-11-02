@@ -1,7 +1,8 @@
 import globalCss from "../../css/global.module.css";
-import FooterList from "./FooterList/FooterList";
-import FooterLogo from "./FooterLogo/FooterLogo";
-import css from "./styles/Footer.module.css";
+
+import { FooterList, FooterLogo } from "./components/index";
+
+import css from "./Footer.module.css";
 
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/user/user-selector";

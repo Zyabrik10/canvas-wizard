@@ -1,4 +1,4 @@
-import css from "./styles/MobileSideMenuBox.module.css";
+import css from "./MobileSideMenuBox.module.css";
 import globalCss from "../../css/global.module.css";
 import menu_bar from "../../img/logo/menu-bar.svg";
 

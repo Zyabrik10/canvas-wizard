@@ -1,5 +1,5 @@
 import globalCss from "../../css/global.module.css";
-import css from "./styles/ImageBox.module.css";
+import css from "./ImageBox.module.css";
 
 type ImageBoxType = {
   src: string;

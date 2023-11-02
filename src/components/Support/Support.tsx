@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 import globalCss from "../../css/global.module.css";
 
-import css from "./styles/Support.module.css";
+import css from "./Support.module.css";
 
 export default function Support() {
   return (

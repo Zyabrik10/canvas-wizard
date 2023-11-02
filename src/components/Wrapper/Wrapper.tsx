@@ -1,7 +1,7 @@
 import { JSX } from "react";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/user/user-selector";
-import css from "./styles/Wrapper.module.css";
+import css from "./Wrapper.module.css";
 
 type Props = {
   children: JSX.Element;

@@ -1,6 +1,6 @@
-import css from "./styles/SideMenuMap.module.css";
+import css from "./SideMenuMap.module.css";
 
-import BookSidebarList from "./BookSidebarList/BookSidebarList";
+import {BookSideBarList} from "./components/index";
 import { useSelector } from "react-redux";
 import { selectUser } from "../../redux/user/user-selector";
 
@@ -12,7 +12,7 @@ export default function SideMenuMap() {
     <aside
       className={`${css[currentTheme]} ${css["book-sidebar-map"]}`}
     >
-      <BookSidebarList />
+      <BookSideBarList />
     </aside>
   );
 }

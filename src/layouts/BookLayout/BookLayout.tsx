@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 
 import SideMenuMap from "../../components/SideMenuMap/SideMenuMap";
 import MobileSideMenuBox from "../../components/MobileSideMenuBox/MobileSideMenuBox";
-import MobileSideMenu from "../../components/MobileSideMenuBox/MobileSideMenu/MobileSideMenu";
+import MobileSideMenu from "../../components/MobileSideMenuBox/components/MobileSideMenu/MobileSideMenu";
 import InfoBox from "../../components/InfoBox/InfoBox";
 import {
   FormatLink,

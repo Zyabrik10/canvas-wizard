@@ -1,0 +1,27 @@
+.book-sidebar-map {
+  display: none;
+  width: 100%;
+  max-width: 250px;
+  background-color: inherit;
+}
+
+@media screen and (min-width: 1200px) {
+  .book-sidebar-map {
+    display: block;
+  }
+}
+
+.book-sidebar-map.dark-theme {
+  border-right: 1px solid var(--def-dark-2);
+  background: var(--default-dark);
+}
+
+.book-sidebar-map.light-theme {
+  border-right: 1px solid #e2e2e2;
+  background: #fff;
+}
+
+.item-button-status {
+  font-size: 25px;
+  margin-left: auto;
+}
