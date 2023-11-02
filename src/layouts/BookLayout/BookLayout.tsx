@@ -1,5 +1,5 @@
 import globalCss from "../../css/global.module.css";
-import css from "./styles/BookLayout.module.css";
+import css from "./BookLayout.module.css";
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
