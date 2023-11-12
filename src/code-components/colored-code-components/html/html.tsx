@@ -1,5 +1,4 @@
 import htmlCodeColor from "css/code-color/html/html-code-color.module.css";
-import { JSX } from "react";
 
 type Tag = {
   tagName: string;
@@ -59,13 +58,7 @@ type AttrType = {
 type DoubleTagType = {
   tagName: string;
   attrs?: Array<AttrType>;
-  children?:
-    | string
-    | Array<string>
-    | JSX.Element
-    | Array<JSX.Element>
-  | Array<string | JSX.Element>
-  | null;
+  children?: any;
 };
 
 export function DoubleTag({ tagName, attrs, children }: DoubleTagType) {

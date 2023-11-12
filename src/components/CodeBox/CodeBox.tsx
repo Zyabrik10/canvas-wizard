@@ -1,17 +1,10 @@
 import globalCss from "css/global.module.css";
 import css from "./CodeBox.module.css";
 
-import { JSX, useRef, useState } from "react";
-
-type ChildrenType =
-  | Array<string>
-  | string
-  | Array<JSX.Element>
-  | JSX.Element
-  | Array<string | JSX.Element>;
+import {  useRef, useState } from "react";
 
 type CodeBoxType = {
-  children: ChildrenType;
+  children: any;
   id?: string;
   filename?: string;
 };

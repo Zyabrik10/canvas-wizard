@@ -1,17 +1,10 @@
-import { JSX } from "react";
-
 import css from "./InfoBox.module.css";
 
 import { selectUser } from 'redux/user/user-selector';
 import { useSelector } from 'react-redux';
 
 type InfoBoxType = {
-  children:
-    | string
-    | Array<string>
-    | JSX.Element
-    | Array<JSX.Element>
-    | Array<string | JSX.Element>;
+  children: any;
   dir: "column" | "row";
   type: "extra" | "warn" | "error";
 };

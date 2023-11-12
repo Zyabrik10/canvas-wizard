@@ -1,28 +1,20 @@
 import globalCss from "css/global.module.css";
 import formatText from "css/format-text.module.css";
-import { JSX } from "react";
 import { Link } from "react-router-dom";
 
-type ChildrenType =
-  | Array<string>
-  | string
-  | Array<JSX.Element>
-  | JSX.Element
-  | Array<string | JSX.Element>;
-
 type FormatTextType = {
-  children: ChildrenType;
+  children: any;
   id?: string;
 };
 
 type FormatLinkType = {
-  children: ChildrenType;
+  children: any;
   href: string;
   isHere?: boolean;
 };
 
 type FormatListType = {
-  children: Array<JSX.Element> | JSX.Element;
+  children: any;
 };
 
 export function FormatP({ children }: FormatTextType) {

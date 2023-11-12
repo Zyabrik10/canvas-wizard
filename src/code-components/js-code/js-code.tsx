@@ -26,7 +26,7 @@ import { nanoid } from "nanoid";
 
 type VarType = {
   name: string;
-  children: JSX.Element | string | string[] | JSX.Element[];
+  children: any;
 };
 
 export function ConstVariable({ name, children }: VarType) {
@@ -159,7 +159,7 @@ export function UseArrowFunction({ name, children, args }: ArrowFunctionType) {
 }
 
 type ConsoleLogType = {
-  children: JSX.Element | string | Array<string> | Array<JSX.Element> | null;
+  children: any;
 };
 
 export function ConsoleLog({ children }: ConsoleLogType) {
@@ -176,13 +176,7 @@ export function ConsoleLog({ children }: ConsoleLogType) {
 type DeclareFunctionType = {
   parameters?: Array<string>;
   name: string;
-  children:
-    | JSX.Element
-    | string
-    | Array<string>
-    | Array<JSX.Element>
-    | Array<JSX.Element | string>
-    | null;
+  children:any;
 };
 
 export function FunctionDeclare({
@@ -260,13 +254,7 @@ export function CallFunction({ args, name }: CallFunctionType) {
 
 type CallFunctionWithChildrenType = {
   name: string;
-  children:
-    | JSX.Element
-    | string
-    | Array<string>
-    | Array<JSX.Element>
-    | Array<JSX.Element | string>
-    | null;
+  children:any;
 };
 
 export function CallFunctionWithChildren({
@@ -311,13 +299,7 @@ export function DeclareClass({ children, name }: DeclareClassType) {
 type ClassFunctionDeclareType = {
   parameters?: Array<string> | Array<JSX.Element> | Array<JSX.Element | string>;
   name: string;
-  children:
-    | JSX.Element
-    | string
-    | Array<string>
-    | Array<JSX.Element>
-    | Array<JSX.Element | string>
-    | null;
+  children: any;
 };
 
 export function ClassFunctionDeclare({
@@ -443,13 +425,7 @@ export function ClassObjectExpression({ propertys }: ObjectExpressionType) {
 
 type InitClassInstanceType = {
   name: string;
-  children:
-    | JSX.Element
-    | string
-    | Array<string>
-    | Array<JSX.Element>
-    | Array<JSX.Element | string>
-    | null;
+  children: any;
 };
 
 export function InitClassInstance({ name, children }: InitClassInstanceType) {
@@ -463,13 +439,7 @@ export function InitClassInstance({ name, children }: InitClassInstanceType) {
 }
 
 type ForType = {
-  children:
-    | JSX.Element
-    | string
-    | Array<string>
-    | Array<JSX.Element>
-    | Array<JSX.Element | string>
-    | null;
+  children: any;
   variable: {
     name: string;
     value: JSX.Element | string;

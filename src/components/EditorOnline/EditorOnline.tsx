@@ -1,16 +1,9 @@
 import css from "./EditorOnline.module.css";
-import { JSX } from "react";
 
 type EditorOnlineType = {
   src: string;
   title?: string;
-  children:
-    | string
-    | Array<string>
-    | JSX.Element
-    | Array<JSX.Element>
-    | Array<string | JSX.Element>
-    | null;
+  children: any;
 };
 
 export default function EditorOnline({
