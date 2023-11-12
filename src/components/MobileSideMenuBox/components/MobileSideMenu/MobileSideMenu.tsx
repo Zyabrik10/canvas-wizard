@@ -1,5 +1,4 @@
 import css from "./MobileSideMenu.module.css";
-import globalCss from "css/global.module.css";
 
 import { BookSideBarList } from "components/SideMenuMap/components/index";
 
@@ -28,7 +27,7 @@ export default function MobileSideMenu() {
     >
       <div>
         <button
-          className={`${css["close-button"]} ${globalCss["global-button"]} ${css[currentTheme]}`}
+          className={`${css["close-button"]} ${css[currentTheme]}`}
           onClick={buttonHandler}
         >
           &times;

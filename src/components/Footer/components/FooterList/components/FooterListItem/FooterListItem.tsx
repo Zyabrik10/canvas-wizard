@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import css from "./FooterListItem.module.css";
 
 import { useSelector } from "react-redux";
@@ -17,7 +16,7 @@ export default function FooterListItem({ path, text, logo }: Link) {
   return (
     <li>
       <a
-        className={`${css["footer-link-button"]} ${css[currentTheme]} ${globalCss["global-link"]}`}
+        className={`${css["footer-link-button"]} ${css[currentTheme]}`}
         href={path}
         target="_blank"
         rel="noreferrer"

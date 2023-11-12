@@ -1,5 +1,4 @@
 import css from "./MobileSideMenuBox.module.css";
-import globalCss from "css/global.module.css";
 import menu_bar from "img/logo/menu-bar.svg";
 
 import { toggleMobileMenu } from "redux/mobileMenu/mobileMenu-redux";
@@ -19,7 +18,6 @@ export default function MobileSideMenuBox() {
   return (
     <div className={`${css[currentTheme]} ${css["mobile-sidemenu-box"]}`}>
       <button
-        className={`${globalCss["global-button"]}`}
         onClick={buttonHandler}
       >
         <img src={menu_bar} alt="" />

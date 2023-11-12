@@ -1,8 +1,10 @@
-import globalCss from "css/global.module.css";
 import css from "./Hero.module.css";
+import homeCss from "../Home.module.css";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectUser } from "redux/user/user-selector";
+
+import container from 'css/container.module.css';
 
 export default function Hero() {
   const { theme } = useSelector(selectUser);
@@ -11,19 +13,19 @@ export default function Hero() {
   const location = useLocation();
   return (
     <section
-      className={`${css["hero"]} ${css[currentThem]} ${globalCss["global-section"]}`}
+      className={`${css["hero"]} ${css[currentThem]} ${homeCss["section"]}`}
     >
-      <div className={`${css["hero-container"]} ${globalCss["container"]}`}>
-        <h1 className={`${css["hero-title"]} ${globalCss["global-title"]}`}>
+      <div className={`${css["hero-container"]} ${container.container}`}>
+        <h1 className={`${css["hero-title"]}`}>
           <span>Learn Canvas</span>{" "}
         </h1>
         <p
-          className={`${css[currentThem]} ${css["hero-subtitle"]} ${globalCss["global-p"]}`}
+          className={`${css[currentThem]} ${css["hero-subtitle"]}`}
         >
           Right Now <span>For Free</span>
         </p>
         <Link
-          className={`${css[currentThem]} ${css["hero-button"]} ${globalCss["global-link"]}`}
+          className={`${css[currentThem]} ${css["hero-button"]}`}
           to="/book/about-canvas"
           state={location}
         >

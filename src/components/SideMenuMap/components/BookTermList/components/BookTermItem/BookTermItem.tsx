@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import { NavLink, useLocation } from "react-router-dom";
 import css from "./BookTermItem.module.css";
 
@@ -27,7 +26,7 @@ export default function BookTermItem({ title, path }: Term) {
   return (
     <li>
       <NavLink
-        className={`${css["book-term-link"]} ${globalCss["global-link"]} ${css[currentTheme]}`}
+        className={`${css["book-term-link"]} ${css[currentTheme]}`}
         to={path}
         onClick={linkHandler}
         state={location}

@@ -1,13 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import {AboutList} from "./components/index";
 
-import globalCss from "css/global.module.css";
 import css from "./About.module.css";
+import homeCss from "../Home.module.css";
 
 import arrow_logo from "img/logo/arrow1.svg";
 
 import { useSelector } from "react-redux";
 import { selectUser } from "redux/user/user-selector";
+
+import container from 'css/container.module.css';
 
 export default function About() {
   const location = useLocation();
@@ -16,15 +18,15 @@ export default function About() {
   const currentThem = `${theme}-theme`;
   return (
     <section
-      className={`${css["about"]} ${css[currentThem]} ${globalCss["global-section"]}`}
+      className={`${css["about"]} ${css[currentThem]} ${homeCss["section"]}`}
     >
-      <div className={globalCss["container"]}>
+      <div className={container.container}>
         <h2
-          className={`${globalCss["section-title"]} ${css["about-title"]} ${globalCss["global-title"]}`}
+          className={`${css["about-title"]} ${homeCss["section-title"]}`}
         >
           What are you going to learn ?
         </h2>
-        <p className={`${css["about-p"]} ${globalCss["global-p"]}`}>
+        <p className={css["about-p"]}>
           How to work with canvas <span>using js</span>
         </p>
         <div className={css["about-main-box"]}>
@@ -32,7 +34,7 @@ export default function About() {
           <AboutList />
         </div>
         <div
-          className={`${css["about-button-box"]} ${globalCss["global-button"]}`}
+          className={css["about-button-box"]}
         >
           <img
             className={css["about-box-logo"]}
@@ -42,7 +44,7 @@ export default function About() {
             width="30"
           />
           <Link
-            className={`${css["about-button"]} ${globalCss["global-link"]}`}
+            className={`${css["about-button"]}`}
             to="book/projects/stars/project-configuration"
             state={location}
           >

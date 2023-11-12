@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import css from "./CodeBox.module.css";
 
 import {  useRef, useState } from "react";
@@ -35,7 +34,7 @@ export default function CodeBox({ id, children, filename }: CodeBoxType) {
       {filename !== undefined ? (
         <>
           <div className={css["filename-box"]}>
-            <p className={`${globalCss["global-p"]} ${css["filename"]}`}>
+            <p className={css["filename"]}>
               {filename}
             </p>
           </div>
@@ -43,13 +42,13 @@ export default function CodeBox({ id, children, filename }: CodeBoxType) {
       ) : null}
       <button
         ref={buttonRef}
-        className={`${globalCss["global-button"]} ${css["copy-button"]}`}
+        className={css["copy-button"]}
         type="button"
         onClick={buttonHandler}
       >
         {text}
       </button>
-      <pre className={globalCss["global-p"]}>
+      <pre>
         <code className="code">{children ? children : null}</code>
       </pre>
     </div>

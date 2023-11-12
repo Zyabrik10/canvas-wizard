@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import formatText from "css/format-text.module.css";
 import { Link } from "react-router-dom";
 
@@ -19,13 +18,13 @@ type FormatListType = {
 
 export function FormatP({ children }: FormatTextType) {
   return (
-    <p className={`${globalCss["global-p"]} ${formatText["p"]}`}>{children}</p>
+    <p className={formatText["p"]}>{children}</p>
   );
 }
 
 export function FormatTitleH2({ children }: FormatTextType) {
   return (
-    <h2 className={`${globalCss["global-title"]} ${formatText["titleh2"]}`}>
+    <h2 className={formatText["titleh2"]}>
       {children}
     </h2>
   );
@@ -33,7 +32,7 @@ export function FormatTitleH2({ children }: FormatTextType) {
 
 export function FormatTitleH3({ children, id }: FormatTextType) {
   return (
-    <h3 className={`${globalCss["global-title"]} ${formatText["titleh3"]}`} id={id}>
+    <h3 className={formatText["titleh3"]} id={id}>
       {children}
     </h3>
   );
@@ -48,7 +47,7 @@ export function FormatLink({ children, href, isHere }: FormatLinkType) {
     <>
       {
         isHere ? <Link
-        className={`switch-theme ${formatText["dark-theme"]} ${globalCss["global-link"]} ${formatText["link"]}`}
+        className={`switch-theme ${formatText["dark-theme"]} ${formatText["link"]}`}
         data-dark-theme={formatText["dark-theme"]}
         data-light-theme={formatText["light-theme"]}
         to={href}
@@ -59,7 +58,7 @@ export function FormatLink({ children, href, isHere }: FormatLinkType) {
         </Link>
           :
       <a
-        className={`switch-theme ${formatText["dark-theme"]} ${globalCss["global-link"]} ${formatText["link"]}`}
+        className={`switch-theme ${formatText["dark-theme"]} ${formatText["link"]}`}
         data-dark-theme={formatText["dark-theme"]}
         data-light-theme={formatText["light-theme"]}
         href={href}

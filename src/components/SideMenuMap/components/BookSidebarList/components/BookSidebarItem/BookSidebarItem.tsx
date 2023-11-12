@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import css from "./BookSidebarItem.module.css";
 
 import { BookTermList } from "../../../index";
@@ -31,7 +30,7 @@ export default function BookSidebarItem({ title, terms }: Book) {
   return (
     <li className={`${css[currentTheme]} ${css["sidebar-item"]}`}>
       <button
-        className={`${css["sidebar-item-button"]} ${globalCss["global-button"]} ${css[currentTheme]}`}
+        className={`${css["sidebar-item-button"]} ${css[currentTheme]}`}
         type="button"
         onClick={buttonHandler}
       >

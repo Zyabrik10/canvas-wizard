@@ -5,8 +5,6 @@ import {
 } from "code-components/format-components/format-components";
 import { Link } from "react-router-dom";
 
-import globalCss from "css/global.module.css";
-
 import css from "./Support.module.css";
 
 export default function Support() {
@@ -26,7 +24,7 @@ export default function Support() {
       </FormatP>
       <Link
         to="/book/support"
-        className={`${css["support-button"]} ${globalCss["global-link"]}`}
+        className={css["support-button"]}
       >
         support
       </Link>

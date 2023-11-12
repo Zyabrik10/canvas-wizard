@@ -1,0 +1,24 @@
+@import url("./variables.css");
+
+main {
+  min-height: calc(100vh - 60px);
+}
+
+/* cell */
+.flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: var(--flex-items-gap);
+}
+
+.flex-container li {
+  -ms-flex-preferred-size: calc(
+    (100% - (var(--flex-items) - 1) * var(--flex-items-gap)) / var(--flex-items)
+  );
+  flex-basis: calc(
+    (100% - (var(--flex-items) - 1) * var(--flex-items-gap)) / var(--flex-items)
+  );
+}

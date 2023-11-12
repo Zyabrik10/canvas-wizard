@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import css from "./HeaderList.module.css";
 import linkedin_logo from "img/logo/linkedin-logo.svg";
 import github_logo from "img/logo/github-logo.svg";
@@ -29,10 +28,10 @@ export default function HeaderList() {
   }
 
   return (
-    <ul className={`${globalCss["global-list"]} ${css["header-list"]}`}>
+    <ul className={css["header-list"]}>
       <li>
         <button
-          className={`${css["header-language-button"]} ${globalCss["global-button"]} ${css["header-link-button"]} ${css[currentTheme]}`}
+          className={`${css["header-language-button"]} ${css["header-link-button"]} ${css[currentTheme]}`}
           type="button"
         >
           en
@@ -40,7 +39,7 @@ export default function HeaderList() {
       </li>
       <li>
         <a
-          className={`${css["header-link-button"]} ${css[currentTheme]} ${globalCss["global-link"]}`}
+          className={`${css["header-link-button"]} ${css[currentTheme]}`}
           href="https://www.linkedin.com/in/alexander-mazurok-jfd/"
           target="_blank"
           rel="noreferrer"
@@ -50,7 +49,7 @@ export default function HeaderList() {
       </li>
       <li>
         <a
-          className={`${css["header-link-button"]} ${css[currentTheme]} ${globalCss["global-link"]}`}
+          className={`${css["header-link-button"]} ${css[currentTheme]}`}
           rel="noreferrer"
           target="_blank"
           href="https://github.com/Zyabrik10"
@@ -60,7 +59,7 @@ export default function HeaderList() {
       </li>
       <li>
         <button
-          className={`${css["header-language-button"]} ${globalCss["global-button"]} ${css["header-link-button"]} ${css[currentTheme]}`}
+          className={`${css["header-language-button"]} ${css["header-link-button"]} ${css[currentTheme]}`}
           type="button"
           onClick={changeColorButtonHandler}
         >

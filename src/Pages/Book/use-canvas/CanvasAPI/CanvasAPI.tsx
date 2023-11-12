@@ -1,5 +1,3 @@
-import globalCss from "css/global.module.css";
-
 import {
   FormatP,
   FormatTitleH2,
@@ -49,7 +47,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#fillRect"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             fillRect
@@ -58,7 +55,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#clearRect"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             clearRect
@@ -67,7 +63,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#beginPath"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             beginPath
@@ -76,7 +71,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#fill"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             fill
@@ -85,7 +79,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#stroke"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             stroke
@@ -94,7 +87,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#fillStyle"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             fillStyle
@@ -103,7 +95,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#strokeStyle"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             strokeStyle
@@ -112,7 +103,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#rect"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             rect
@@ -121,7 +111,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#arc"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             arc
@@ -130,7 +119,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#lineTo"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             lineTo
@@ -139,7 +127,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#moveTo"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             moveTo
@@ -148,7 +135,6 @@ export default function CanvasAPI() {
         <li>
           <a
             href="#lineWidth"
-            className={`${globalCss["global-link"]}`}
             style={{ borderBottom: "1px solid currentColor" }}
           >
             lineWidth

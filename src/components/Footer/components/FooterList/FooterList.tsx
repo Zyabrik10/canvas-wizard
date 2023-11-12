@@ -1,6 +1,5 @@
 import {FooterListItem} from "./components/index";
 import { nanoid } from "nanoid";
-import globalCss from 'css/global.module.css';
 import css from './FooterList.module.css';
 
 import linkedin_logo from "img/logo/linkedin-logo.svg";
@@ -39,7 +38,7 @@ export default function FooterList() {
   ];
   
   return (
-    <ul className={`${globalCss["global-list"]} ${css['footer-list']}`}>
+    <ul className={`${css['footer-list']}`}>
       {items.map(({ path, text, logo }: Link) => (
         <FooterListItem key={nanoid()} path={path} text={text} logo={ logo} />
       ))}

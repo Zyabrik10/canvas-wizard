@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import globalCss from "css/global.module.css";
 import css from "./HeaderNavList.module.css";
 
 import { useSelector } from "react-redux";
@@ -11,13 +10,21 @@ export default function HeaderNav() {
 
   return (
     <nav>
-      <ul className={`${globalCss["global-list"]} ${css["header-nav-list"]}`}>
+      <ul className={css["header-nav-list"]}>
         <li>
           <NavLink
             to="/book"
-            className={`${css[currentTheme]} ${css["header-nav-link"]} ${globalCss["global-link"]}`}
+            className={`${css[currentTheme]} ${css["header-nav-link"]}`}
           >
             Book
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/projects"
+            className={`${css[currentTheme]} ${css["header-nav-link"]}`}
+          >
+            Projects
           </NavLink>
         </li>
       </ul>

@@ -4,7 +4,6 @@ import api_logo from 'img/logo/api-logo.svg';
 import project_logo from 'img/logo/project-logo.svg';
 import science_logo from 'img/logo/science-logo.svg';
 import css from './AboutList.module.css';
-import globalCss from 'css/global.module.css';
 
 export default function Aboutlist() {
   interface Item {
@@ -30,7 +29,7 @@ export default function Aboutlist() {
     },
   ];
   return (
-    <ul className={`${css["about-list"]} ${globalCss["global-list"]}`}>
+    <ul className={`${css["about-list"]}`}>
       {items.map(({ logo, text, title }: Item) => (
         <AboutListItem key={nanoid()} logo={logo} text={text} title={title} />
       ))}

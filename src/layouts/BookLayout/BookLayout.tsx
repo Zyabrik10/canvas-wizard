@@ -1,4 +1,3 @@
-import globalCss from "css/global.module.css";
 import css from "./BookLayout.module.css";
 
 import { Header } from "components/index";
@@ -22,7 +21,7 @@ export default function BookLayout() {
       <div className={`${css["book-global-box"]}`}>
         <SideMenuMap />
         <MobileSideMenuBox />
-        <main className={`${css["main"]} ${globalCss["main"]}`}>
+        <main className={css["main"]}>
           <MobileSideMenu />
           <div className={css["container"]}>
             {/* {location.state ? (
