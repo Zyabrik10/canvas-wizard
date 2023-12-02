@@ -19,14 +19,14 @@ export default function HeaderNav() {
             Book
           </NavLink>
         </li>
-        <li>
+        {/* <li>
           <NavLink
             to="/projects"
             className={`${css[currentTheme]} ${css["header-nav-link"]}`}
           >
             Projects
           </NavLink>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

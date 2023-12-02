@@ -13,7 +13,7 @@ export default function Hero() {
   const location = useLocation();
   return (
     <section
-      className={`${css["hero"]} ${css[currentThem]} ${homeCss["section"]}`}
+      className={`${css["hero"]} ${css["section"]} ${css[currentThem]} ${homeCss["section"]}`}
     >
       <div className={`${css["hero-container"]} ${container.container}`}>
         <h1 className={`${css["hero-title"]}`}>

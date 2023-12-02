@@ -1,17 +1,17 @@
 @import url("css/variables.css");
 
-.hero {
+.hero.section {
   padding-top: 100px;
 }
 
 @media screen and (min-width: 748px) {
-  .hero {
+  .hero.section {
     padding-top: 135px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .hero {
+  .hero.section {
     padding-top: 160px;
   }
 }
@@ -103,7 +103,7 @@
   padding: 20px 10px;
 
   width: 100%;
-  max-width: auto;
+  max-width: 200px;
 
   border-radius: 10px;
 
@@ -137,7 +137,6 @@
 @media screen and (min-width: 748px) {
   .hero-button {
     font-size: 24px;
-    max-width: 215px;
   }
 }
 
