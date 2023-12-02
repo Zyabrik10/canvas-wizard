@@ -2,6 +2,8 @@ import { canvas, ctx } from "./canvas-config";
 import { getDist } from "./math";
 import { init, minRad, balls, fillColor } from "./init";
 
+export let canvasTimer: any;
+
 export function initCanvasUpdating() {
   function drawLineBetwenTwoPoint(
     a: { x: number; y: number },
@@ -32,10 +34,10 @@ export function initCanvasUpdating() {
         }
       }
     }
-
-    requestAnimationFrame(update);
   }
 
   init();
-  update();
+  canvasTimer = setInterval(() => {
+    update()
+  }, 10);
 }
