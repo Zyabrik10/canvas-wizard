@@ -19,6 +19,7 @@ import {
   ReactOnWindowResizeStars,
   RandomValueFromArray,
   Support,
+  Projects,
 } from "./Pages/index";
 
 import "./App.module.css";
@@ -29,6 +30,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomeLayout />}>
           <Route index element={<Home />} />
+          <Route path="projects" element={<Projects />} />
         </Route>
         <Route path="/book" element={<BookLayout />}>
           <Route index element={<Book />} />

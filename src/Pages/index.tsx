@@ -12,3 +12,4 @@ export {default as UpdateStars} from "./Book/projects/Stars/Update/Update";
 export {default as ReactOnWindowResizeStars} from "./Book/projects/Stars/ReactOnWindowResize/ReactOnWindowResize";
 export {default as RandomValueFromArray} from "./Book/math-physics/RandomValueFromArray/RandomValueFromArray";
 export {default as Support} from "./Support/Support";
+export {default as Projects} from "./Projects/Projects";
