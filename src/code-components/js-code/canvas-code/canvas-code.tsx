@@ -1,3 +1,4 @@
+import { nanoid } from "nanoid";
 import { Br } from "../../colored-code-components/html/html";
 import {
   Semicoln,
@@ -52,13 +53,13 @@ export function UseCtxFunction({
       <UseObject name="ctx" method={method}>
         {args !== undefined && args.length !== 0
           ? args.map((name, index) => {
-              if (index + 1 === args.length) return <VarName value={name} />;
+              if (index + 1 === args.length) return <VarName key={nanoid()} value={name} />;
 
               return (
-                <>
+                <span key={nanoid()}>
                   <VarName value={name} />
                   <Coma />
-                </>
+                </span>
               );
             })
           : null}

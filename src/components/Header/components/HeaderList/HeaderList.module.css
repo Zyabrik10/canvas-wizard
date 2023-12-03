@@ -29,7 +29,7 @@
   width: 40px;
   height: 40px;
 
-  color: var(--def-light-dark);
+  color: var(--def-light-dark-2);
   font-size: 24px;
   font-weight: 700;
 
@@ -40,6 +40,10 @@
   transition: background-color 0.2s ease;
 }
 
+.header-link-button svg {
+  fill: currentColor;
+}
+
 .header-link-button.dark-theme:hover,
 .header-link-button.dark-theme:focus {
   background-color: rgba(255, 255, 255, 0.1);
@@ -47,11 +51,11 @@
 
 .header-link-button.light-theme:hover,
 .header-link-button.light-theme:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--global-box-shadow);
 }
 
 .header-link-button.dark-theme {
-  border: 1px solid var(--def-dark-2, #1f262e);
+  border: 1px solid var(--def-dark-2);
 }
 
 .header-link-button.light-theme {

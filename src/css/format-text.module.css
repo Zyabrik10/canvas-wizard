@@ -1,8 +1,9 @@
 .titleh2 {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .titleh3 {
+  margin-top: 50px;
   margin-bottom: 15px;
 }
 
@@ -14,8 +15,10 @@
 .mark {
   padding: 0 5px;
   display: inline-block;
-  background: rgba(100, 100, 100, 0.5);
-  border: 2px solid #888;
+  background: rgba(150, 150, 150, 0.7);
+
+  border-bottom: 2px solid var(--def-light-dark);
+
   border-radius: 5px;
   color: #fff;
   margin: 0 2px;
@@ -23,38 +26,9 @@
 
 .link {
   display: inline-block;
-  padding: 0 5px;
-  border: 1px solid;
 
-  border-radius: 5px;
-
-  -webkit-transition: 0.2s ease;
-
-  -o-transition: 0.2s ease;
-
-  transition: 0.2s ease;
-}
-
-.link.dark-theme {
-  color: rgb(26, 200, 206);
-  border-color: rgb(26, 200, 206);
-}
-
-.link.light-theme {
-  color: rgb(11, 79, 204);
-  border-color: rgb(11, 79, 204);
-}
-
-.link.dark-theme:hover,
-.link.dark-theme:focus {
-  background-color: rgb(26, 200, 206);
-  color: #fff;
-}
-
-.link.light-theme:hover,
-.link.light-theme:focus {
-  background-color: rgb(11, 79, 204);
-  color: #fff;
+  text-decoration: underline;
+  color: var(--def-light-dark-2);
 }
 
 .list {

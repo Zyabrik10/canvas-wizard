@@ -143,10 +143,10 @@ export function UseArrowFunction({ name, children, args }: ArrowFunctionType) {
               if (index + 1 === args.length)
                 return <VarName key={nanoid()} value={name} />;
               return (
-                <>
-                  <VarName key={nanoid()} value={name} />
+                <span key={nanoid()}>
+                  <VarName value={name} />
                   <Coma />
-                </>
+                </span>
               );
             })
           : null}
@@ -194,10 +194,10 @@ export function FunctionDeclare({
               if (index + 1 === parameters.length)
                 return <VarName key={nanoid()} value={name} />;
               return (
-                <>
-                  <VarName key={nanoid()} value={name} />
+                <span key={nanoid()}>
+                  <VarName value={name} />
                   <Coma />
-                </>
+                </span>
               );
             })
           : null}
@@ -240,10 +240,10 @@ export function CallFunction({ args, name }: CallFunctionType) {
               if (index + 1 === args.length)
                 return <VarName key={nanoid()} value={name} />;
               return (
-                <>
-                  <VarName key={nanoid()} value={name} />
+                <span key={nanoid()}>
+                  <VarName value={name} />
                   <Coma />
-                </>
+                </span>
               );
             })
           : null}
@@ -351,24 +351,24 @@ export function ObjectExpression({ propertys }: ObjectExpressionType) {
             ) => {
               if (index + 1 === propertys.length)
                 return (
-                  <>
+                  <span key={nanoid()}>
                     {" "}
-                    <VarName key={nanoid()} value={property} />
+                    <VarName value={property} />
                     <Colon />
                     {value}
                     <Br />
-                  </>
+                  </span>
                 );
 
               return (
-                <>
+                <span key={nanoid()}>
                   {" "}
-                  <VarName key={nanoid()} value={property} />
+                  <VarName value={property} />
                   <Colon />
                   {value}
                   <Coma />
                   <Br />
-                </>
+                </span>
               );
             }
           )

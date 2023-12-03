@@ -1,22 +1,16 @@
 .info-box {
-  --extra: rgb(0, 225, 255);
-  --warn: rgb(255, 196, 0);
-  --error: rgb(255, 0, 0);
-
   width: 100%;
   overflow-x: auto;
 
   border-radius: 10px;
 
   padding: 15px;
-
   margin-bottom: 20px;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
+
   gap: 10px;
 }
 
@@ -35,17 +29,28 @@
 }
 
 .info-box.dark-theme {
-  background: rgb(71, 71, 72);
-  color: #fff;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  background: var(--info-box-background);
+  color: var(--info-box-text-color);
+  -webkit-box-shadow: 0px 1px 2px 0px var(--info-box-box-shadow);
+  box-shadow: 0px 1px 2px 0px var(--info-box-box-shadow);
 }
 
 .info-box.light-theme {
-  background: rgb(253, 253, 254);
-  color: #333;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  background: var(--info-box-background-light);
+  color: var(--info-box-text-color-light);
+  -webkit-box-shadow: 0px 1px 2px 0px var(--info-box-box-shadow);
+  box-shadow: 0px 1px 2px 0px var(--info-box-box-shadow);
+}
+
+.info-box-label {
+  display: flex;
+  gap: 10px;
+
+  align-items: center;
+
+  color: var(--info-box-extra);
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .info-box-marker {
@@ -68,33 +73,28 @@
   border-radius: 100%;
 
   border: 2px solid currentColor;
-
-  font-weight: bold;
 }
 
 .extra {
-  border-left: 5px solid var(--extra);
-  border-right: 5px solid var(--extra);
+  border-left: 5px solid var(--info-box-extra);
 }
 
 .extra .info-box-marker {
-  color: var(--extra);
+  color: var(--info-box-extra);
 }
 
 .warn {
-  border-left: 5px solid var(--warn);
-  border-right: 5px solid var(--warn);
+  border-color: var(--info-box-warn);
 }
 
 .warn .info-box-marker {
-  color: var(--warn);
+  color: var(--info-box-warn);
 }
 
 .error {
-  border-left: 5px solid var(--error);
-  border-right: 5px solid var(--error);
+  border-color: var(--info-box-error);
 }
 
 .error .info-box-marker {
-  color: var(--error);
+  color: var(--info-box-error);
 }

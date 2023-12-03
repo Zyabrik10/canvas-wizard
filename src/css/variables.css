@@ -3,9 +3,30 @@
   --flex-items: 1;
   --flex-items-gap: 10px;
 
-  /* dark */
+  /* dark global */
   --default-dark: #141a1f;
   --def-dark-2: #1f262e;
-  --def-light-dark: #66b2ff;
+  --def-light-dark: #1886f5;
+  --def-light-dark-2: #66b2ff;
   --primary-bl: #0075ff;
+  --global-box-shadow: rgba(0, 0, 0, 0.1);
+
+  /* info box */
+  --info-box-background: rgb(71, 71, 72);
+  --info-box-background-light: rgb(253, 253, 254);
+
+  --info-box-text-color: #fff;
+  --info-box-text-color-light: #333;
+
+  --info-box-box-shadow: rgba(0, 0, 0, 0.1);
+
+  --info-box-extra: var(--def-light-dark-2);
+  --info-box-warn: rgb(255, 196, 0);
+  --info-box-error: rgb(255, 0, 0);
+
+  /* header */
+  --header-background: rgba(16, 20, 24, 0.7);
+  --header-background-light: rgba(255, 255, 255, 0.7);
+
+  --header-box-shadow: #e2e2e2;
 }

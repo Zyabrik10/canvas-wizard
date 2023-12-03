@@ -18,13 +18,13 @@
 
 .code-box pre {
   padding: 20px;
-  overflow: auto;
+  overflow-x: auto;
 }
 
 .code-box > .copy-button {
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 10px;
 
   border: 1px solid rgba(255, 255, 255, 0.5);
 
@@ -51,7 +51,6 @@
 }
 
 .filename-box {
-  padding: 10px 0;
+  padding: 10px;
   border-bottom: 1px solid #aaa;
-  margin-bottom: 20px;
 }

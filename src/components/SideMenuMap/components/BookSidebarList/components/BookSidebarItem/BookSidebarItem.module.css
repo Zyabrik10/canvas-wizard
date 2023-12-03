@@ -37,7 +37,7 @@
 
 .sidebar-item-button.light-theme:hover,
 .sidebar-item-button.light-theme:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--global-box-shadow);
 }
 
 .item-button-title {

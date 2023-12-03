@@ -17,5 +17,5 @@
 
 .book-term-link.light-theme:hover,
 .book-term-link.light-theme:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--global-box-shadow);
 }

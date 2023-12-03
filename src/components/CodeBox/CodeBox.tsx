@@ -1,6 +1,6 @@
 import css from "./CodeBox.module.css";
 
-import {  useRef, useState } from "react";
+import { useRef, useState } from "react";
 
 type CodeBoxType = {
   children: any;
@@ -32,13 +32,9 @@ export default function CodeBox({ id, children, filename }: CodeBoxType) {
   return (
     <div id={id} className={css["code-box"]}>
       {filename !== undefined ? (
-        <>
-          <div className={css["filename-box"]}>
-            <p className={css["filename"]}>
-              {filename}
-            </p>
-          </div>
-        </>
+        <div className={css["filename-box"]}>
+          <p className={css["filename"]}>{filename}</p>
+        </div>
       ) : null}
       <button
         ref={buttonRef}
@@ -49,7 +45,7 @@ export default function CodeBox({ id, children, filename }: CodeBoxType) {
         {text}
       </button>
       <pre>
-        <code className="code">{children ? children : null}</code>
+        <code className="code">{children || null}</code>
       </pre>
     </div>
   );

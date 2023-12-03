@@ -33,7 +33,7 @@
 
 .footer-link-button.light-theme:hover,
 .footer-link-button.light-theme:focus {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--global-box-shadow);
 }
 
 .footer-link-button.dark-theme {

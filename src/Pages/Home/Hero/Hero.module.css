@@ -22,10 +22,10 @@
     left top,
     left bottom,
     from(#001425),
-    to(#141a1f)
+    to(var(--default-dark))
   );
-  background: -o-linear-gradient(top, #001425 0%, #141a1f 100%);
-  background: linear-gradient(180deg, #001425 0%, #141a1f 100%);
+  background: -o-linear-gradient(top, #001425 0%, var(--default-dark) 100%);
+  background: linear-gradient(180deg, #001425 0%, var(--default-dark) 100%);
   border-bottom: 1px solid var(--def-dark-2);
 }
 
