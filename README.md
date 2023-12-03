@@ -1,46 +1,41 @@
-# Getting Started with Create React App
+# CanvasWizard Project README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Welcome to CanvasWizard, a project dedicated to exploring the fascinating world of canvas and JavaScript! This README provides an overview of the project, its goals, current status, and future plans.
 
-In the project directory, you can run:
+## Project Details
 
-### `npm start`
+- **Project Link:** [CanvasWizard](https://lnkd.in/dN3wZayj)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Goals
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+CanvasWizard is born out of a passion for canvas and a desire to fill the void in English resources for canvas projects. The project aims to:
 
-### `npm test`
+- Provide comprehensive information about canvas and its API.
+- Explore mathematical and physical concepts crucial for canvas projects.
+- Utilize images and videos to simplify complex topics.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Development Status
 
-### `npm run build`
+- The website is currently under development, and its appearance is subject to change.
+- Future plans include creating versions in Ukrainian, Japanese, Spanish, and Polish.
+- Expect more exciting projects in the pipeline.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Site Information
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The website is searchable but does not have its own domain yet.
+- Browser compatibility is still in development, and variations in appearance may occur across different browsers. If you encounter any issues, please reach out to me.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Get Involved
 
-### `npm run eject`
+If you share my enthusiasm for canvas and JavaScript, explore CanvasWizard and provide valuable feedback. Your insights will shape the future of this project.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Contact
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Feel free to contact me if you encounter any issues or have suggestions for improvement.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Thank you for being a part of the CanvasWizard journey!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Best regards,
+Zyabrik10
