@@ -39,7 +39,7 @@ export default function RandomValue() {
         <FormatMark>0</FormatMark> and <FormatMark>1</FormatMark>.
       </FormatP>
 
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           But it doesn't include <FormatMark>1</FormatMark>. So actualy it
           returns value from <FormatMark>0</FormatMark> to{" "}

@@ -34,7 +34,7 @@ export default function RandomValueFromArray() {
 
       <FormatTitleH3>Get last element from array</FormatTitleH3>
 
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           Read this{" "}
           <FormatLink
@@ -93,7 +93,7 @@ export default function RandomValueFromArray() {
         last element.
       </FormatP>
 
-      <InfoBox type="extra" dir="column">
+      <InfoBox type="extra" >
         <FormatP>
           However, there is one thing to keep in mind.
           <FormatMark>Math.random()</FormatMark> gives us a number with
@@ -131,7 +131,7 @@ export default function RandomValueFromArray() {
         <GetNum />
       </CodeBox>
 
-      <InfoBox type="extra" dir="column">
+      <InfoBox type="extra" >
         <FormatP>
           <FormatMark>...nums</FormatMark> is <FormatMark>rest</FormatMark>
           opration. It gathers all value into array.{" "}

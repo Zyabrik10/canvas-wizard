@@ -21,7 +21,7 @@ export default function AboutListItem({ logo, title, text }: Item) {
         loading="lazy"
       />
       <p
-        className={`${css[currentTheme]} ${css["about-item-title"]}}`}
+        className={`${css[currentTheme]} ${css["about-item-title"]}`}
       >
         {title}
       </p>

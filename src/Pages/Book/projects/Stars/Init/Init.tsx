@@ -95,7 +95,7 @@ export default function InitStars() {
           <Number value="50" />
         </ConstVariable>
       </CodeBox>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           It's essential to provide an explanation for why we've chosen the
           number 50 in our loop. Leaving numbers without context is not good

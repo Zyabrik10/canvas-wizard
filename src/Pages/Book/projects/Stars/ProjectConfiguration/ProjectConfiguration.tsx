@@ -38,7 +38,7 @@ export default function ProjectConfiguration() {
     <>
       <FormatTitleH2>Project configuration</FormatTitleH2>
       <FormatTitleH3>Stars - project</FormatTitleH3>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         Before you start this project you should know:
         <FormatListUl>
           <li>
@@ -114,7 +114,7 @@ export default function ProjectConfiguration() {
         <InitHTML />
       </CodeBox>
 
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         We make file <FormatMark>main.js</FormatMark> to be module in advance.
         To make in the furure seperates files
       </InfoBox>
@@ -144,7 +144,7 @@ export default function ProjectConfiguration() {
         <FormatMark>width</FormatMark> and <FormatMark>height</FormatMark> of
         the <FormatMark>current viewport</FormatMark>.
       </FormatP>
-      <InfoBox type="warn" dir="column">
+      <InfoBox type="warn" >
         <FormatP>
           Be careful! If you set the width and height for the canvas in a CSS
           file, those values will affect the visible canvas but not the real
@@ -158,7 +158,7 @@ export default function ProjectConfiguration() {
       <CodeBox filename="main.js">
         <SetCanvasSize width="innerWidth" height="innerHeight" />
       </CodeBox>
-      <InfoBox type="extra" dir="column">
+      <InfoBox type="extra" >
         <FormatP>
           The <FormatMark>innerWidth</FormatMark> and <FormatMark>innerHeight</FormatMark> are properties of the global <FormatMark>window</FormatMark>
           object, so there's no need to write <FormatMark>window.innerWidth</FormatMark> or

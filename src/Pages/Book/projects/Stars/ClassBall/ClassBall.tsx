@@ -75,7 +75,7 @@ export default function ClassBall() {
       <CodeBox>
         <Contructor />
       </CodeBox>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           We use destruction for our object to get propertys, but if we don't
           pass any propertys they will be <FormatMark>undefined</FormatMark>.
@@ -88,7 +88,7 @@ export default function ClassBall() {
         <li>coor - coordinates</li>
         <li>vel - velocity</li>
       </FormatListUl>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           We also use id. We need it in the future for optimization.
         </FormatP>
@@ -139,7 +139,7 @@ export default function ClassBall() {
           <Semicoln />
         </ClassFunctionDeclare>
       </CodeBox>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           If you don't remember how <FormatMark>ctx.arc()</FormatMark> works see
           this{" "}

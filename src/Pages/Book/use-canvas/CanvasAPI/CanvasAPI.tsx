@@ -179,7 +179,7 @@ export default function CanvasAPI() {
         <FormatMark>getContext</FormatMark> and pass <FormatMark>2d</FormatMark>
         as an argument.
       </FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           There are more kind of parametrs of{" "}
           <FormatMark>getContext</FormatMark>. But we don't need them right now.
@@ -188,7 +188,7 @@ export default function CanvasAPI() {
       <CodeBox>
         <DeclareCtx />
       </CodeBox>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           Now we have an access to <FormatMark>CANVAS API</FormatMark>.
         </FormatP>
@@ -205,7 +205,7 @@ export default function CanvasAPI() {
         description="Canvas coordinates"
         number="1.1"
       />
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           Canvas coordinates (0, 0) start from upper left corner.{" "}
         </FormatP>
@@ -290,7 +290,7 @@ export default function CanvasAPI() {
       <FormatP>
         beginPath - begins a new path or resets the current path.
       </FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         Image path like a box. Inside of this box elements will be connected
         with each other. New path - new element
       </InfoBox>
@@ -322,7 +322,7 @@ export default function CanvasAPI() {
         <UseCtxVar varName="fillStyle" value="<your color code>" />
       </CodeBox>
       <FormatP>fillStyle - set color wich will be used to fill path.</FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>#fff - by default</FormatP>
       </InfoBox>
       <ImageBox src={fillStyleImg} description="ctx.fillStyle" />
@@ -372,7 +372,7 @@ export default function CanvasAPI() {
       <FormatP>
         strokeStyle - set color wich will be used to stroke path.
       </FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>#fff - by default</FormatP>
       </InfoBox>
       <ImageBox src={strokeStyleImg} description="ctx.strokeStyle" />
@@ -399,7 +399,7 @@ export default function CanvasAPI() {
         <UseCtxFunction method="rect" args={["x", "y", "width", "height"]} />
       </CodeBox>
       <FormatP>rect - mark rectangle area with transparent color.</FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           To fill or stroke marked rectangle use <FormatMark>fill()</FormatMark>{" "}
           or <FormatMark>stroke()</FormatMark>
@@ -440,7 +440,7 @@ export default function CanvasAPI() {
         />
       </CodeBox>
       <FormatP>arc - mark a circle area with transparent color.</FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           To fill or stroke marked arc use <FormatMark>fill()</FormatMark> or{" "}
           <FormatMark>stroke()</FormatMark>
@@ -479,7 +479,7 @@ export default function CanvasAPI() {
         <UseCtxFunction method="moveTo" args={["x", "y"]} />
       </CodeBox>
       <FormatP>moveTo - mark a start point of a line.</FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           In order to draw line we need use <FormatMark>lineTo()</FormatMark>{" "}
           method to mark end point and then use{" "}

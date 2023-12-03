@@ -128,7 +128,7 @@ export default function MathVariables() {
       </CodeBox>
       <FormatTitleH3>Our own functions</FormatTitleH3>
       <FormatP>We also will need some own functions.</FormatP>
-      <InfoBox type="warn" dir="row">
+      <InfoBox type="warn" >
         <FormatP>
           The code below is part of a code above, so we're omitting the Math
           class here. When you copy this code, remember to include the code
@@ -173,7 +173,7 @@ export default function MathVariables() {
         </ConsoleLog>
         <Comment value="10" />
       </CodeBox>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra" >
         <FormatP>
           If you're unsure how these functions work, you can check these
           articles:

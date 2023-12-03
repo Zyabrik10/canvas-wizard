@@ -14,13 +14,12 @@ import {
   CloseTag,
 } from "code-components/colored-code-components/html/html";
 
-import {EditorOnline} from "components/index";
+import { EditorOnline } from "components/index";
 
 import { Canvas } from "code-components/html-code/snippets/snippets";
 import { InitHTML } from "code-components/html-code/html-code";
 
 export default function AboutCanvas() {
-
   return (
     <>
       <FormatTitleH2>What is Canvas?</FormatTitleH2>
@@ -43,7 +42,7 @@ export default function AboutCanvas() {
       <FormatP>
         Additionally, you will need a basic understanding of math and physics.
       </FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra">
         <FormatP>
           Don't worry if you don't remember much about these subjects; I will
           explain them.
@@ -54,7 +53,7 @@ export default function AboutCanvas() {
         drawing graphs, combining photos, or creating simple animations, for
         instance.
       </FormatP>
-      <InfoBox type="extra" dir="row">
+      <InfoBox type="extra">
         <FormatP>
           You can use it for your website, for relaxation, simulating physics,
           or even for games.
@@ -64,7 +63,7 @@ export default function AboutCanvas() {
         Here are a few examples of what you can do with just canvas and
         JavaScript.
       </FormatP>
-      <InfoBox dir="column" type="warn">
+      <InfoBox type="warn">
         On weaker devices, these projects may either not be displayed at all or
         may be displayed with freezes. On mobile phones, you might not be able
         to try these projects because the authors of the projects haven't
@@ -98,13 +97,12 @@ export default function AboutCanvas() {
         by Akimitsu Hamamuro (<a href="https://codepen.io/akm2">@akm2</a>) on{" "}
         <a href="https://codepen.io">CodePen</a>.
       </EditorOnline>
-      <InfoBox type="extra" dir="column">
+      <InfoBox type="extra">
         <FormatP>
           To see more just google it as
           <FormatMark>canvas js projects</FormatMark> to find more websites with
           canvas projects.
-        </FormatP>
-        <FormatP>
+          <br />
           Link on one of them{" "}
           <FormatLink href="https://webdesign.tutsplus.com/21-ridiculously-impressive-html5-canvas-experiments--net-14210a">
             canvas projects

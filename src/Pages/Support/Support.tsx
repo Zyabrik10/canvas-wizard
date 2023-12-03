@@ -15,7 +15,7 @@ export default function Support() {
         available soon. However, for now, you can simply transfer funds from one
         card to another.
       </FormatP>
-      <InfoBox dir="row" type="warn">
+      <InfoBox  type="warn">
         <FormatP>
           Please note that Monobank may apply a tax, typically around 4%,
           according to your bank's policies. Additionally, Monobank accepts
